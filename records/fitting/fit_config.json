@@ -1,0 +1,46 @@
+{
+  "schema_version": "2.0",
+  "seed": 20260717,
+  "bootstrap_replicates": 10000,
+  "confidence_level": 0.95,
+  "reported_formulas": {
+    "original_PySR": {
+      "power": 1,
+      "alpha": [0.128, 0.053, 0.620, 5.78]
+    },
+    "M16": {
+      "power": 2,
+      "alpha": [0.111, 0.052, 0.443, 2.888]
+    }
+  },
+  "mask": {
+    "y_plus_min_exclusive": 1.0,
+    "y_plus_max_absolute": 150.0,
+    "y_plus_max_re_fraction": 0.3,
+    "epsilon_min": 1e-6,
+    "p_over_epsilon_min": 0.01
+  },
+  "matched_calibration": {
+    "bounds": [
+      [0.02, 0.40],
+      [0.01, 0.15],
+      [0.05, 1.20],
+      [0.50, 12.0]
+    ],
+    "multistarts": 64,
+    "max_iterations": 10000,
+    "optimizer_ftol": 1e-14
+  },
+  "noninferiority": {
+    "delta_r2_margin": -0.01,
+    "relative_rmse_margin": 0.05,
+    "minimum_profiles_for_family_gate": 3
+  },
+  "primary_role": "external_re_evaluation_in_domain",
+  "historical_exposure_labels": [
+    "training",
+    "used_in_original_model_selection",
+    "reported_validation_not_known_used_for_selection",
+    "out_of_domain_diagnostic"
+  ]
+}

@@ -1,0 +1,693 @@
+{
+  "schema_version": "node000-replay-1.0",
+  "replayed_from_script": "records/audits/pressure_transport_audit.py",
+  "source_script_sha256": "005061cf8dda50f567b5337d69168a41eac34d3d0495b778388934879357d75b",
+  "config_path": "records/audits/audit_config.json",
+  "config_sha256": "2b6041562eead2ba43aa24a78622ec9891f2f5f2fc0cf1fe8362d62cea0041f6",
+  "replay_script_sha256": "fe028a555661dd5bc0fc078561a8e79809262cffe2a14419dbce8e2cafa2e233",
+  "source_sha256": {
+    "codes/data_processing/spectra_data/LM_Channel_0180_RSTE_k.dat": "51fed05b3d0c3d2e42d91144dcc68836f5dc0f6fa1a6a5993f41db96429122e1",
+    "codes/data_processing/spectra_data/LM_Channel_0550_RSTE_k.dat": "1b8d65696b6647b9131cd7b033fb82076bcb831c72280d1c932c3c63d3ee0068",
+    "codes/data_processing/spectra_data/LM_Channel_1000_RSTE_k.dat": "132dfaeea001b9d135f85a63eccf890328d25ce797dce19f2e5c2889085d2fd8",
+    "codes/data_processing/spectra_data/LM_Channel_2000_RSTE_k.dat": "e15fae9a4b2e6e56ec307b5cc52492209221d037429f820f068451d79673527e",
+    "codes/data_processing/spectra_data/LM_Channel_5200_RSTE_k.dat": "f86f7402c64436ccb60aaa8b0dadbf98d8fb8897a1fd40a36122e1e0908bda10"
+  },
+  "ratio_definition": "|Pi_p|/(|T_turb|+|T_visc|)",
+  "counterfactual": {
+    "F_without_pressure": "1-(T_turb+T_visc)/epsilon",
+    "F_DNS_minus_F_without_pressure": "-Pi_p/epsilon",
+    "interpretation": "Signed plausibility diagnostic, not a causal decomposition of the coupled equilibrium-closure deficit."
+  },
+  "per_Re_tau": {
+    "180": {
+      "Re_tau_nominal": 180,
+      "budget_sign_convention": "P + T_turb + T_visc + Phi_p + Pi_p - epsilon = balance; epsilon is positive and Phi_p is the saved zero TKE trace",
+      "balance_max_abs_error_recomputed_minus_reported": 8.326672684688674e-17,
+      "layers": {
+        "buffer_primary": {
+          "requested_y_plus_range": [
+            10.0,
+            20.0
+          ],
+          "actual_y_plus_range": [
+            10.20609445522346,
+            19.78504405425227
+          ],
+          "status": "ok",
+          "n": 9,
+          "pointwise_abs_ratio_median": 0.025940408744785017,
+          "pointwise_abs_ratio_IQR": [
+            0.014513681003832383,
+            0.03808130110255709
+          ],
+          "pointwise_signed_ratio_median": -0.0036423162776245614,
+          "integrated_L1_ratio": 0.021378814052079573,
+          "pressure_positive_fraction": 0.4444444444444444,
+          "pressure_negative_fraction": 0.5555555555555556,
+          "pressure_opposes_turbulent_transport_fraction": 0.4444444444444444,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.4444444444444444
+        },
+        "log_primary": {
+          "requested_y_plus_range": [
+            30.0,
+            50.0
+          ],
+          "actual_y_plus_range": [
+            30.57854766080223,
+            49.59029819641487
+          ],
+          "status": "ok",
+          "n": 11,
+          "pointwise_abs_ratio_median": 0.11017950858450173,
+          "pointwise_abs_ratio_IQR": [
+            0.08809428470360398,
+            0.11630372116309692
+          ],
+          "pointwise_signed_ratio_median": 0.09755311491448622,
+          "integrated_L1_ratio": 0.10332082802563569,
+          "pressure_positive_fraction": 0.7272727272727273,
+          "pressure_negative_fraction": 0.2727272727272727,
+          "pressure_opposes_turbulent_transport_fraction": 0.0,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.09090909090909091
+        },
+        "buffer_sensitivity": {
+          "requested_y_plus_range": [
+            5.0,
+            30.0
+          ],
+          "actual_y_plus_range": [
+            5.051793130230531,
+            28.9044937312458
+          ],
+          "status": "ok",
+          "n": 21,
+          "pointwise_abs_ratio_median": 0.06518303417546906,
+          "pointwise_abs_ratio_IQR": [
+            0.029160834570301053,
+            0.10570877260168207
+          ],
+          "pointwise_signed_ratio_median": -0.0036423162776245614,
+          "integrated_L1_ratio": 0.051750176859649756,
+          "pressure_positive_fraction": 0.47619047619047616,
+          "pressure_negative_fraction": 0.5238095238095238,
+          "pressure_opposes_turbulent_transport_fraction": 0.2857142857142857,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.38095238095238093
+        },
+        "log_sensitivity": {
+          "requested_y_plus_range": [
+            50.0,
+            100.0
+          ],
+          "actual_y_plus_range": [
+            51.70676917087474,
+            98.18054116364982
+          ],
+          "status": "ok",
+          "n": 20,
+          "pointwise_abs_ratio_median": 0.09909960867059653,
+          "pointwise_abs_ratio_IQR": [
+            0.051904969242110105,
+            0.18224729815982388
+          ],
+          "pointwise_signed_ratio_median": -0.07992868554745214,
+          "integrated_L1_ratio": 0.10632533714631921,
+          "pressure_positive_fraction": 0.3,
+          "pressure_negative_fraction": 0.7,
+          "pressure_opposes_turbulent_transport_fraction": 0.7,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.7
+        }
+      },
+      "deficit_attribution": {
+        "buffer_DNS_peak": {
+          "y_plus": 12.31561123688027,
+          "F_DNS": 1.8408006006449134,
+          "Pi_p": 0.001777874282937944,
+          "epsilon": 0.1180797309810928,
+          "delta_F_from_pressure_minus_Pi_over_epsilon": -0.015056557701868591,
+          "reported_35pct_peak_deficit_normalizer": 0.6442802102257197,
+          "signed_fraction_of_reported_deficit": -0.023369579668749436,
+          "sign_aligned_fraction_clipped_0_1": 0.0
+        },
+        "nearest_to_y_plus_12": {
+          "y_plus": 12.31561123688027,
+          "F_DNS": 1.8408006006449134,
+          "Pi_p": 0.001777874282937944,
+          "epsilon": 0.1180797309810928,
+          "delta_F_from_pressure_minus_Pi_over_epsilon": -0.015056557701868591,
+          "reported_35pct_peak_deficit_normalizer": 0.6442802102257197,
+          "signed_fraction_of_reported_deficit": -0.023369579668749436,
+          "sign_aligned_fraction_clipped_0_1": 0.0
+        }
+      }
+    },
+    "550": {
+      "Re_tau_nominal": 550,
+      "budget_sign_convention": "P + T_turb + T_visc + Phi_p + Pi_p - epsilon = balance; epsilon is positive and Phi_p is the saved zero TKE trace",
+      "balance_max_abs_error_recomputed_minus_reported": 1.3878126620993358e-16,
+      "layers": {
+        "buffer_primary": {
+          "requested_y_plus_range": [
+            10.0,
+            20.0
+          ],
+          "actual_y_plus_range": [
+            10.02607109157555,
+            19.28197214165958
+          ],
+          "status": "ok",
+          "n": 10,
+          "pointwise_abs_ratio_median": 0.0275948129866061,
+          "pointwise_abs_ratio_IQR": [
+            0.015524242371494936,
+            0.04007805164278957
+          ],
+          "pointwise_signed_ratio_median": -0.00219323661140445,
+          "integrated_L1_ratio": 0.024647709537297197,
+          "pressure_positive_fraction": 0.5,
+          "pressure_negative_fraction": 0.5,
+          "pressure_opposes_turbulent_transport_fraction": 0.5,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.5
+        },
+        "log_primary": {
+          "requested_y_plus_range": [
+            30.0,
+            50.0
+          ],
+          "actual_y_plus_range": [
+            31.48505662129033,
+            48.41661794504267
+          ],
+          "status": "ok",
+          "n": 11,
+          "pointwise_abs_ratio_median": 0.2106776113908402,
+          "pointwise_abs_ratio_IQR": [
+            0.15349177346006657,
+            0.2654770344725648
+          ],
+          "pointwise_signed_ratio_median": 0.2106776113908402,
+          "integrated_L1_ratio": 0.18244684980266115,
+          "pressure_positive_fraction": 0.9090909090909091,
+          "pressure_negative_fraction": 0.09090909090909091,
+          "pressure_opposes_turbulent_transport_fraction": 0.2727272727272727,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.18181818181818182
+        },
+        "buffer_sensitivity": {
+          "requested_y_plus_range": [
+            5.0,
+            30.0
+          ],
+          "actual_y_plus_range": [
+            5.519183423626813,
+            29.98561026228904
+          ],
+          "status": "ok",
+          "n": 24,
+          "pointwise_abs_ratio_median": 0.056147345641375024,
+          "pointwise_abs_ratio_IQR": [
+            0.031615928443842166,
+            0.0729822895475937
+          ],
+          "pointwise_signed_ratio_median": -0.012867852114802292,
+          "integrated_L1_ratio": 0.05695790115552161,
+          "pressure_positive_fraction": 0.4583333333333333,
+          "pressure_negative_fraction": 0.5416666666666666,
+          "pressure_opposes_turbulent_transport_fraction": 0.2916666666666667,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.4166666666666667
+        },
+        "log_sensitivity": {
+          "requested_y_plus_range": [
+            50.0,
+            100.0
+          ],
+          "actual_y_plus_range": [
+            50.30089700574776,
+            97.55977722695611
+          ],
+          "status": "ok",
+          "n": 22,
+          "pointwise_abs_ratio_median": 0.08644148871909461,
+          "pointwise_abs_ratio_IQR": [
+            0.04389343557621362,
+            0.13436098495828888
+          ],
+          "pointwise_signed_ratio_median": 0.020237593338660965,
+          "integrated_L1_ratio": 0.08330115047418024,
+          "pressure_positive_fraction": 0.5454545454545454,
+          "pressure_negative_fraction": 0.45454545454545453,
+          "pressure_opposes_turbulent_transport_fraction": 0.45454545454545453,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.45454545454545453
+        }
+      },
+      "deficit_attribution": {
+        "buffer_DNS_peak": {
+          "y_plus": 11.82531606933399,
+          "F_DNS": 1.7973075348654994,
+          "Pi_p": 0.002936223980774838,
+          "epsilon": 0.1328306159733171,
+          "delta_F_from_pressure_minus_Pi_over_epsilon": -0.022105024201383393,
+          "reported_35pct_peak_deficit_normalizer": 0.6290576372029247,
+          "signed_fraction_of_reported_deficit": -0.03513990275942336,
+          "sign_aligned_fraction_clipped_0_1": 0.0
+        },
+        "nearest_to_y_plus_12": {
+          "y_plus": 11.82531606933399,
+          "F_DNS": 1.7973075348654994,
+          "Pi_p": 0.002936223980774838,
+          "epsilon": 0.1328306159733171,
+          "delta_F_from_pressure_minus_Pi_over_epsilon": -0.022105024201383393,
+          "reported_35pct_peak_deficit_normalizer": 0.6290576372029247,
+          "signed_fraction_of_reported_deficit": -0.03513990275942336,
+          "sign_aligned_fraction_clipped_0_1": 0.0
+        }
+      }
+    },
+    "1000": {
+      "Re_tau_nominal": 1000,
+      "budget_sign_convention": "P + T_turb + T_visc + Phi_p + Pi_p - epsilon = balance; epsilon is positive and Phi_p is the saved zero TKE trace",
+      "balance_max_abs_error_recomputed_minus_reported": 8.327350311046477e-17,
+      "layers": {
+        "buffer_primary": {
+          "requested_y_plus_range": [
+            10.0,
+            20.0
+          ],
+          "actual_y_plus_range": [
+            10.30071610698542,
+            19.83533817452478
+          ],
+          "status": "ok",
+          "n": 10,
+          "pointwise_abs_ratio_median": 0.0264163157875525,
+          "pointwise_abs_ratio_IQR": [
+            0.014488904058909813,
+            0.038536940964215394
+          ],
+          "pointwise_signed_ratio_median": -0.0033846520614981604,
+          "integrated_L1_ratio": 0.023643074813311536,
+          "pressure_positive_fraction": 0.5,
+          "pressure_negative_fraction": 0.5,
+          "pressure_opposes_turbulent_transport_fraction": 0.5,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.5
+        },
+        "log_primary": {
+          "requested_y_plus_range": [
+            30.0,
+            50.0
+          ],
+          "actual_y_plus_range": [
+            30.89181313615294,
+            48.08516670267758
+          ],
+          "status": "ok",
+          "n": 11,
+          "pointwise_abs_ratio_median": 0.32150856627847735,
+          "pointwise_abs_ratio_IQR": [
+            0.22499601038375128,
+            0.4874538698365478
+          ],
+          "pointwise_signed_ratio_median": 0.32150856627847735,
+          "integrated_L1_ratio": 0.2859514305832704,
+          "pressure_positive_fraction": 1.0,
+          "pressure_negative_fraction": 0.0,
+          "pressure_opposes_turbulent_transport_fraction": 0.45454545454545453,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.36363636363636365
+        },
+        "buffer_sensitivity": {
+          "requested_y_plus_range": [
+            5.0,
+            30.0
+          ],
+          "actual_y_plus_range": [
+            5.029168228805792,
+            29.37782509086797
+          ],
+          "status": "ok",
+          "n": 24,
+          "pointwise_abs_ratio_median": 0.04381158605050449,
+          "pointwise_abs_ratio_IQR": [
+            0.024522842572862334,
+            0.0854068050813748
+          ],
+          "pointwise_signed_ratio_median": 0.0026291196794391183,
+          "integrated_L1_ratio": 0.060225276790637314,
+          "pressure_positive_fraction": 0.5416666666666666,
+          "pressure_negative_fraction": 0.4583333333333333,
+          "pressure_opposes_turbulent_transport_fraction": 0.3333333333333333,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.4583333333333333
+        },
+        "log_sensitivity": {
+          "requested_y_plus_range": [
+            50.0,
+            100.0
+          ],
+          "actual_y_plus_range": [
+            50.0083854450018,
+            98.76616052209194
+          ],
+          "status": "ok",
+          "n": 22,
+          "pointwise_abs_ratio_median": 0.12562348648532232,
+          "pointwise_abs_ratio_IQR": [
+            0.06710349623950776,
+            0.1842352131986438
+          ],
+          "pointwise_signed_ratio_median": 0.045776417914108095,
+          "integrated_L1_ratio": 0.1222977074370811,
+          "pressure_positive_fraction": 0.5909090909090909,
+          "pressure_negative_fraction": 0.4090909090909091,
+          "pressure_opposes_turbulent_transport_fraction": 0.4090909090909091,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.4090909090909091
+        }
+      },
+      "deficit_attribution": {
+        "buffer_DNS_peak": {
+          "y_plus": 12.15223963744949,
+          "F_DNS": 1.7801256906339777,
+          "Pi_p": 0.002791473174975824,
+          "epsilon": 0.1358851660741674,
+          "delta_F_from_pressure_minus_Pi_over_epsilon": -0.02054288378653643,
+          "reported_35pct_peak_deficit_normalizer": 0.6230439917218922,
+          "signed_fraction_of_reported_deficit": -0.032971803049994176,
+          "sign_aligned_fraction_clipped_0_1": 0.0
+        },
+        "nearest_to_y_plus_12": {
+          "y_plus": 12.15223963744949,
+          "F_DNS": 1.7801256906339777,
+          "Pi_p": 0.002791473174975824,
+          "epsilon": 0.1358851660741674,
+          "delta_F_from_pressure_minus_Pi_over_epsilon": -0.02054288378653643,
+          "reported_35pct_peak_deficit_normalizer": 0.6230439917218922,
+          "signed_fraction_of_reported_deficit": -0.032971803049994176,
+          "sign_aligned_fraction_clipped_0_1": 0.0
+        }
+      }
+    },
+    "2000": {
+      "Re_tau_nominal": 2000,
+      "budget_sign_convention": "P + T_turb + T_visc + Phi_p + Pi_p - epsilon = balance; epsilon is positive and Phi_p is the saved zero TKE trace",
+      "balance_max_abs_error_recomputed_minus_reported": 9.71445146547012e-17,
+      "layers": {
+        "buffer_primary": {
+          "requested_y_plus_range": [
+            10.0,
+            20.0
+          ],
+          "actual_y_plus_range": [
+            10.68176787522713,
+            19.68443084786798
+          ],
+          "status": "ok",
+          "n": 10,
+          "pointwise_abs_ratio_median": 0.02368568964801175,
+          "pointwise_abs_ratio_IQR": [
+            0.013566167841145805,
+            0.03305548273943335
+          ],
+          "pointwise_signed_ratio_median": -0.0021415444295092827,
+          "integrated_L1_ratio": 0.021474440922721497,
+          "pressure_positive_fraction": 0.5,
+          "pressure_negative_fraction": 0.5,
+          "pressure_opposes_turbulent_transport_fraction": 0.5,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.5
+        },
+        "log_primary": {
+          "requested_y_plus_range": [
+            30.0,
+            50.0
+          ],
+          "actual_y_plus_range": [
+            31.41323542871294,
+            49.42669166632965
+          ],
+          "status": "ok",
+          "n": 12,
+          "pointwise_abs_ratio_median": 0.4491311988532597,
+          "pointwise_abs_ratio_IQR": [
+            0.34797557419566105,
+            0.6489415196329735
+          ],
+          "pointwise_signed_ratio_median": 0.4491311988532597,
+          "integrated_L1_ratio": 0.41167635779341655,
+          "pressure_positive_fraction": 1.0,
+          "pressure_negative_fraction": 0.0,
+          "pressure_opposes_turbulent_transport_fraction": 0.5,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.4166666666666667
+        },
+        "buffer_sensitivity": {
+          "requested_y_plus_range": [
+            5.0,
+            30.0
+          ],
+          "actual_y_plus_range": [
+            5.572525413020117,
+            29.97588160685862
+          ],
+          "status": "ok",
+          "n": 25,
+          "pointwise_abs_ratio_median": 0.03644958236559791,
+          "pointwise_abs_ratio_IQR": [
+            0.020966155211546995,
+            0.07107250132373935
+          ],
+          "pointwise_signed_ratio_median": 0.012950184864170657,
+          "integrated_L1_ratio": 0.05527517892023259,
+          "pressure_positive_fraction": 0.56,
+          "pressure_negative_fraction": 0.44,
+          "pressure_opposes_turbulent_transport_fraction": 0.4,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.52
+        },
+        "log_sensitivity": {
+          "requested_y_plus_range": [
+            50.0,
+            100.0
+          ],
+          "actual_y_plus_range": [
+            51.26378607018022,
+            99.99823377299006
+          ],
+          "status": "ok",
+          "n": 23,
+          "pointwise_abs_ratio_median": 0.1367500574440758,
+          "pointwise_abs_ratio_IQR": [
+            0.073745501852296,
+            0.21274012784454857
+          ],
+          "pointwise_signed_ratio_median": 0.09187005645069533,
+          "integrated_L1_ratio": 0.15419703464703008,
+          "pressure_positive_fraction": 0.6521739130434783,
+          "pressure_negative_fraction": 0.34782608695652173,
+          "pressure_opposes_turbulent_transport_fraction": 0.34782608695652173,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.34782608695652173
+        }
+      },
+      "deficit_attribution": {
+        "buffer_DNS_peak": {
+          "y_plus": 11.54702052631526,
+          "F_DNS": 1.7623482744527934,
+          "Pi_p": 0.004135938070952244,
+          "epsilon": 0.1399818659661384,
+          "delta_F_from_pressure_minus_Pi_over_epsilon": -0.029546241882164412,
+          "reported_35pct_peak_deficit_normalizer": 0.6168218960584777,
+          "signed_fraction_of_reported_deficit": -0.04790076693283159,
+          "sign_aligned_fraction_clipped_0_1": 0.0
+        },
+        "nearest_to_y_plus_12": {
+          "y_plus": 12.4460717514693,
+          "F_DNS": 1.7575361908169485,
+          "Pi_p": 0.002618035284571396,
+          "epsilon": 0.138188366504284,
+          "delta_F_from_pressure_minus_Pi_over_epsilon": -0.01894541017307874,
+          "reported_35pct_peak_deficit_normalizer": 0.615137666785932,
+          "signed_fraction_of_reported_deficit": -0.030798650767181437,
+          "sign_aligned_fraction_clipped_0_1": 0.0
+        }
+      }
+    },
+    "5200": {
+      "Re_tau_nominal": 5200,
+      "budget_sign_convention": "P + T_turb + T_visc + Phi_p + Pi_p - epsilon = balance; epsilon is positive and Phi_p is the saved zero TKE trace",
+      "balance_max_abs_error_recomputed_minus_reported": 8.327011497867576e-17,
+      "layers": {
+        "buffer_primary": {
+          "requested_y_plus_range": [
+            10.0,
+            20.0
+          ],
+          "actual_y_plus_range": [
+            10.47495312682141,
+            19.66921773769277
+          ],
+          "status": "ok",
+          "n": 11,
+          "pointwise_abs_ratio_median": 0.02010351614203195,
+          "pointwise_abs_ratio_IQR": [
+            0.011637743855548537,
+            0.028723791137885507
+          ],
+          "pointwise_signed_ratio_median": 0.0014587797059813026,
+          "integrated_L1_ratio": 0.02188092035287007,
+          "pressure_positive_fraction": 0.5454545454545454,
+          "pressure_negative_fraction": 0.45454545454545453,
+          "pressure_opposes_turbulent_transport_fraction": 0.5454545454545454,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.5454545454545454
+        },
+        "log_primary": {
+          "requested_y_plus_range": [
+            30.0,
+            50.0
+          ],
+          "actual_y_plus_range": [
+            30.91552994687357,
+            48.59610051463453
+          ],
+          "status": "ok",
+          "n": 14,
+          "pointwise_abs_ratio_median": 0.6420154962696252,
+          "pointwise_abs_ratio_IQR": [
+            0.36160079918116333,
+            0.9414317358302446
+          ],
+          "pointwise_signed_ratio_median": 0.6420154962696252,
+          "integrated_L1_ratio": 0.5069309909653857,
+          "pressure_positive_fraction": 1.0,
+          "pressure_negative_fraction": 0.0,
+          "pressure_opposes_turbulent_transport_fraction": 0.5714285714285714,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.42857142857142855
+        },
+        "buffer_sensitivity": {
+          "requested_y_plus_range": [
+            5.0,
+            30.0
+          ],
+          "actual_y_plus_range": [
+            5.261924647571224,
+            29.69867751523788
+          ],
+          "status": "ok",
+          "n": 27,
+          "pointwise_abs_ratio_median": 0.02688747111569991,
+          "pointwise_abs_ratio_IQR": [
+            0.018515995705546667,
+            0.07998986286699122
+          ],
+          "pointwise_signed_ratio_median": 0.02010351614203195,
+          "integrated_L1_ratio": 0.05741922131871735,
+          "pressure_positive_fraction": 0.6296296296296297,
+          "pressure_negative_fraction": 0.37037037037037035,
+          "pressure_opposes_turbulent_transport_fraction": 0.4444444444444444,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.5925925925925926
+        },
+        "log_sensitivity": {
+          "requested_y_plus_range": [
+            50.0,
+            100.0
+          ],
+          "actual_y_plus_range": [
+            50.09914677948984,
+            98.3712195689824
+          ],
+          "status": "ok",
+          "n": 28,
+          "pointwise_abs_ratio_median": 0.22038565727012577,
+          "pointwise_abs_ratio_IQR": [
+            0.08773343840856557,
+            0.3443676245514212
+          ],
+          "pointwise_signed_ratio_median": 0.22038565727012577,
+          "integrated_L1_ratio": 0.24760389931785656,
+          "pressure_positive_fraction": 0.8928571428571429,
+          "pressure_negative_fraction": 0.10714285714285714,
+          "pressure_opposes_turbulent_transport_fraction": 0.10714285714285714,
+          "pressure_opposes_turbulent_plus_viscous_fraction": 0.10714285714285714
+        }
+      },
+      "deficit_attribution": {
+        "buffer_DNS_peak": {
+          "y_plus": 12.14945519525534,
+          "F_DNS": 1.7377627524156753,
+          "Pi_p": 0.00337755180934768,
+          "epsilon": 0.1415428133242809,
+          "delta_F_from_pressure_minus_Pi_over_epsilon": -0.02386240410249271,
+          "reported_35pct_peak_deficit_normalizer": 0.6082169633454864,
+          "signed_fraction_of_reported_deficit": -0.03923337483262221,
+          "sign_aligned_fraction_clipped_0_1": 0.0
+        },
+        "nearest_to_y_plus_12": {
+          "y_plus": 12.14945519525534,
+          "F_DNS": 1.7377627524156753,
+          "Pi_p": 0.00337755180934768,
+          "epsilon": 0.1415428133242809,
+          "delta_F_from_pressure_minus_Pi_over_epsilon": -0.02386240410249271,
+          "reported_35pct_peak_deficit_normalizer": 0.6082169633454864,
+          "signed_fraction_of_reported_deficit": -0.03923337483262221,
+          "sign_aligned_fraction_clipped_0_1": 0.0
+        }
+      }
+    }
+  },
+  "equal_profile_aggregate": {
+    "buffer_primary": {
+      "aggregation_unit": "Re_tau profile (equal weight; no grid pooling)",
+      "n_profiles": 5,
+      "mean_of_profile_medians": 0.024748148661797465,
+      "median_of_profile_medians": 0.025940408744785017,
+      "range_of_profile_medians": [
+        0.02010351614203195,
+        0.0275948129866061
+      ],
+      "mean_integrated_L1_ratio": 0.02260499193565597,
+      "median_integrated_L1_ratio": 0.02188092035287007,
+      "mean_opposition_fraction_to_turbulent_transport": 0.4979797979797979
+    },
+    "log_primary": {
+      "aggregation_unit": "Re_tau profile (equal weight; no grid pooling)",
+      "n_profiles": 5,
+      "mean_of_profile_medians": 0.34670247627534084,
+      "median_of_profile_medians": 0.32150856627847735,
+      "range_of_profile_medians": [
+        0.11017950858450173,
+        0.6420154962696252
+      ],
+      "mean_integrated_L1_ratio": 0.2980652914340739,
+      "median_integrated_L1_ratio": 0.2859514305832704,
+      "mean_opposition_fraction_to_turbulent_transport": 0.35974025974025975
+    },
+    "buffer_sensitivity": {
+      "aggregation_unit": "Re_tau profile (equal weight; no grid pooling)",
+      "n_profiles": 5,
+      "mean_of_profile_medians": 0.04569580386972928,
+      "median_of_profile_medians": 0.04381158605050449,
+      "range_of_profile_medians": [
+        0.02688747111569991,
+        0.06518303417546906
+      ],
+      "mean_integrated_L1_ratio": 0.05632555100895172,
+      "median_integrated_L1_ratio": 0.05695790115552161,
+      "mean_opposition_fraction_to_turbulent_transport": 0.351031746031746
+    },
+    "log_sensitivity": {
+      "aggregation_unit": "Re_tau profile (equal weight; no grid pooling)",
+      "n_profiles": 5,
+      "mean_of_profile_medians": 0.133660059717843,
+      "median_of_profile_medians": 0.12562348648532232,
+      "range_of_profile_medians": [
+        0.08644148871909461,
+        0.22038565727012577
+      ],
+      "mean_integrated_L1_ratio": 0.14274502580449341,
+      "median_integrated_L1_ratio": 0.1222977074370811,
+      "mean_opposition_fraction_to_turbulent_transport": 0.40372106154714854
+    }
+  },
+  "buffer_peak_aggregate": {
+    "n_profiles": 5,
+    "all_Pi_p_positive": true,
+    "signed_fraction_of_35pct_deficit_mean": -0.03572308544872415,
+    "signed_fraction_of_35pct_deficit_range": [
+      -0.04790076693283159,
+      -0.023369579668749436
+    ],
+    "sign_aligned_fraction_of_35pct_deficit": 0.0,
+    "conclusion": "At the DNS buffer peak Pi_p has the opposite effect to that needed to explain a positive 35% underprediction; it accounts for none of that deficit under this signed counterfactual."
+  }
+}

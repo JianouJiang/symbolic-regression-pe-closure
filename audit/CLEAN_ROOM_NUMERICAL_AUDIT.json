@@ -1,0 +1,246 @@
+{
+  "schema_version": "clean-room-pof-revision-1.0",
+  "recommended_formula": {
+    "name": "original_PySR_printed_Eq_35",
+    "alpha": [
+      0.128,
+      0.053,
+      0.62,
+      5.78
+    ],
+    "formula": "tanh(a1*y)/[tanh(a2*y-a3)+a4/y]"
+  },
+  "dissipation_diagnostic": {
+    "input": "DNS-resolved production and dissipation budgets; production contains DNS mean-shear and Reynolds-stress information",
+    "mask": "5 < y_plus < 80 and epsilon > 1e-8",
+    "channel": {
+      "180": {
+        "n": 45,
+        "actual_y_plus_range": [
+          5.051793130230531,
+          79.79753944349379
+        ],
+        "R2_equilibrium": -0.35817533424735015,
+        "R2_corrected": 0.9910441131404103,
+        "RMSE_equilibrium": 0.042720293803497046,
+        "RMSE_corrected": 0.0034690504083531386,
+        "RMSE_reduction_percent": 91.87961949814782
+      },
+      "550": {
+        "n": 49,
+        "actual_y_plus_range": [
+          5.519183423626813,
+          77.86223376309594
+        ],
+        "R2_equilibrium": -0.4018379987716696,
+        "R2_corrected": 0.9959254770650764,
+        "RMSE_equilibrium": 0.046349958058353735,
+        "RMSE_corrected": 0.0024988421036317744,
+        "RMSE_reduction_percent": 94.60875002198324
+      },
+      "1000": {
+        "n": 49,
+        "actual_y_plus_range": [
+          5.029168228805792,
+          78.32862559956811
+        ],
+        "R2_equilibrium": -0.31004144514475174,
+        "R2_corrected": 0.9959120729369342,
+        "RMSE_equilibrium": 0.04694589926557758,
+        "RMSE_corrected": 0.0026224469653869393,
+        "RMSE_reduction_percent": 94.41389555549571
+      },
+      "2000": {
+        "n": 51,
+        "actual_y_plus_range": [
+          5.572525413020117,
+          78.14792352021966
+        ],
+        "R2_equilibrium": -0.2732744430036922,
+        "R2_corrected": 0.9963373303833083,
+        "RMSE_equilibrium": 0.04676304045818519,
+        "RMSE_corrected": 0.0025080754803756913,
+        "RMSE_reduction_percent": 94.63662872259478
+      },
+      "5200": {
+        "n": 59,
+        "actual_y_plus_range": [
+          5.261924647571224,
+          78.76698982851846
+        ],
+        "R2_equilibrium": -0.09331596879025561,
+        "R2_corrected": 0.9936482539659173,
+        "RMSE_equilibrium": 0.04443416072149056,
+        "RMSE_corrected": 0.003386808947289963,
+        "RMSE_reduction_percent": 92.37791624214941
+      }
+    },
+    "pipe": {
+      "180": {
+        "n": 116,
+        "actual_y_plus_range": [
+          5.113624249987243,
+          79.85447326898186
+        ],
+        "R2_equilibrium": -1.0890708724635858,
+        "R2_corrected": 0.9699498962336719,
+        "RMSE_equilibrium": 0.04785333620418306,
+        "RMSE_corrected": 0.005739295978105093,
+        "RMSE_reduction_percent": 88.00648725176366
+      },
+      "360": {
+        "n": 169,
+        "actual_y_plus_range": [
+          5.13112109385423,
+          79.95447387359039
+        ],
+        "R2_equilibrium": -0.7405669138525774,
+        "R2_corrected": 0.9942572545468359,
+        "RMSE_equilibrium": 0.048818586767976374,
+        "RMSE_corrected": 0.0028041395604510404,
+        "RMSE_reduction_percent": 94.25600013007653
+      },
+      "550": {
+        "n": 247,
+        "actual_y_plus_range": [
+          5.023742358444325,
+          79.9024586319111
+        ],
+        "R2_equilibrium": -0.5463123046740426,
+        "R2_corrected": 0.9956862591475821,
+        "RMSE_equilibrium": 0.047348238039262004,
+        "RMSE_corrected": 0.002500818895602106,
+        "RMSE_reduction_percent": 94.71824296074463
+      },
+      "1000": {
+        "n": 336,
+        "actual_y_plus_range": [
+          5.007502599642896,
+          79.74497693416609
+        ],
+        "R2_equilibrium": -0.27165832769754106,
+        "R2_corrected": 0.9961508034548164,
+        "RMSE_equilibrium": 0.04353336106654192,
+        "RMSE_corrected": 0.0023950910215216567,
+        "RMSE_reduction_percent": 94.49826302669189
+      }
+    },
+    "RMSE_reduction_percent_range": [
+      88.00648725176366,
+      94.71824296074463
+    ]
+  },
+  "pressure_transport_peak_shift_audit": {
+    "definition": "F_without_pressure = F_DNS + Pi_p/epsilon",
+    "buffer_window": "10 <= y_plus <= 20",
+    "per_Re_tau": {
+      "180": {
+        "DNS_peak": {
+          "y_plus": 12.31561123688027,
+          "F": 1.8408006006449134
+        },
+        "no_pressure_peak": {
+          "y_plus": 11.23670904123138,
+          "F": 1.8613629252379742
+        },
+        "no_pressure_minus_DNS_peak": 0.020562324593060843,
+        "peak_location_shift_y_plus": -1.0789021956488902,
+        "peak_change_fraction_of_nominal_35pct_gap": 0.03191518886767755,
+        "largest_pointwise_sign_aligned_fraction_of_nominal_35pct_gap": 0.03663129607913733
+      },
+      "550": {
+        "DNS_peak": {
+          "y_plus": 11.82531606933399,
+          "F": 1.7973075348654994
+        },
+        "no_pressure_peak": {
+          "y_plus": 10.90720189049688,
+          "F": 1.8241632385142543
+        },
+        "no_pressure_minus_DNS_peak": 0.02685570364875489,
+        "peak_location_shift_y_plus": -0.9181141788371097,
+        "peak_change_fraction_of_nominal_35pct_gap": 0.04269196026006062,
+        "largest_pointwise_sign_aligned_fraction_of_nominal_35pct_gap": 0.03400866690443596
+      },
+      "1000": {
+        "DNS_peak": {
+          "y_plus": 12.15223963744949,
+          "F": 1.7801256906339777
+        },
+        "no_pressure_peak": {
+          "y_plus": 11.20733463037254,
+          "F": 1.811763376181278
+        },
+        "no_pressure_minus_DNS_peak": 0.031637685547300176,
+        "peak_location_shift_y_plus": -0.9449050070769509,
+        "peak_change_fraction_of_nominal_35pct_gap": 0.0507792161832166,
+        "largest_pointwise_sign_aligned_fraction_of_nominal_35pct_gap": 0.028781963831379532
+      },
+      "2000": {
+        "DNS_peak": {
+          "y_plus": 11.54702052631526,
+          "F": 1.7623482744527934
+        },
+        "no_pressure_peak": {
+          "y_plus": 11.54702052631526,
+          "F": 1.7918945163349578
+        },
+        "no_pressure_minus_DNS_peak": 0.02954624188216437,
+        "peak_location_shift_y_plus": 0.0,
+        "peak_change_fraction_of_nominal_35pct_gap": 0.04790076693283152,
+        "largest_pointwise_sign_aligned_fraction_of_nominal_35pct_gap": 0.02420504216209023
+      },
+      "5200": {
+        "DNS_peak": {
+          "y_plus": 12.14945519525534,
+          "F": 1.7377627524156753
+        },
+        "no_pressure_peak": {
+          "y_plus": 11.30192696864662,
+          "F": 1.7685960911108534
+        },
+        "no_pressure_minus_DNS_peak": 0.030833338695178014,
+        "peak_location_shift_y_plus": -0.8475282266087198,
+        "peak_change_fraction_of_nominal_35pct_gap": 0.05069463785682628,
+        "largest_pointwise_sign_aligned_fraction_of_nominal_35pct_gap": 0.01852108547631916
+      }
+    },
+    "peak_change_fraction_of_nominal_35pct_gap_range": [
+      0.03191518886767755,
+      0.0507792161832166
+    ],
+    "largest_pointwise_sign_aligned_fraction_range": [
+      0.01852108547631916,
+      0.03663129607913733
+    ],
+    "interpretation": "After allowing the counterfactual peak to move, deleting pressure transport raises rather than lowers the buffer peak in all five profiles.  Isolated sign-aligned points contribute at most 3.7% of the nominal 35% gap."
+  },
+  "printed_formula_comparison": {
+    "source": "replay/results/formula_comparison_exact_replayed.json",
+    "source_sha256": "d25ab68a4b64840aad9c41ca210c3ceeaa9ce00dccdb09d3ef0bba75eb50b5c0",
+    "n_primary_profiles": 19,
+    "printed_M16_R2_wins": 1,
+    "median_of_family_median_delta_R2": -0.004384293765798519,
+    "median_of_family_median_relative_RMSE_change": 0.17759323961495332,
+    "inference_boundary": "This is the referee-requested comparison of the two submitted, printed coefficient sets; it is not a claim that every possible cubic recalibration is inferior."
+  },
+  "source_sha256": {
+    "codes/data_processing/spectra_data/LM_Channel_0180_RSTE_k.dat": "51fed05b3d0c3d2e42d91144dcc68836f5dc0f6fa1a6a5993f41db96429122e1",
+    "codes/data_processing/spectra_data/LM_Channel_0550_RSTE_k.dat": "1b8d65696b6647b9131cd7b033fb82076bcb831c72280d1c932c3c63d3ee0068",
+    "codes/data_processing/spectra_data/LM_Channel_1000_RSTE_k.dat": "132dfaeea001b9d135f85a63eccf890328d25ce797dce19f2e5c2889085d2fd8",
+    "codes/data_processing/spectra_data/LM_Channel_2000_RSTE_k.dat": "e15fae9a4b2e6e56ec307b5cc52492209221d037429f820f068451d79673527e",
+    "codes/data_processing/spectra_data/LM_Channel_5200_RSTE_k.dat": "f86f7402c64436ccb60aaa8b0dadbf98d8fb8897a1fd40a36122e1e0908bda10",
+    "codes/results/el_khoury_pipe/1000_RR_Budget.dat": "b3eac682d870a84aeacea138824edd619c9c4de73f5d3bf3e1d578b94fed58e0",
+    "codes/results/el_khoury_pipe/1000_TT_Budget.dat": "536a0a1adf7cdf37bb8cdf16146e7135f3e67c310dc9e67e4f049708f32e81b3",
+    "codes/results/el_khoury_pipe/1000_ZZ_Budget.dat": "d717871545efda94b258ac7ee659b5c2b7734d39365915e14498f599adab9b4d",
+    "codes/results/el_khoury_pipe/180_RR_Budget.dat": "0fad3db67467fb7f2fa9d23e05bad39a557fa35139204da7a5e03ce696f5098a",
+    "codes/results/el_khoury_pipe/180_TT_Budget.dat": "9bb9fd357d98ae3438b3d184bbde5905d834e5c4bebe8ba17b61e477242e0f63",
+    "codes/results/el_khoury_pipe/180_ZZ_Budget.dat": "e0b161b55bc0f6ee716d1fbb336483d48cea84376e68d4e44304ad821a08e4fb",
+    "codes/results/el_khoury_pipe/360_RR_Budget.dat": "28cb8219a38f365b5231c00d1c17148fa71fb792631ebb394696851c5c3d22ea",
+    "codes/results/el_khoury_pipe/360_TT_Budget.dat": "7546071f75869a69dc0651f925cb45c9557af3518f6aba71eb865d7e229e7702",
+    "codes/results/el_khoury_pipe/360_ZZ_Budget.dat": "f0f80b50400503cffa2d70456003c7f310f759a34a81526067b946407a8044a0",
+    "codes/results/el_khoury_pipe/550_RR_Budget.dat": "5c7276804914a6518eaecdcb773fa0e02c42ba802bc0c479cc8ec272c41ec58d",
+    "codes/results/el_khoury_pipe/550_TT_Budget.dat": "ed5079489cabd441db961725c8b343e467a32b13d1bce018e68a4c340c0a1f22",
+    "codes/results/el_khoury_pipe/550_ZZ_Budget.dat": "57917c5acd2c76b437ba4c1a8671d109063e9431688358222ef4313152c5dd24"
+  }
+}

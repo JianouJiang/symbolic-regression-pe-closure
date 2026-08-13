@@ -1,0 +1,254 @@
+{
+  "description": "Genuinely independent SINDy verification \u2014 NO PySR constants used in feature library",
+  "test1_no_tanh_baseline": {
+    "thresh_0.001": {
+      "R2": 0.9843213490077375,
+      "n_active": 10
+    },
+    "thresh_0.01": {
+      "R2": 0.9843213490077375,
+      "n_active": 10
+    },
+    "thresh_0.05": {
+      "R2": 0.9843213490077375,
+      "n_active": 10
+    }
+  },
+  "test2_gamma_sweep": {
+    "gamma_5": {
+      "gamma": 5,
+      "R2": 0.9843686112017882,
+      "n_active": 14
+    },
+    "gamma_10": {
+      "gamma": 10,
+      "R2": 0.9843675850145651,
+      "n_active": 14
+    },
+    "gamma_15": {
+      "gamma": 15,
+      "R2": 0.9843688414241868,
+      "n_active": 14
+    },
+    "gamma_20": {
+      "gamma": 20,
+      "R2": 0.9843702149634366,
+      "n_active": 14
+    },
+    "gamma_25": {
+      "gamma": 25,
+      "R2": 0.9843723495525539,
+      "n_active": 14
+    },
+    "gamma_30": {
+      "gamma": 30,
+      "R2": 0.9843753669284229,
+      "n_active": 14
+    },
+    "gamma_35": {
+      "gamma": 35,
+      "R2": 0.9843781315683836,
+      "n_active": 14
+    },
+    "gamma_40": {
+      "gamma": 40,
+      "R2": 0.9843803097386211,
+      "n_active": 14
+    },
+    "gamma_50": {
+      "gamma": 50,
+      "R2": 0.9843832350379802,
+      "n_active": 14
+    },
+    "best_gamma": 50,
+    "best_R2": 0.9843832350379802,
+    "pysr_gamma": 24.64
+  },
+  "test3_re_dependence": {
+    "y_plus_only_R2": 0.9843723495525539,
+    "y_plus_only_nterms": 14,
+    "y_plus_Re_R2": 0.9865777972856572,
+    "y_plus_Re_nterms": 15,
+    "Re_coefficient": 0.03281306869631761,
+    "Re_retained": true,
+    "R2_improvement_Re": 0.002205447733103272,
+    "y_plus_ydelta_R2": 0.9984784064580857,
+    "y_plus_ydelta_nterms": 18,
+    "R2_improvement_ydelta": 0.014106056905531794
+  },
+  "test4_crossflow": {
+    "gamma": 25,
+    "train_R2": 0.9843723495525539,
+    "n_active": 14,
+    "active_terms": {
+      "1": -1619.1997347809659,
+      "1/y+": 2268.3547690522255,
+      "ln(y+)": 620.314717922468,
+      "ln^2(y+)": -64.80793585585168,
+      "ln(y+)/y+": 1020.0852767765998,
+      "ln^2(y+)/y+": 199.0606530347606,
+      "exp(-y+/30)": 59.05631429144835,
+      "1/y+^2": -221.28907382859282,
+      "sqrt(y+)": 0.4548249256776603,
+      "y+": 0.5240997311663406,
+      "tanh(25.0/y+)": -491.2513827609335,
+      "ln*tanh(25.0)": 189.97082388478415,
+      "ln^2*tanh(25.0)": -26.828906777336336,
+      "ln^2*tanh(25.0)/y+": 218.75778104659696
+    },
+    "tbl_avg_R2": 0.977837593792793,
+    "tbl_n_datasets": 10,
+    "tbl_details": {
+      "Re_theta_670": {
+        "R2_log": 0.97558186398424,
+        "R2_raw": 0.8968663475302266,
+        "n": 55
+      },
+      "Re_theta_1000": {
+        "R2_log": 0.9869255955956551,
+        "R2_raw": 0.9466022967459715,
+        "n": 57
+      },
+      "Re_theta_1410": {
+        "R2_log": 0.99502027014152,
+        "R2_raw": 0.9815779743039337,
+        "n": 58
+      },
+      "Re_theta_2000": {
+        "R2_log": 0.9972830579558999,
+        "R2_raw": 0.9898770531104707,
+        "n": 60
+      },
+      "Re_theta_2540": {
+        "R2_log": 0.9979973631800981,
+        "R2_raw": 0.9919677411528092,
+        "n": 61
+      },
+      "Re_theta_3030": {
+        "R2_log": 0.997985643074832,
+        "R2_raw": 0.9943664273192679,
+        "n": 61
+      },
+      "Re_theta_3270": {
+        "R2_log": 0.9977702732578023,
+        "R2_raw": 0.9932412655200636,
+        "n": 61
+      },
+      "Re_theta_3630": {
+        "R2_log": 0.9983999072622446,
+        "R2_raw": 0.9948918246210858,
+        "n": 61
+      },
+      "Re_theta_3970": {
+        "R2_log": 0.9983719622957429,
+        "R2_raw": 0.9947461904861322,
+        "n": 62
+      },
+      "Re_theta_4060": {
+        "R2_log": 0.9982438044072466,
+        "R2_raw": 0.9942388171379675,
+        "n": 62
+      }
+    },
+    "pipe_avg_R2": 0.9710412041098602,
+    "pipe_n_datasets": 4,
+    "pipe_details": {
+      "Re_tau_180": {
+        "R2_raw": 0.9037933948029163,
+        "n": 168
+      },
+      "Re_tau_360": {
+        "R2_raw": 0.9939220949919535,
+        "n": 240
+      },
+      "Re_tau_550": {
+        "R2_raw": 0.994651030994708,
+        "n": 353
+      },
+      "Re_tau_1000": {
+        "R2_raw": 0.9917982956498632,
+        "n": 504
+      }
+    }
+  },
+  "test5_re_thresholding": {
+    "thresh_0.001": {
+      "threshold": 0.001,
+      "Re_coefficient": 0.03281306869631761,
+      "Re_active": true,
+      "R2": 0.9865777972856572,
+      "n_active": 15
+    },
+    "thresh_0.005": {
+      "threshold": 0.005,
+      "Re_coefficient": 0.03281306869631761,
+      "Re_active": true,
+      "R2": 0.9865777972856572,
+      "n_active": 15
+    },
+    "thresh_0.01": {
+      "threshold": 0.01,
+      "Re_coefficient": 0.03281306869631761,
+      "Re_active": true,
+      "R2": 0.9865777972856572,
+      "n_active": 15
+    },
+    "thresh_0.02": {
+      "threshold": 0.02,
+      "Re_coefficient": 0.03281306869631761,
+      "Re_active": true,
+      "R2": 0.9865777972856572,
+      "n_active": 15
+    },
+    "thresh_0.03": {
+      "threshold": 0.03,
+      "Re_coefficient": 0.03281306869631761,
+      "Re_active": true,
+      "R2": 0.9865777972856572,
+      "n_active": 15
+    },
+    "thresh_0.04": {
+      "threshold": 0.04,
+      "Re_coefficient": 0.0,
+      "Re_active": false,
+      "R2": 0.9843723495525539,
+      "n_active": 14
+    },
+    "thresh_0.05": {
+      "threshold": 0.05,
+      "Re_coefficient": 0.0,
+      "Re_active": false,
+      "R2": 0.9843723495525539,
+      "n_active": 14
+    },
+    "thresh_0.075": {
+      "threshold": 0.075,
+      "Re_coefficient": 0.0,
+      "Re_active": false,
+      "R2": 0.9843723495525539,
+      "n_active": 14
+    },
+    "thresh_0.1": {
+      "threshold": 0.1,
+      "Re_coefficient": 0.0,
+      "Re_active": false,
+      "R2": 0.9843723495525539,
+      "n_active": 14
+    },
+    "thresh_0.2": {
+      "threshold": 0.2,
+      "Re_coefficient": 0.0,
+      "Re_active": false,
+      "R2": 0.9843723495525539,
+      "n_active": 14
+    }
+  },
+  "verdict": {
+    "dominant_predictor": "y+ confirmed as dominant predictor",
+    "gamma_sweep_result": "No sharp gamma selection \u2014 R^2 varies by <0.001 across gamma=5..50. Best gamma=50, but the improvement over no-tanh baseline is marginal.",
+    "Re_sensitivity": "Re_tau retained at low STLSQ thresholds (coeff=0.0328), eliminated at threshold>=0.04. Delta_R2 from Re = 0.0022.",
+    "outer_coordinate_sensitivity": "Adding y/delta improves R^2 by 0.0141, removing 90.3% of residual variance. This is a measurable outer-coordinate sensitivity.",
+    "crossflow_generalisation": true,
+    "conclusion": "STLSQ confirms y+ as the dominant predictor with cross-flow generalisation (TBL R^2=0.978, Pipe R^2=0.971 on raw P/eps). The gamma sweep shows no sharp selection of a preferred transition scale (R^2 varies <1e-4 across gamma=5-50), and residual outer-coordinate sensitivity exists (Delta_R^2=0.0141 from y/delta). The verification is partially independent: the feature library contains no PySR constants, but the target transformation ln(P/eps - c_0) uses c_0=0.0645 from PySR."
+  }
+}

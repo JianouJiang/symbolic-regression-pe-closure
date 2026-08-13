@@ -1,0 +1,59 @@
+{
+  "schema_version": "3.0",
+  "seed": 20260717,
+  "training_re_tau": [180, 550, 1000, 2000, 5200],
+  "wall_coefficient_estimator": {
+    "y_plus_min_exclusive": 0.1,
+    "y_plus_max_exclusive": 2.0,
+    "fit": "free-slope log(P/epsilon)=log(c_w)+n*log(y+)",
+    "profile_aggregation": "arithmetic mean"
+  },
+  "mask": {
+    "y_plus_min_exclusive": 1.0,
+    "y_plus_max_absolute": 150.0,
+    "y_plus_max_re_fraction": 0.3,
+    "epsilon_min": 1e-6,
+    "p_over_epsilon_min": 0.01
+  },
+  "reported_formulas": {
+    "original_PySR": {
+      "formula": "tanh(a1*y)/[tanh(a2*y-a3)+a4/y]",
+      "alpha": [0.128, 0.053, 0.620, 5.78]
+    },
+    "printed_M16": {
+      "formula": "tanh(a1*y)^2/[tanh(a2*y-a3)+a4/y]",
+      "alpha": [0.111, 0.052, 0.443, 2.888]
+    }
+  },
+  "dual_activation": {
+    "formula": "tanh(a*y)*(1-exp(-b*y))/[tanh(b*y-d)+(a*b/c_w)/y]",
+    "parameters": ["a", "b", "d"],
+    "bounds": [[0.02, 0.5], [0.01, 0.2], [0.05, 1.5]],
+    "multistarts": 64,
+    "max_iterations": 10000,
+    "optimizer_ftol": 1e-14
+  },
+  "hard_anchored_M16": {
+    "formula": "tanh(a*y)^2/[tanh(b*y-d)+(a^2/c_w)/y]",
+    "parameters": ["a", "b", "d"],
+    "bounds": [[0.02, 0.5], [0.01, 0.2], [0.05, 1.5]]
+  },
+  "uncertainty": {
+    "bootstrap_replicates": 10000,
+    "confidence_level": 0.95,
+    "primary_role": "external_re_evaluation_in_domain"
+  },
+  "decision": {
+    "delta_r2_margin": -0.01,
+    "relative_rmse_margin": 0.05,
+    "wall_coefficient_relative_error_max": 0.15,
+    "require_cubic_wall_exponent": true,
+    "require_all_primary_source_family_medians_within_margins": true
+  },
+  "stress_test_roles": [
+    "apg_boundary_stress_test",
+    "recovering_apg_stress_test",
+    "separated_flow_stress_test",
+    "out_of_domain_diagnostic"
+  ]
+}

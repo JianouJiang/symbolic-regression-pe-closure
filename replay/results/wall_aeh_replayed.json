@@ -1,0 +1,172 @@
+{
+  "schema_version": "node000-replay-1.0",
+  "replayed_from_script": "records/audits/wall_aeh_contracts.py",
+  "source_script_sha256": "2997b3035fb6318cbbb658f538f2cb3d8005f4c161633dce69ad379e7808622a",
+  "config_path": "records/audits/audit_config.json",
+  "config_sha256": "2b6041562eead2ba43aa24a78622ec9891f2f5f2fc0cf1fe8362d62cea0041f6",
+  "replay_script_sha256": "fe028a555661dd5bc0fc078561a8e79809262cffe2a14419dbce8e2cafa2e233",
+  "source_sha256": {
+    "codes/results/channel_Re180.npz": "033db9c2df6b9cc55cd9a29a95a7fe486880daef91c88f8ff04c7fe09d5d36f0",
+    "codes/results/channel_Re550.npz": "fcee7436ab157b53c7a230600ac4a3022af3cc0a99ce9654486cc881b0c9576f",
+    "codes/results/channel_Re1000.npz": "346e8e229016000202520fc51cf5c8fd7530ea8bd41203f8ac31193b640dffb7",
+    "codes/results/channel_Re2000.npz": "c2e9b7f7785d72e28552d8fc01099aca6a396a90d2a80dc37eff6ed1d0776121",
+    "codes/results/channel_Re5200.npz": "8dd85833fcfde84859b0fd75515ce031c2d20cb74fc39b757ec9686699767c9f"
+  },
+  "coefficient_level_kinematics": {
+    "velocity_expansions": "u'+=a1*y+ + a2*(y+)^2+...; v'+=b2*(y+)^2+b3*(y+)^3+...; w'+=c1*y+ + c2*(y+)^2+...",
+    "continuity_coefficient": "2*b2 + partial_xplus(a1) + partial_zplus(c1) = 0",
+    "reynolds_stress": "-<u'v'>+=-<a1*b2>*(y+)^3+O((y+)^4)",
+    "production": "P+=-<a1*b2>*(y+)^3+O((y+)^4)",
+    "dissipation": "epsilon+=<a1^2+c1^2>+O(y+)",
+    "ratio_coefficient": "c_w=-<a1*b2>/<a1^2+c1^2> (using dU+/dy+|wall=1)"
+  },
+  "formula_series": {
+    "pysr": {
+      "leading_power": 2,
+      "coefficient_y2": 0.022145328719723183,
+      "coefficient_y3": 0.0021115763596246096,
+      "remainder_after_reported_terms": "O((y+)^4)"
+    },
+    "m16": {
+      "leading_power": 3,
+      "coefficient_y3": 0.004266274238227147,
+      "coefficient_y4": 0.0006147217344766612,
+      "remainder_after_reported_terms": "O((y+)^5)"
+    },
+    "note": "The M16 denominator generates a nonzero quartic term; writing only c_w*(y+)^3+O((y+)^5) is generically incorrect."
+  },
+  "aeh_refit_with_printed_practical_m16_triplet": {
+    "fixed_alpha1_alpha2_alpha3": [
+      0.111,
+      0.052,
+      0.443
+    ],
+    "per_Re_tau": [
+      {
+        "Re_tau": 180,
+        "alpha4": 2.8780096625994918,
+        "R2": 0.986731482422144,
+        "RMSE": 0.060994238603377826,
+        "n": 41,
+        "actual_y_plus_range": [
+          1.315853268928577,
+          53.86008974954277
+        ],
+        "optimizer_success": true
+      },
+      {
+        "Re_tau": 550,
+        "alpha4": 2.877980267156187,
+        "R2": 0.9852972843641968,
+        "RMSE": 0.04739243914471248,
+        "n": 84,
+        "actual_y_plus_range": [
+          1.282576163869408,
+          148.9751647118144
+        ],
+        "optimizer_success": true
+      },
+      {
+        "Re_tau": 1000,
+        "alpha4": 2.907811311938731,
+        "R2": 0.9886087021962539,
+        "RMSE": 0.04135368115253424,
+        "n": 82,
+        "actual_y_plus_range": [
+          1.316138106449228,
+          149.5401127056647
+        ],
+        "optimizer_success": true
+      },
+      {
+        "Re_tau": 2000,
+        "alpha4": 2.952703067118749,
+        "R2": 0.9896843499589558,
+        "RMSE": 0.03847264095501341,
+        "n": 86,
+        "actual_y_plus_range": [
+          1.444598987157692,
+          148.3793575780338
+        ],
+        "optimizer_success": true
+      },
+      {
+        "Re_tau": 5200,
+        "alpha4": 3.0192169934441857,
+        "R2": 0.9875862052606886,
+        "RMSE": 0.0365744300599396,
+        "n": 97,
+        "actual_y_plus_range": [
+          1.596125319450033,
+          148.6015442478464
+        ],
+        "optimizer_success": true
+      }
+    ],
+    "regression": {
+      "formula": "alpha4(Re_tau)=alpha4_0+alpha5*ln(Re_tau/1000)",
+      "Re_tau_reference": 1000.0,
+      "fitted_range": [
+        180.0,
+        5200.0
+      ],
+      "alpha4_0": 2.926889964999007,
+      "alpha4_0_bootstrap_95CI": [
+        2.894955806598599,
+        2.944498219628405
+      ],
+      "alpha5": 0.043587960801554235,
+      "alpha5_bootstrap_95CI": [
+        0.01323707384637432,
+        0.0677956358958134
+      ],
+      "R2_five_profile_regression": 0.8609541142380713,
+      "bootstrap_unit": "Re_tau profile (paired Re_tau, fitted alpha4)",
+      "bootstrap_replicates": 10000
+    }
+  },
+  "explicit_closure": "F(y+,Re_tau)=tanh^2(0.111*y+)/[tanh(0.052*y+-0.443)+{2.926889965+0.043587961*ln(Re_tau/1000)}/y+]",
+  "admissibility": {
+    "condition": "A(Re_tau) > max_{0<y+<alpha3/alpha2} y+*tanh(alpha3-alpha2*y+)",
+    "alpha3_over_alpha2": 8.51923076923077,
+    "critical_y_plus": 4.326673349750969,
+    "A_critical": 0.9286052845687013,
+    "Re_tau_lower_global": 1.229767769412398e-17,
+    "admissible_re_statement": "Re_tau > Re_tau_lower_global",
+    "probes": [
+      {
+        "Re_tau": 180.0,
+        "A": 2.852145398332769,
+        "margin_A_minus_Acritical": 1.923540113764068,
+        "evidence_status": "fitted/validated range"
+      },
+      {
+        "Re_tau": 5200.0,
+        "A": 2.998751632546254,
+        "margin_A_minus_Acritical": 2.070146347977553,
+        "evidence_status": "fitted/validated range"
+      },
+      {
+        "Re_tau": 1000000.0,
+        "A": 3.22798493132601,
+        "margin_A_minus_Acritical": 2.2993796467573087,
+        "evidence_status": "algebraic extrapolation only"
+      },
+      {
+        "Re_tau": 1000000000.0,
+        "A": 3.5290798976530127,
+        "margin_A_minus_Acritical": 2.6004746130843115,
+        "evidence_status": "algebraic extrapolation only"
+      }
+    ]
+  },
+  "high_Re_asymptotics": {
+    "fixed_y_plus": "F ~ y+*tanh^2(alpha1*y+)/[alpha5*ln(Re_tau)] -> 0",
+    "fixed_finite_Re_tau_then_y_plus_to_infinity": "F -> 1",
+    "noncommuting_limits": {
+      "lim_Re_then_lim_y": 0,
+      "lim_y_then_lim_Re": 1
+    },
+    "claim_boundary": "Only Re_tau=180--5200 is fitted; larger probes are unvalidated algebraic extrapolations."
+  }
+}

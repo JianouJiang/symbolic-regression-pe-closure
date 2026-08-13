@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.out
+
+# Reader-staged data (not redistributed; see README):
+codes/results/
+codes/data_processing/
+related_papers/
+records/manifest/source_cache/

@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "seed": 20260717,
+  "reported_formulas": {
+    "pysr": {
+      "power": 1,
+      "alpha": [0.128, 0.053, 0.620, 5.78]
+    },
+    "m16": {
+      "power": 2,
+      "alpha": [0.111, 0.052, 0.443, 2.888]
+    }
+  },
+  "training_re_tau": [180, 550, 1000, 2000, 5200],
+  "mask": {
+    "y_plus_min_exclusive": 1.0,
+    "y_plus_max_absolute": 150.0,
+    "y_plus_max_re_fraction": 0.3,
+    "epsilon_min": 1e-6,
+    "p_over_epsilon_min": 0.01
+  },
+  "pressure_layers": {
+    "buffer_primary": [10.0, 20.0],
+    "log_primary": [30.0, 50.0],
+    "buffer_sensitivity": [5.0, 30.0],
+    "log_sensitivity": [50.0, 100.0]
+  },
+  "reported_equilibrium_peak_deficit_fraction": 0.35,
+  "aeh": {
+    "re_tau_reference": 1000.0,
+    "alpha4_bounds": [0.5, 12.0],
+    "bootstrap_replicates": 10000,
+    "extrapolation_probe_re_tau": [1000000.0, 1000000000.0]
+  },
+  "matched_calibration": {
+    "bounds": [
+      [0.02, 0.40],
+      [0.01, 0.15],
+      [0.05, 1.20],
+      [0.50, 12.0]
+    ],
+    "multistarts": 64,
+    "max_iterations": 10000,
+    "wall_coefficient_dns": 0.00496,
+    "wall_penalty_grid": [0.0, 0.001, 0.01, 0.1, 1.0]
+  },
+  "nested_shoulder": {
+    "ell_plus": 6.0,
+    "peak_y_plus": 12.0,
+    "gamma_bounds": [-1.5, 1.5],
+    "minimum_loo_relative_loss_reduction": 0.02,
+    "minimum_loo_profile_wins": 4
+  },
+  "comparison_thresholds": {
+    "median_delta_r2_floor": -0.01,
+    "median_relative_rmse_ceiling": 0.05,
+    "family_minimum_dataset_count": 3
+  }
+}

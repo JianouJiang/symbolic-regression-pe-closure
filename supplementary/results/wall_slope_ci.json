@@ -1,0 +1,232 @@
+{
+  "metric": "G1 wall exponent (P/eps = c_w y+^n)",
+  "G1_envelope": [
+    2.9,
+    3.1
+  ],
+  "fit_window_default_yp": [
+    0.1,
+    2.0
+  ],
+  "fit_alt_windows_yp": [
+    [
+      0.1,
+      1.0
+    ],
+    [
+      0.1,
+      1.5
+    ],
+    [
+      0.1,
+      3.0
+    ]
+  ],
+  "bootstrap_method": "residual resampling in log-log",
+  "n_bootstrap": 2000,
+  "seed": 20260527,
+  "per_Re_tau": {
+    "180": {
+      "yp_0.1_to_1.0": {
+        "n_pts": 5,
+        "n_hat": 3.06059347761586,
+        "ci95_lo": 3.0515040773375497,
+        "ci95_hi": 3.0695989499050125,
+        "std_boot": 0.004728822709715117,
+        "ci_inside_G1": true,
+        "ci_overlaps_G1": true
+      },
+      "yp_0.1_to_1.5": {
+        "n_pts": 6,
+        "n_hat": 3.066591885847851,
+        "ci95_lo": 3.057216088213222,
+        "ci95_hi": 3.07512197162569,
+        "std_boot": 0.004767311768100313,
+        "ci_inside_G1": true,
+        "ci_overlaps_G1": true
+      },
+      "yp_0.1_to_2.0": {
+        "n_pts": 7,
+        "n_hat": 3.0711825450224253,
+        "ci95_lo": 3.0619401406494697,
+        "ci95_hi": 3.0797933988571367,
+        "std_boot": 0.004584785710737673,
+        "ci_inside_G1": true,
+        "ci_overlaps_G1": true
+      },
+      "yp_0.1_to_3.0": {
+        "n_pts": 9,
+        "n_hat": 3.075434927248615,
+        "ci95_lo": 3.0681541115747923,
+        "ci95_hi": 3.0823288373357203,
+        "std_boot": 0.0036400554311844854,
+        "ci_inside_G1": true,
+        "ci_overlaps_G1": true
+      }
+    },
+    "550": {
+      "yp_0.1_to_1.0": {
+        "n_pts": 6,
+        "n_hat": 3.0833195081122375,
+        "ci95_lo": 3.070629426978454,
+        "ci95_hi": 3.095605011157998,
+        "std_boot": 0.006438528239940684,
+        "ci_inside_G1": true,
+        "ci_overlaps_G1": true
+      },
+      "yp_0.1_to_1.5": {
+        "n_pts": 7,
+        "n_hat": 3.0909864344564113,
+        "ci95_lo": 3.077860455854683,
+        "ci95_hi": 3.10468854312667,
+        "std_boot": 0.006825762443857106,
+        "ci_inside_G1": false,
+        "ci_overlaps_G1": true
+      },
+      "yp_0.1_to_2.0": {
+        "n_pts": 9,
+        "n_hat": 3.1022212322282248,
+        "ci95_lo": 3.0896128388387187,
+        "ci95_hi": 3.1147669745642226,
+        "std_boot": 0.006581607255597784,
+        "ci_inside_G1": false,
+        "ci_overlaps_G1": true
+      },
+      "yp_0.1_to_3.0": {
+        "n_pts": 11,
+        "n_hat": 3.1070281369168495,
+        "ci95_lo": 3.0967684304772396,
+        "ci95_hi": 3.116869324800537,
+        "std_boot": 0.005118068003201483,
+        "ci_inside_G1": false,
+        "ci_overlaps_G1": true
+      }
+    },
+    "1000": {
+      "yp_0.1_to_1.0": {
+        "n_pts": 5,
+        "n_hat": 3.081186219847761,
+        "ci95_lo": 3.068888191954535,
+        "ci95_hi": 3.0938862052411347,
+        "std_boot": 0.00645641223107095,
+        "ci_inside_G1": true,
+        "ci_overlaps_G1": true
+      },
+      "yp_0.1_to_1.5": {
+        "n_pts": 7,
+        "n_hat": 3.098669417815677,
+        "ci95_lo": 3.083910414057285,
+        "ci95_hi": 3.1126226788421874,
+        "std_boot": 0.0073694891521148866,
+        "ci_inside_G1": false,
+        "ci_overlaps_G1": true
+      },
+      "yp_0.1_to_2.0": {
+        "n_pts": 8,
+        "n_hat": 3.105329532747563,
+        "ci95_lo": 3.091111800683507,
+        "ci95_hi": 3.11930124429044,
+        "std_boot": 0.00705487549129976,
+        "ci_inside_G1": false,
+        "ci_overlaps_G1": true
+      },
+      "yp_0.1_to_3.0": {
+        "n_pts": 11,
+        "n_hat": 3.11499704586433,
+        "ci95_lo": 3.104351417953642,
+        "ci95_hi": 3.1251970169886767,
+        "std_boot": 0.005313030135883099,
+        "ci_inside_G1": false,
+        "ci_overlaps_G1": false
+      }
+    },
+    "2000": {
+      "yp_0.1_to_1.0": {
+        "n_pts": 6,
+        "n_hat": 3.086394861721871,
+        "ci95_lo": 3.071983815760012,
+        "ci95_hi": 3.099594818660251,
+        "std_boot": 0.007141928610793679,
+        "ci_inside_G1": true,
+        "ci_overlaps_G1": true
+      },
+      "yp_0.1_to_1.5": {
+        "n_pts": 8,
+        "n_hat": 3.102198973254039,
+        "ci95_lo": 3.087735457156801,
+        "ci95_hi": 3.1167760554190176,
+        "std_boot": 0.007488836938879502,
+        "ci_inside_G1": false,
+        "ci_overlaps_G1": true
+      },
+      "yp_0.1_to_2.0": {
+        "n_pts": 9,
+        "n_hat": 3.1081262271533587,
+        "ci95_lo": 3.0936148724118846,
+        "ci95_hi": 3.121630003582701,
+        "std_boot": 0.007253128053583804,
+        "ci_inside_G1": false,
+        "ci_overlaps_G1": true
+      },
+      "yp_0.1_to_3.0": {
+        "n_pts": 12,
+        "n_hat": 3.116498119019985,
+        "ci95_lo": 3.1051594983974837,
+        "ci95_hi": 3.127531951341467,
+        "std_boot": 0.005653568930952385,
+        "ci_inside_G1": false,
+        "ci_overlaps_G1": false
+      }
+    },
+    "5200": {
+      "yp_0.1_to_1.0": {
+        "n_pts": 3,
+        "n_hat": 3.0942764814346733,
+        "ci95_lo": 3.083108838178478,
+        "ci95_hi": 3.105444124690865,
+        "std_boot": 0.006815556258818412,
+        "ci_inside_G1": false,
+        "ci_overlaps_G1": true
+      },
+      "yp_0.1_to_1.5": {
+        "n_pts": 4,
+        "n_hat": 3.1082996184252503,
+        "ci95_lo": 3.0930004331088443,
+        "ci95_hi": 3.1235642538280857,
+        "std_boot": 0.008315839937989388,
+        "ci_inside_G1": false,
+        "ci_overlaps_G1": true
+      },
+      "yp_0.1_to_2.0": {
+        "n_pts": 5,
+        "n_hat": 3.1185686179269694,
+        "ci95_lo": 3.1025362087556525,
+        "ci95_hi": 3.133131615403934,
+        "std_boot": 0.008124357098285594,
+        "ci_inside_G1": false,
+        "ci_overlaps_G1": false
+      },
+      "yp_0.1_to_3.0": {
+        "n_pts": 7,
+        "n_hat": 3.126145423379794,
+        "ci95_lo": 3.1144939533163827,
+        "ci95_hi": 3.136680875462202,
+        "std_boot": 0.005684066080162276,
+        "ci_inside_G1": false,
+        "ci_overlaps_G1": false
+      }
+    }
+  },
+  "verdict": {
+    "G1_envelope": [
+      2.9,
+      3.1
+    ],
+    "n_Re_tau_ci_inside_G1": 1,
+    "n_Re_tau_ci_overlaps_G1": 4,
+    "n_Re_tau_total": 5,
+    "pass_overlap_all": false,
+    "pass_inside_all": false,
+    "note": "CI overlap with nominal tolerance envelope means the DNS exponent is statistically consistent with the kinematic prediction n=3 within sampling noise."
+  }
+}

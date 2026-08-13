@@ -1,0 +1,131 @@
+{
+  "description": "Pareto front ablation: complexity vs accuracy on same train/test",
+  "n_train": 425,
+  "n_tbl_datasets": 10,
+  "n_pipe_datasets": 4,
+  "models": [
+    {
+      "name": "Constant",
+      "complexity": 1,
+      "n_params": 1,
+      "params": [
+        0.9929387324755639
+      ],
+      "R2_train": 0.0,
+      "RMSE_train": 0.3843267245487124,
+      "R2_tbl_mean": -0.0034429350434321384,
+      "R2_tbl_std": 0.007090223058010589,
+      "R2_tbl_n": 10,
+      "R2_pipe_mean": -0.015816692063296944,
+      "R2_pipe_n": 4
+    },
+    {
+      "name": "Linear (1/y+)",
+      "complexity": 5,
+      "n_params": 2,
+      "params": [
+        1.0994541396313948,
+        -1.5374636390194696
+      ],
+      "R2_train": 0.24716138638858642,
+      "RMSE_train": 0.3334659751624277,
+      "R2_tbl_mean": 0.29053475079132174,
+      "R2_tbl_std": 0.03405061239845467,
+      "R2_tbl_n": 10,
+      "R2_pipe_mean": 0.12947750464752497,
+      "R2_pipe_n": 4
+    },
+    {
+      "name": "Log-linear",
+      "complexity": 7,
+      "n_params": 3,
+      "params": [
+        2.422158872357048,
+        -0.32313433981927187,
+        -4.102647394120879
+      ],
+      "R2_train": 0.5669347477887008,
+      "RMSE_train": 0.2529165528806378,
+      "R2_tbl_mean": 0.5694010522416694,
+      "R2_tbl_std": 0.04376275934967287,
+      "R2_tbl_n": 10,
+      "R2_pipe_mean": 0.5470738067697305,
+      "R2_pipe_n": 4
+    },
+    {
+      "name": "Log-polynomial",
+      "complexity": 12,
+      "n_params": 5,
+      "params": [
+        1.4793586616948322,
+        -10.555319703596433,
+        7.336678444191885,
+        -0.6401178165897909,
+        -0.1363573537463203
+      ],
+      "R2_train": 0.7916966518296119,
+      "RMSE_train": 0.1754077226001062,
+      "R2_tbl_mean": 0.7905947147903364,
+      "R2_tbl_std": 0.04548393406524393,
+      "R2_tbl_n": 10,
+      "R2_pipe_mean": 0.7760061164121814,
+      "R2_pipe_n": 4
+    },
+    {
+      "name": "Rational + exp",
+      "complexity": 15,
+      "n_params": 4,
+      "params": [
+        68.71308833393954,
+        0.3269168157465015,
+        22.243651022222398,
+        -3.021705916856367
+      ],
+      "R2_train": 0.5026667313560291,
+      "RMSE_train": 0.27103435322770003,
+      "R2_tbl_mean": 0.4764430454708234,
+      "R2_tbl_std": 0.06894125625793676,
+      "R2_tbl_n": 10,
+      "R2_pipe_mean": 0.4361031700930731,
+      "R2_pipe_n": 4
+    },
+    {
+      "name": "tanh-exp (5 param)",
+      "complexity": 18,
+      "n_params": 5,
+      "params": [
+        4.207502884458192,
+        9.441445211358495,
+        7.424831300532979,
+        0.553230653491819,
+        -1.1356980381091977
+      ],
+      "R2_train": 0.8143241956018811,
+      "RMSE_train": 0.1656068290673814,
+      "R2_tbl_mean": 0.8091139720295976,
+      "R2_tbl_std": 0.05753089206686417,
+      "R2_tbl_n": 10,
+      "R2_pipe_mean": 0.8006418045199243,
+      "R2_pipe_n": 4
+    },
+    {
+      "name": "Original PySR ratio-of-tanh",
+      "complexity": 21,
+      "n_params": 4,
+      "params": [
+        0.128,
+        0.053,
+        0.62,
+        5.78
+      ],
+      "note": "PySR originally discovered an exp-ln\u00b2-tanh form (complexity 22, 5 params) which was recast into this ratio-of-tanh form with correct asymptotic limits. The two forms differ outside the evaluation domain.",
+      "R2_train": 0.9529930543000216,
+      "RMSE_train": 0.08332620473316603,
+      "R2_tbl_mean": 0.981726892455893,
+      "R2_tbl_std": 0.013964359411344284,
+      "R2_tbl_n": 10,
+      "R2_pipe_mean": 0.9549233545507227,
+      "R2_pipe_n": 4
+    }
+  ]
+}

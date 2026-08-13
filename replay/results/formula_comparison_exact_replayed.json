@@ -1,0 +1,4473 @@
+{
+  "schema_version": "node000-exact-pair-replay-1.0",
+  "formula_constants": {
+    "original_PySR": [
+      0.128,
+      0.053,
+      0.62,
+      5.78
+    ],
+    "printed_M16": [
+      0.111,
+      0.052,
+      0.443,
+      2.888
+    ]
+  },
+  "mask": {
+    "y_plus_min_exclusive": 1.0,
+    "y_plus_max_absolute": 150.0,
+    "y_plus_max_re_fraction": 0.3,
+    "epsilon_min": 1e-06,
+    "p_over_epsilon_min": 0.01
+  },
+  "source_script": "records/manifest/full_suite_evaluation.py",
+  "source_script_sha256": "cfca86018e886ef3ef3a5c5413cd7ba75f7d9b2360d81959fac4aafa2e213491",
+  "config_path": "records/manifest/method_config.json",
+  "config_sha256": "c689238cbf83b35d77634bcef43afbffec6f82ae356954d05a5105d7799e45db",
+  "fit_freeze_path": "records/manifest/wall_amplitude_fit_freeze.json",
+  "fit_freeze_sha256": "f2e1f5cef447da34be722185d3a2259132e04a9606d4326e5ff72ecfe7ff996c",
+  "manifest_path": "records/manifest/profile_manifest_freeze.json",
+  "manifest_sha256": "344538ca85520ce1114ecec7b47d94f1e78468ae4ea27c15139a715d4519bb62",
+  "manifest_freeze_verified": "8865a510628ac4866481daba31881ec05ce2972864dc2be3c1e8db3e27097490",
+  "source_files_verified": 41,
+  "replay_script_sha256": "fe028a555661dd5bc0fc078561a8e79809262cffe2a14419dbce8e2cafa2e233",
+  "exact_printed_comparison_unconditional": true,
+  "summary": {
+    "n_all_rows": 179,
+    "role_counts": {
+      "apg_boundary_stress_test": 5,
+      "external_re_evaluation_in_domain": 19,
+      "out_of_domain_diagnostic": 3,
+      "recovering_apg_stress_test": 141,
+      "separated_flow_stress_test": 6,
+      "training": 5
+    },
+    "primary_role": "external_re_evaluation_in_domain",
+    "n_primary_rows": 19,
+    "primary_source_family_summaries": [
+      {
+        "source_family": "ElKhoury_pipe",
+        "n_rows": 4,
+        "median_delta_R2_M16_minus_PySR": -0.01284758058299662,
+        "median_relative_RMSE_change_M16_over_PySR": 0.3831172996037977,
+        "M16_R2_wins": 0,
+        "M16_RMSE_wins": 0
+      },
+      {
+        "source_family": "KTH_ZPG_TBL",
+        "n_rows": 10,
+        "median_delta_R2_M16_minus_PySR": -0.0060127225882665725,
+        "median_relative_RMSE_change_M16_over_PySR": 0.21639953740985096,
+        "M16_R2_wins": 0,
+        "M16_RMSE_wins": 0
+      },
+      {
+        "source_family": "UPM_channel",
+        "n_rows": 4,
+        "median_delta_R2_M16_minus_PySR": -0.002755864943330466,
+        "median_relative_RMSE_change_M16_over_PySR": 0.1387869418200557,
+        "M16_R2_wins": 0,
+        "M16_RMSE_wins": 0
+      },
+      {
+        "source_family": "Yao_pipe",
+        "n_rows": 1,
+        "median_delta_R2_M16_minus_PySR": 0.0033731990273438983,
+        "median_relative_RMSE_change_M16_over_PySR": -0.11756789647247656,
+        "M16_R2_wins": 1,
+        "M16_RMSE_wins": 1
+      }
+    ],
+    "primary_M16_R2_wins": 1,
+    "primary_M16_RMSE_wins": 1,
+    "primary_median_of_family_median_delta_R2": -0.004384293765798519,
+    "primary_median_of_family_median_relative_RMSE_change": 0.17759323961495332,
+    "all_role_source_family_summaries": {
+      "apg_boundary_stress_test": [
+        {
+          "source_family": "Bobke_APG",
+          "n_rows": 5,
+          "median_delta_R2_M16_minus_PySR": 0.00013132873154919622,
+          "median_relative_RMSE_change_M16_over_PySR": -0.0005974914679752752,
+          "M16_R2_wins": 3,
+          "M16_RMSE_wins": 3
+        }
+      ],
+      "external_re_evaluation_in_domain": [
+        {
+          "source_family": "ElKhoury_pipe",
+          "n_rows": 4,
+          "median_delta_R2_M16_minus_PySR": -0.01284758058299662,
+          "median_relative_RMSE_change_M16_over_PySR": 0.3831172996037977,
+          "M16_R2_wins": 0,
+          "M16_RMSE_wins": 0
+        },
+        {
+          "source_family": "KTH_ZPG_TBL",
+          "n_rows": 10,
+          "median_delta_R2_M16_minus_PySR": -0.0060127225882665725,
+          "median_relative_RMSE_change_M16_over_PySR": 0.21639953740985096,
+          "M16_R2_wins": 0,
+          "M16_RMSE_wins": 0
+        },
+        {
+          "source_family": "UPM_channel",
+          "n_rows": 4,
+          "median_delta_R2_M16_minus_PySR": -0.002755864943330466,
+          "median_relative_RMSE_change_M16_over_PySR": 0.1387869418200557,
+          "M16_R2_wins": 0,
+          "M16_RMSE_wins": 0
+        },
+        {
+          "source_family": "Yao_pipe",
+          "n_rows": 1,
+          "median_delta_R2_M16_minus_PySR": 0.0033731990273438983,
+          "median_relative_RMSE_change_M16_over_PySR": -0.11756789647247656,
+          "M16_R2_wins": 1,
+          "M16_RMSE_wins": 1
+        }
+      ],
+      "out_of_domain_diagnostic": [
+        {
+          "source_family": "Lee_Moser_Couette",
+          "n_rows": 3,
+          "median_delta_R2_M16_minus_PySR": 0.00039067415030991093,
+          "median_relative_RMSE_change_M16_over_PySR": -0.00015729783251061669,
+          "M16_R2_wins": 3,
+          "M16_RMSE_wins": 3
+        }
+      ],
+      "recovering_apg_stress_test": [
+        {
+          "source_family": "Lardeau_recovering_APG",
+          "n_rows": 141,
+          "median_delta_R2_M16_minus_PySR": -0.11006088878568931,
+          "median_relative_RMSE_change_M16_over_PySR": 0.052072367387600904,
+          "M16_R2_wins": 19,
+          "M16_RMSE_wins": 19
+        }
+      ],
+      "separated_flow_stress_test": [
+        {
+          "source_family": "TMBWG_periodic_hill",
+          "n_rows": 6,
+          "median_delta_R2_M16_minus_PySR": -0.06895073383113315,
+          "median_relative_RMSE_change_M16_over_PySR": 0.015013482184160654,
+          "M16_R2_wins": 1,
+          "M16_RMSE_wins": 1
+        }
+      ],
+      "training": [
+        {
+          "source_family": "Lee_Moser_channel",
+          "n_rows": 5,
+          "median_delta_R2_M16_minus_PySR": -0.0025688921929155617,
+          "median_relative_RMSE_change_M16_over_PySR": 0.11338689918026845,
+          "M16_R2_wins": 0,
+          "M16_RMSE_wins": 0
+        }
+      ]
+    },
+    "evidence_led_practical_recommendation": "original_PySR",
+    "recommendation_reason": "On the 19 intended-domain external profiles the printed M16 wins only 1/19 paired R2 and RMSE comparisons; the source-balanced median delta R2 is negative and relative RMSE is higher.  M16's cubic wall order remains an analytical advantage, not a basis for hiding its finite-domain loss."
+  },
+  "rows": [
+    {
+      "dataset_id": "LM_channel_Re180",
+      "source_family": "Lee_Moser_channel",
+      "flow_family": "channel",
+      "role": "training",
+      "historical_exposure": "training",
+      "actual_y_plus_range": [
+        1.315853268928577,
+        53.86008974954277
+      ],
+      "original_PySR": {
+        "R2": 0.9892797728108607,
+        "RMSE": 0.05482512201845811,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.9867108806179451,
+        "RMSE": 0.06104157260131093,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": -0.0025688921929155617,
+      "delta_RMSE_M16_minus_PySR": 0.00621645058285282,
+      "relative_RMSE_change_M16_over_PySR": 0.11338689918026845
+    },
+    {
+      "dataset_id": "LM_channel_Re550",
+      "source_family": "Lee_Moser_channel",
+      "flow_family": "channel",
+      "role": "training",
+      "historical_exposure": "training",
+      "actual_y_plus_range": [
+        1.282576163869408,
+        148.9751647118144
+      ],
+      "original_PySR": {
+        "R2": 0.9910450073212107,
+        "RMSE": 0.03698647133972531,
+        "n": 84
+      },
+      "printed_M16": {
+        "R2": 0.9852763902781259,
+        "RMSE": 0.04742610197867112,
+        "n": 84
+      },
+      "delta_R2_M16_minus_PySR": -0.005768617043084845,
+      "delta_RMSE_M16_minus_PySR": 0.010439630638945811,
+      "relative_RMSE_change_M16_over_PySR": 0.28225538313878373
+    },
+    {
+      "dataset_id": "LM_channel_Re1000",
+      "source_family": "Lee_Moser_channel",
+      "flow_family": "channel",
+      "role": "training",
+      "historical_exposure": "training",
+      "actual_y_plus_range": [
+        1.316138106449228,
+        149.5401127056647
+      ],
+      "original_PySR": {
+        "R2": 0.991554502742513,
+        "RMSE": 0.03560739354989199,
+        "n": 82
+      },
+      "printed_M16": {
+        "R2": 0.9885263415527152,
+        "RMSE": 0.04150290829490951,
+        "n": 82
+      },
+      "delta_R2_M16_minus_PySR": -0.0030281611897977623,
+      "delta_RMSE_M16_minus_PySR": 0.005895514745017524,
+      "relative_RMSE_change_M16_over_PySR": 0.16556996054083295
+    },
+    {
+      "dataset_id": "LM_channel_Re2000",
+      "source_family": "Lee_Moser_channel",
+      "flow_family": "channel",
+      "role": "training",
+      "historical_exposure": "training",
+      "actual_y_plus_range": [
+        1.444598987157692,
+        148.3793575780338
+      ],
+      "original_PySR": {
+        "R2": 0.9900339366636589,
+        "RMSE": 0.037815123299644066,
+        "n": 86
+      },
+      "printed_M16": {
+        "R2": 0.9887782599417162,
+        "RMSE": 0.040126732941988166,
+        "n": 86
+      },
+      "delta_R2_M16_minus_PySR": -0.0012556767219427112,
+      "delta_RMSE_M16_minus_PySR": 0.0023116096423441007,
+      "relative_RMSE_change_M16_over_PySR": 0.06112923721091912
+    },
+    {
+      "dataset_id": "LM_channel_Re5200",
+      "source_family": "Lee_Moser_channel",
+      "flow_family": "channel",
+      "role": "training",
+      "historical_exposure": "training",
+      "actual_y_plus_range": [
+        1.596125319450033,
+        148.6015442478464
+      ],
+      "original_PySR": {
+        "R2": 0.9851382955289811,
+        "RMSE": 0.040018388649710884,
+        "n": 97
+      },
+      "printed_M16": {
+        "R2": 0.9834323006360444,
+        "RMSE": 0.04225288715758858,
+        "n": 97
+      },
+      "delta_R2_M16_minus_PySR": -0.0017059948929367685,
+      "delta_RMSE_M16_minus_PySR": 0.0022344985078776927,
+      "relative_RMSE_change_M16_over_PySR": 0.05583679361597271
+    },
+    {
+      "dataset_id": "UPM_channel_Re180",
+      "source_family": "UPM_channel",
+      "flow_family": "channel",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.5941476,
+        50.336388
+      ],
+      "original_PySR": {
+        "R2": 0.9890080089810976,
+        "RMSE": 0.05597579483806658,
+        "n": 20
+      },
+      "printed_M16": {
+        "R2": 0.9876046809200363,
+        "RMSE": 0.05944166175967779,
+        "n": 20
+      },
+      "delta_R2_M16_minus_PySR": -0.0014033280610613597,
+      "delta_RMSE_M16_minus_PySR": 0.003465866921611216,
+      "relative_RMSE_change_M16_over_PySR": 0.061917243544958867
+    },
+    {
+      "dataset_id": "UPM_channel_Re550",
+      "source_family": "UPM_channel",
+      "flow_family": "channel",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.4808524,
+        146.11496
+      ],
+      "original_PySR": {
+        "R2": 0.9909391729198239,
+        "RMSE": 0.03686434703931684,
+        "n": 56
+      },
+      "printed_M16": {
+        "R2": 0.9858578937027895,
+        "RMSE": 0.04605530612281198,
+        "n": 56
+      },
+      "delta_R2_M16_minus_PySR": -0.0050812792170343846,
+      "delta_RMSE_M16_minus_PySR": 0.00919095908349514,
+      "relative_RMSE_change_M16_over_PySR": 0.2493183745718519
+    },
+    {
+      "dataset_id": "UPM_channel_Re950",
+      "source_family": "UPM_channel",
+      "flow_family": "channel",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.5311691,
+        149.0159
+      ],
+      "original_PySR": {
+        "R2": 0.9911078746506022,
+        "RMSE": 0.03590843940724015,
+        "n": 64
+      },
+      "printed_M16": {
+        "R2": 0.9878266064244342,
+        "RMSE": 0.042014536279058115,
+        "n": 64
+      },
+      "delta_R2_M16_minus_PySR": -0.0032812682261680326,
+      "delta_RMSE_M16_minus_PySR": 0.006106096871817963,
+      "relative_RMSE_change_M16_over_PySR": 0.17004628919035691
+    },
+    {
+      "dataset_id": "UPM_channel_Re2000",
+      "source_family": "UPM_channel",
+      "flow_family": "channel",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.3300556,
+        146.97815
+      ],
+      "original_PySR": {
+        "R2": 0.9901575874955868,
+        "RMSE": 0.03573494324667443,
+        "n": 55
+      },
+      "printed_M16": {
+        "R2": 0.9879271258350939,
+        "RMSE": 0.039577435731787826,
+        "n": 55
+      },
+      "delta_R2_M16_minus_PySR": -0.0022304616604928995,
+      "delta_RMSE_M16_minus_PySR": 0.003842492485113397,
+      "relative_RMSE_change_M16_over_PySR": 0.10752759444975446
+    },
+    {
+      "dataset_id": "KTH_TBL_Retheta670",
+      "source_family": "KTH_ZPG_TBL",
+      "flow_family": "ZPG_TBL",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.4902546,
+        72.6274294
+      ],
+      "original_PySR": {
+        "R2": 0.9917494164640734,
+        "RMSE": 0.04086659913841923,
+        "n": 37
+      },
+      "printed_M16": {
+        "R2": 0.9905834158625451,
+        "RMSE": 0.043658907157219366,
+        "n": 37
+      },
+      "delta_R2_M16_minus_PySR": -0.001166000601528383,
+      "delta_RMSE_M16_minus_PySR": 0.0027923080188001353,
+      "relative_RMSE_change_M16_over_PySR": 0.06832738905780511
+    },
+    {
+      "dataset_id": "KTH_TBL_Retheta1000",
+      "source_family": "KTH_ZPG_TBL",
+      "flow_family": "ZPG_TBL",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.4080289,
+        104.876277
+      ],
+      "original_PySR": {
+        "R2": 0.9905140845122756,
+        "RMSE": 0.040508693124598205,
+        "n": 47
+      },
+      "printed_M16": {
+        "R2": 0.9865209695702896,
+        "RMSE": 0.048287857192130676,
+        "n": 47
+      },
+      "delta_R2_M16_minus_PySR": -0.0039931149419860645,
+      "delta_RMSE_M16_minus_PySR": 0.007779164067532471,
+      "relative_RMSE_change_M16_over_PySR": 0.1920369053527602
+    },
+    {
+      "dataset_id": "KTH_TBL_Retheta1410",
+      "source_family": "KTH_ZPG_TBL",
+      "flow_family": "ZPG_TBL",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.3438443,
+        146.3395677
+      ],
+      "original_PySR": {
+        "R2": 0.9870609702794313,
+        "RMSE": 0.043737966804761774,
+        "n": 58
+      },
+      "printed_M16": {
+        "R2": 0.9817333660935248,
+        "RMSE": 0.05196811901923877,
+        "n": 58
+      },
+      "delta_R2_M16_minus_PySR": -0.005327604185906498,
+      "delta_RMSE_M16_minus_PySR": 0.008230152214476996,
+      "relative_RMSE_change_M16_over_PySR": 0.18816951988680408
+    },
+    {
+      "dataset_id": "KTH_TBL_Retheta2000",
+      "source_family": "KTH_ZPG_TBL",
+      "flow_family": "ZPG_TBL",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.2827147,
+        148.5726152
+      ],
+      "original_PySR": {
+        "R2": 0.9883217505557292,
+        "RMSE": 0.04183534278261251,
+        "n": 60
+      },
+      "printed_M16": {
+        "R2": 0.9807014886150955,
+        "RMSE": 0.05377945085270986,
+        "n": 60
+      },
+      "delta_R2_M16_minus_PySR": -0.007620261940633699,
+      "delta_RMSE_M16_minus_PySR": 0.011944108070097353,
+      "relative_RMSE_change_M16_over_PySR": 0.2855028135460034
+    },
+    {
+      "dataset_id": "KTH_TBL_Retheta2540",
+      "source_family": "KTH_ZPG_TBL",
+      "flow_family": "ZPG_TBL",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.2438618,
+        148.4783139
+      ],
+      "original_PySR": {
+        "R2": 0.9888211011893232,
+        "RMSE": 0.041133119887698265,
+        "n": 61
+      },
+      "printed_M16": {
+        "R2": 0.9824052090244142,
+        "RMSE": 0.05160409841017203,
+        "n": 61
+      },
+      "delta_R2_M16_minus_PySR": -0.0064158921649090095,
+      "delta_RMSE_M16_minus_PySR": 0.010470978522473764,
+      "relative_RMSE_change_M16_over_PySR": 0.25456319751727197
+    },
+    {
+      "dataset_id": "KTH_TBL_Retheta3030",
+      "source_family": "KTH_ZPG_TBL",
+      "flow_family": "ZPG_TBL",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.6573385,
+        149.7291111
+      ],
+      "original_PySR": {
+        "R2": 0.9877207391624756,
+        "RMSE": 0.04124866690652985,
+        "n": 61
+      },
+      "printed_M16": {
+        "R2": 0.9801490862428137,
+        "RMSE": 0.052446203561341075,
+        "n": 61
+      },
+      "delta_R2_M16_minus_PySR": -0.0075716529196618865,
+      "delta_RMSE_M16_minus_PySR": 0.011197536654811227,
+      "relative_RMSE_change_M16_over_PySR": 0.2714642070781348
+    },
+    {
+      "dataset_id": "KTH_TBL_Retheta3270",
+      "source_family": "KTH_ZPG_TBL",
+      "flow_family": "ZPG_TBL",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.6400632,
+        148.1684068
+      ],
+      "original_PySR": {
+        "R2": 0.9881013573793029,
+        "RMSE": 0.04075667216871609,
+        "n": 61
+      },
+      "printed_M16": {
+        "R2": 0.9820528458017725,
+        "RMSE": 0.0500550388672457,
+        "n": 61
+      },
+      "delta_R2_M16_minus_PySR": -0.006048511577530391,
+      "delta_RMSE_M16_minus_PySR": 0.009298366698529612,
+      "relative_RMSE_change_M16_over_PySR": 0.22814342299680757
+    },
+    {
+      "dataset_id": "KTH_TBL_Retheta3630",
+      "source_family": "KTH_ZPG_TBL",
+      "flow_family": "ZPG_TBL",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.6222014,
+        146.5547173
+      ],
+      "original_PySR": {
+        "R2": 0.9879009303721331,
+        "RMSE": 0.04129373159256843,
+        "n": 61
+      },
+      "printed_M16": {
+        "R2": 0.9822613292048527,
+        "RMSE": 0.049999847472571635,
+        "n": 61
+      },
+      "delta_R2_M16_minus_PySR": -0.005639601167280461,
+      "delta_RMSE_M16_minus_PySR": 0.008706115880003203,
+      "relative_RMSE_change_M16_over_PySR": 0.21083383710398373
+    },
+    {
+      "dataset_id": "KTH_TBL_Retheta3970",
+      "source_family": "KTH_ZPG_TBL",
+      "flow_family": "ZPG_TBL",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.6038946,
+        149.1951101
+      ],
+      "original_PySR": {
+        "R2": 0.9872444119097095,
+        "RMSE": 0.042340800698907714,
+        "n": 62
+      },
+      "printed_M16": {
+        "R2": 0.9810686990583083,
+        "RMSE": 0.051582104042116314,
+        "n": 62
+      },
+      "delta_R2_M16_minus_PySR": -0.006175712851401172,
+      "delta_RMSE_M16_minus_PySR": 0.0092413033432086,
+      "relative_RMSE_change_M16_over_PySR": 0.21826000431416026
+    },
+    {
+      "dataset_id": "KTH_TBL_Retheta4060",
+      "source_family": "KTH_ZPG_TBL",
+      "flow_family": "ZPG_TBL",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.5995841,
+        148.7941413
+      ],
+      "original_PySR": {
+        "R2": 0.9874197668634126,
+        "RMSE": 0.04204161040986565,
+        "n": 62
+      },
+      "printed_M16": {
+        "R2": 0.9814428332644098,
+        "RMSE": 0.05106117842975433,
+        "n": 62
+      },
+      "delta_R2_M16_minus_PySR": -0.005976933599002754,
+      "delta_RMSE_M16_minus_PySR": 0.00901956801988868,
+      "relative_RMSE_change_M16_over_PySR": 0.21453907050554166
+    },
+    {
+      "dataset_id": "ElKhoury_pipe_Re180",
+      "source_family": "ElKhoury_pipe",
+      "flow_family": "pipe",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.4377904605936012,
+        52.95400016577184
+      ],
+      "original_PySR": {
+        "R2": 0.9784237579675518,
+        "RMSE": 0.07938513427695035,
+        "n": 120
+      },
+      "printed_M16": {
+        "R2": 0.9733277596974664,
+        "RMSE": 0.08826347638139893,
+        "n": 120
+      },
+      "delta_R2_M16_minus_PySR": -0.0050959982700853335,
+      "delta_RMSE_M16_minus_PySR": 0.008878342104448586,
+      "relative_RMSE_change_M16_over_PySR": 0.11183884974578207
+    },
+    {
+      "dataset_id": "ElKhoury_pipe_Re360",
+      "source_family": "ElKhoury_pipe",
+      "flow_family": "pipe",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.3384282273425585,
+        107.19723037368898
+      ],
+      "original_PySR": {
+        "R2": 0.9842848546597717,
+        "RMSE": 0.05409498064528247,
+        "n": 214
+      },
+      "printed_M16": {
+        "R2": 0.9718608437472177,
+        "RMSE": 0.07238578762914355,
+        "n": 214
+      },
+      "delta_R2_M16_minus_PySR": -0.012424010912553962,
+      "delta_RMSE_M16_minus_PySR": 0.018290806983861083,
+      "relative_RMSE_change_M16_over_PySR": 0.3381239214003895
+    },
+    {
+      "dataset_id": "ElKhoury_pipe_Re550",
+      "source_family": "ElKhoury_pipe",
+      "flow_family": "pipe",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.357332454339399,
+        149.14180343178413
+      ],
+      "original_PySR": {
+        "R2": 0.9872331420165812,
+        "RMSE": 0.04241500612562592,
+        "n": 353
+      },
+      "printed_M16": {
+        "R2": 0.9739619917631419,
+        "RMSE": 0.06057332314726442,
+        "n": 353
+      },
+      "delta_R2_M16_minus_PySR": -0.013271150253439279,
+      "delta_RMSE_M16_minus_PySR": 0.018158317021638504,
+      "relative_RMSE_change_M16_over_PySR": 0.4281106778072059
+    },
+    {
+      "dataset_id": "ElKhoury_pipe_Re1000",
+      "source_family": "ElKhoury_pipe",
+      "flow_family": "pipe",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.361773065335707,
+        149.63319517275588
+      ],
+      "original_PySR": {
+        "R2": 0.9866831590589484,
+        "RMSE": 0.03794709442481066,
+        "n": 504
+      },
+      "printed_M16": {
+        "R2": 0.970237420412899,
+        "RMSE": 0.05673005525897108,
+        "n": 504
+      },
+      "delta_R2_M16_minus_PySR": -0.01644573864604948,
+      "delta_RMSE_M16_minus_PySR": 0.018782960834160423,
+      "relative_RMSE_change_M16_over_PySR": 0.4949775765145197
+    },
+    {
+      "dataset_id": "Yao_pipe_Re5200",
+      "source_family": "Yao_pipe",
+      "flow_family": "pipe",
+      "role": "external_re_evaluation_in_domain",
+      "historical_exposure": "reported_validation_not_known_used_for_selection",
+      "actual_y_plus_range": [
+        1.39482190308596,
+        148.557105589016
+      ],
+      "original_PySR": {
+        "R2": 0.9847582828548522,
+        "RMSE": 0.04470974334386186,
+        "n": 141
+      },
+      "printed_M16": {
+        "R2": 0.9881314818821961,
+        "RMSE": 0.03945331286709971,
+        "n": 141
+      },
+      "delta_R2_M16_minus_PySR": 0.0033731990273438983,
+      "delta_RMSE_M16_minus_PySR": -0.00525643047676215,
+      "relative_RMSE_change_M16_over_PySR": -0.11756789647247656
+    },
+    {
+      "dataset_id": "Couette_Re93",
+      "source_family": "Lee_Moser_Couette",
+      "flow_family": "Couette",
+      "role": "out_of_domain_diagnostic",
+      "historical_exposure": "out_of_domain_diagnostic",
+      "actual_y_plus_range": [
+        1.249027266622089,
+        26.88204059580828
+      ],
+      "original_PySR": {
+        "R2": -0.331195297001841,
+        "RMSE": 8.160991794853707,
+        "n": 25
+      },
+      "printed_M16": {
+        "R2": -0.3273029501957456,
+        "RMSE": 8.14905189973235,
+        "n": 25
+      },
+      "delta_R2_M16_minus_PySR": 0.0038923468060954036,
+      "delta_RMSE_M16_minus_PySR": -0.01193989512135829,
+      "relative_RMSE_change_M16_over_PySR": -0.001463044617798448
+    },
+    {
+      "dataset_id": "Couette_Re220",
+      "source_family": "Lee_Moser_Couette",
+      "flow_family": "Couette",
+      "role": "out_of_domain_diagnostic",
+      "historical_exposure": "out_of_domain_diagnostic",
+      "actual_y_plus_range": [
+        1.262301707274051,
+        63.62173377841214
+      ],
+      "original_PySR": {
+        "R2": -0.026662860952468836,
+        "RMSE": 2934.587383329208,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": -0.02665706630928044,
+        "RMSE": 2934.579101686113,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": 5.7946431883948435e-06,
+      "delta_RMSE_M16_minus_PySR": -0.0082816430949606,
+      "relative_RMSE_change_M16_over_PySR": -2.8220809310530726e-06
+    },
+    {
+      "dataset_id": "Couette_Re500",
+      "source_family": "Lee_Moser_Couette",
+      "flow_family": "Couette",
+      "role": "out_of_domain_diagnostic",
+      "historical_exposure": "out_of_domain_diagnostic",
+      "actual_y_plus_range": [
+        1.159505546945788,
+        146.21258492657
+      ],
+      "original_PySR": {
+        "R2": -0.2419270901227799,
+        "RMSE": 85.09194998032528,
+        "n": 58
+      },
+      "printed_M16": {
+        "R2": -0.24153641597247,
+        "RMSE": 85.07856520102928,
+        "n": 58
+      },
+      "delta_R2_M16_minus_PySR": 0.00039067415030991093,
+      "delta_RMSE_M16_minus_PySR": -0.013384779296004012,
+      "relative_RMSE_change_M16_over_PySR": -0.00015729783251061669
+    },
+    {
+      "dataset_id": "Bobke_APG_b1n",
+      "source_family": "Bobke_APG",
+      "flow_family": "equilibrium_APG_TBL",
+      "role": "apg_boundary_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.1453827709968498,
+        149.99862834387469
+      ],
+      "original_PySR": {
+        "R2": 0.9227107972059222,
+        "RMSE": 0.10857220011510928,
+        "n": 73644
+      },
+      "printed_M16": {
+        "R2": 0.939463332495089,
+        "RMSE": 0.09608785076884736,
+        "n": 73644
+      },
+      "delta_R2_M16_minus_PySR": 0.01675253528916676,
+      "delta_RMSE_M16_minus_PySR": -0.012484349346261914,
+      "relative_RMSE_change_M16_over_PySR": -0.11498661105721253
+    },
+    {
+      "dataset_id": "Bobke_APG_b2n",
+      "source_family": "Bobke_APG",
+      "flow_family": "equilibrium_APG_TBL",
+      "role": "apg_boundary_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.1105846753236104,
+        149.9980534360776
+      ],
+      "original_PySR": {
+        "R2": 0.8900670685581962,
+        "RMSE": 0.12480376372894919,
+        "n": 84176
+      },
+      "printed_M16": {
+        "R2": 0.8901983972897454,
+        "RMSE": 0.12472919454494995,
+        "n": 84176
+      },
+      "delta_R2_M16_minus_PySR": 0.00013132873154919622,
+      "delta_RMSE_M16_minus_PySR": -7.456918399924295e-05,
+      "relative_RMSE_change_M16_over_PySR": -0.0005974914679752752
+    },
+    {
+      "dataset_id": "Bobke_APG_m13n",
+      "source_family": "Bobke_APG",
+      "flow_family": "equilibrium_APG_TBL",
+      "role": "apg_boundary_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.1139032315758608,
+        149.99903717879945
+      ],
+      "original_PySR": {
+        "R2": 0.9276553690856596,
+        "RMSE": 0.10423520571241475,
+        "n": 83060
+      },
+      "printed_M16": {
+        "R2": 0.9357274170859402,
+        "RMSE": 0.09824809804999604,
+        "n": 83060
+      },
+      "delta_R2_M16_minus_PySR": 0.008072048000280607,
+      "delta_RMSE_M16_minus_PySR": -0.005987107662418709,
+      "relative_RMSE_change_M16_over_PySR": -0.057438440510561795
+    },
+    {
+      "dataset_id": "Bobke_APG_m16n",
+      "source_family": "Bobke_APG",
+      "flow_family": "equilibrium_APG_TBL",
+      "role": "apg_boundary_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.085930214292818,
+        149.9942597560774
+      ],
+      "original_PySR": {
+        "R2": 0.8565900691102768,
+        "RMSE": 0.1399559197694224,
+        "n": 87023
+      },
+      "printed_M16": {
+        "R2": 0.8446418002104078,
+        "RMSE": 0.145669540255574,
+        "n": 87023
+      },
+      "delta_R2_M16_minus_PySR": -0.011948268899868997,
+      "delta_RMSE_M16_minus_PySR": 0.005713620486151594,
+      "relative_RMSE_change_M16_over_PySR": 0.04082442883134063
+    },
+    {
+      "dataset_id": "Bobke_APG_m18n",
+      "source_family": "Bobke_APG",
+      "flow_family": "equilibrium_APG_TBL",
+      "role": "apg_boundary_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.078256335741794,
+        149.99941989151793
+      ],
+      "original_PySR": {
+        "R2": 0.7423681697556982,
+        "RMSE": 0.18814762835797885,
+        "n": 85782
+      },
+      "printed_M16": {
+        "R2": 0.7261696661622026,
+        "RMSE": 0.193972322974623,
+        "n": 85782
+      },
+      "delta_R2_M16_minus_PySR": -0.016198503593495617,
+      "delta_RMSE_M16_minus_PySR": 0.005824694616644144,
+      "relative_RMSE_change_M16_over_PySR": 0.030958108095637593
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-7.306702",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.6604591896817698,
+        143.82242591083934
+      ],
+      "original_PySR": {
+        "R2": -1.4672681455722136,
+        "RMSE": 0.6079007374656199,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": -1.675693177906512,
+        "RMSE": 0.6330567590913679,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": -0.20842503233429843,
+      "delta_RMSE_M16_minus_PySR": 0.025156021625748037,
+      "relative_RMSE_change_M16_over_PySR": 0.04138179159088584
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-7.050032",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.7359801533217487,
+        147.9050324924217
+      ],
+      "original_PySR": {
+        "R2": 0.7769432455555982,
+        "RMSE": 0.13031649561841221,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.8639502162581507,
+        "RMSE": 0.10177488755255173,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": 0.08700697070255248,
+      "delta_RMSE_M16_minus_PySR": -0.02854160806586048,
+      "relative_RMSE_change_M16_over_PySR": -0.2190176150027463
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-6.799908",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.70653959969784,
+        146.3134982720245
+      ],
+      "original_PySR": {
+        "R2": 0.5909020520694572,
+        "RMSE": 0.17079829145930883,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.708624076845876,
+        "RMSE": 0.14414404419556592,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": 0.1177220247764188,
+      "delta_RMSE_M16_minus_PySR": -0.02665424726374291,
+      "relative_RMSE_change_M16_over_PySR": -0.15605687291136072
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-6.556166",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.6897566696708,
+        145.40622567797678
+      ],
+      "original_PySR": {
+        "R2": 0.5737462391406971,
+        "RMSE": 0.18238352486440157,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.675739246507802,
+        "RMSE": 0.1590738113662716,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": 0.10199300736710493,
+      "delta_RMSE_M16_minus_PySR": -0.023309713498129964,
+      "relative_RMSE_change_M16_over_PySR": -0.12780602587574874
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-6.318640",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.6826246256688684,
+        145.02067273507168
+      ],
+      "original_PySR": {
+        "R2": 0.6450976880389336,
+        "RMSE": 0.17006238595530723,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.7328538632069521,
+        "RMSE": 0.1475462930409522,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": 0.08775617516801848,
+      "delta_RMSE_M16_minus_PySR": -0.022516092914355024,
+      "relative_RMSE_change_M16_over_PySR": -0.1323990180889988
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-6.087174",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.681975321864981,
+        144.98557185903104
+      ],
+      "original_PySR": {
+        "R2": 0.6885878348329392,
+        "RMSE": 0.16105179523000984,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.764878665417487,
+        "RMSE": 0.13994062276598618,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": 0.07629083058454778,
+      "delta_RMSE_M16_minus_PySR": -0.021111172464023664,
+      "relative_RMSE_change_M16_over_PySR": -0.13108312412086598
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-5.861612",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.685868814414304,
+        145.19605114241233
+      ],
+      "original_PySR": {
+        "R2": 0.7741262227832982,
+        "RMSE": 0.13812590604233121,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.8367172429749521,
+        "RMSE": 0.11743901363693836,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": 0.06259102019165386,
+      "delta_RMSE_M16_minus_PySR": -0.020686892405392857,
+      "relative_RMSE_change_M16_over_PySR": -0.14976837436311896
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-5.641804",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.6916985347224713,
+        145.51120144441813
+      ],
+      "original_PySR": {
+        "R2": 0.8038876685880951,
+        "RMSE": 0.12979205886277143,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.8582480063781635,
+        "RMSE": 0.11034693077637052,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": 0.054360337790068325,
+      "delta_RMSE_M16_minus_PySR": -0.019445128086400906,
+      "relative_RMSE_change_M16_over_PySR": -0.14981754859871788
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-5.427603",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.6994518825601808,
+        145.93034160611452
+      ],
+      "original_PySR": {
+        "R2": 0.8454844640342991,
+        "RMSE": 0.11575503596368439,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.8860020552688774,
+        "RMSE": 0.09942654051315633,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": 0.04051759123457832,
+      "delta_RMSE_M16_minus_PySR": -0.016328495450528058,
+      "relative_RMSE_change_M16_over_PySR": -0.14106077817340723
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-5.218865",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.7084693735345726,
+        146.41782039646623
+      ],
+      "original_PySR": {
+        "R2": 0.8714161023520793,
+        "RMSE": 0.10436984539106478,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.909609337685215,
+        "RMSE": 0.08750714834366673,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": 0.03819323533313568,
+      "delta_RMSE_M16_minus_PySR": -0.016862697047398054,
+      "relative_RMSE_change_M16_over_PySR": -0.16156675315762892
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-5.015453",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.7168159935464913,
+        146.8690324063801
+      ],
+      "original_PySR": {
+        "R2": 0.8983384223955408,
+        "RMSE": 0.09254945378772743,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.9302933003914935,
+        "RMSE": 0.07663597690845819,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": 0.031954877995952646,
+      "delta_RMSE_M16_minus_PySR": -0.015913476879269237,
+      "relative_RMSE_change_M16_over_PySR": -0.17194565962289288
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-4.817229",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.725137045306668,
+        147.31886221580538
+      ],
+      "original_PySR": {
+        "R2": 0.906289863929477,
+        "RMSE": 0.09050730198652872,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.9274762228229478,
+        "RMSE": 0.07962153427659954,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": 0.02118635889347087,
+      "delta_RMSE_M16_minus_PySR": -0.010885767709929176,
+      "relative_RMSE_change_M16_over_PySR": -0.12027502169437598
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-4.624062",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.7340698637520418,
+        147.80176367282357
+      ],
+      "original_PySR": {
+        "R2": 0.9173047949415676,
+        "RMSE": 0.08496904361827634,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.9293814508528552,
+        "RMSE": 0.07851994038082077,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": 0.012076655911287593,
+      "delta_RMSE_M16_minus_PySR": -0.006449103237455567,
+      "relative_RMSE_change_M16_over_PySR": -0.07589944481931776
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-4.435822",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.7417033942043503,
+        148.2144265966426
+      ],
+      "original_PySR": {
+        "R2": 0.9362676957489868,
+        "RMSE": 0.07506169453028272,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.9396116911765897,
+        "RMSE": 0.07306594199487092,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": 0.003343995427602886,
+      "delta_RMSE_M16_minus_PySR": -0.0019957525354118016,
+      "relative_RMSE_change_M16_over_PySR": -0.026588162549496364
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-4.252384",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.7499491300792522,
+        148.66018488586872
+      ],
+      "original_PySR": {
+        "R2": 0.9393352975681107,
+        "RMSE": 0.07374571078701762,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.9386786068194949,
+        "RMSE": 0.07414378224358503,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": -0.0006566907486158513,
+      "delta_RMSE_M16_minus_PySR": 0.0003980714565674087,
+      "relative_RMSE_change_M16_over_PySR": 0.0053978930071887365
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-4.073626",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.757538727071746,
+        149.07047279984218
+      ],
+      "original_PySR": {
+        "R2": 0.9358388220676814,
+        "RMSE": 0.07541223471757817,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.9306786632328035,
+        "RMSE": 0.07838610966353192,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": -0.00516015883487797,
+      "delta_RMSE_M16_minus_PySR": 0.0029738749459537472,
+      "relative_RMSE_change_M16_over_PySR": 0.03943491340749983
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-3.899426",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.764477490352729,
+        149.44557713211773
+      ],
+      "original_PySR": {
+        "R2": 0.9427628867255665,
+        "RMSE": 0.07202059265457822,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.9292372880346216,
+        "RMSE": 0.08007926237722801,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": -0.01352559869094494,
+      "delta_RMSE_M16_minus_PySR": 0.008058669722649792,
+      "relative_RMSE_change_M16_over_PySR": 0.11189396567868304
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-3.729671",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.7707704335044965,
+        149.78576891318937
+      ],
+      "original_PySR": {
+        "R2": 0.9369886169252507,
+        "RMSE": 0.07647298518987616,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.9162475911010415,
+        "RMSE": 0.08816519877411248,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": -0.020741025824209225,
+      "delta_RMSE_M16_minus_PySR": 0.011692213584236319,
+      "relative_RMSE_change_M16_over_PySR": 0.15289338522885587
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-3.564246",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.775794509329781,
+        143.7539509712934
+      ],
+      "original_PySR": {
+        "R2": 0.9377615146542128,
+        "RMSE": 0.07648689615436659,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.9129563619609325,
+        "RMSE": 0.0904536397869476,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.024805152693280208,
+      "delta_RMSE_M16_minus_PySR": 0.013966743632581019,
+      "relative_RMSE_change_M16_over_PySR": 0.1826030906574272
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-3.403040",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.7801830979149935,
+        143.98122894384915
+      ],
+      "original_PySR": {
+        "R2": 0.9372504823705184,
+        "RMSE": 0.0772943637479041,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.9085069137065969,
+        "RMSE": 0.09333333183344103,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.02874356866392158,
+      "delta_RMSE_M16_minus_PySR": 0.016038968085536925,
+      "relative_RMSE_change_M16_over_PySR": 0.20750501469742466
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-3.245947",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.7839392590761953,
+        144.17575451322858
+      ],
+      "original_PySR": {
+        "R2": 0.9336970850149463,
+        "RMSE": 0.0801185849803486,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.9036231764859558,
+        "RMSE": 0.09659469227787426,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.0300739085289905,
+      "delta_RMSE_M16_minus_PySR": 0.01647610729752566,
+      "relative_RMSE_change_M16_over_PySR": 0.20564650887889369
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-3.092861",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.787690366645429,
+        144.37001836517555
+      ],
+      "original_PySR": {
+        "R2": 0.929286141359434,
+        "RMSE": 0.08349587323336684,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.8974487328993505,
+        "RMSE": 0.1005502740206109,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.03183740846008354,
+      "delta_RMSE_M16_minus_PySR": 0.01705440078724406,
+      "relative_RMSE_change_M16_over_PySR": 0.20425441553953028
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-2.943681",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.792684013281073,
+        144.6286313248941
+      ],
+      "original_PySR": {
+        "R2": 0.9257243398937295,
+        "RMSE": 0.08589936395835072,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.8909717358159281,
+        "RMSE": 0.10407255984958691,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.03475260407780134,
+      "delta_RMSE_M16_minus_PySR": 0.018173195891236185,
+      "relative_RMSE_change_M16_over_PySR": 0.21156380040308176
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-2.798305",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.7982911835543764,
+        144.91901769097666
+      ],
+      "original_PySR": {
+        "R2": 0.9227566808251929,
+        "RMSE": 0.08770768338889631,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.8859743953428816,
+        "RMSE": 0.10656347358648284,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.03678228548231133,
+      "delta_RMSE_M16_minus_PySR": 0.018855790197586528,
+      "relative_RMSE_change_M16_over_PySR": 0.21498447421054157
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-2.656638",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.8032659320510045,
+        145.17665194634935
+      ],
+      "original_PySR": {
+        "R2": 0.9135134896213715,
+        "RMSE": 0.09334045970155196,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.8740177469459026,
+        "RMSE": 0.11265499012050938,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.03949574267546885,
+      "delta_RMSE_M16_minus_PySR": 0.01931453041895742,
+      "relative_RMSE_change_M16_over_PySR": 0.20692559776022068
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-2.518584",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.8082318422612524,
+        145.43382848102885
+      ],
+      "original_PySR": {
+        "R2": 0.9011593960472026,
+        "RMSE": 0.10064897493052209,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.857106343840055,
+        "RMSE": 0.12101748835072453,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.044053052207147614,
+      "delta_RMSE_M16_minus_PySR": 0.020368513420202433,
+      "relative_RMSE_change_M16_over_PySR": 0.20237179200546063
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-2.384052",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.8138080377764756,
+        145.72261071401024
+      ],
+      "original_PySR": {
+        "R2": 0.8933903382381365,
+        "RMSE": 0.1057132947077029,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.847515307546608,
+        "RMSE": 0.1264283441029144,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.04587503069152854,
+      "delta_RMSE_M16_minus_PySR": 0.0207150493952115,
+      "relative_RMSE_change_M16_over_PySR": 0.19595500691269319
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-2.252952",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.8199908864077257,
+        146.04281054004645
+      ],
+      "original_PySR": {
+        "R2": 0.8879750462092606,
+        "RMSE": 0.10887314764262095,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.8409443138385795,
+        "RMSE": 0.12972927531810838,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.047030732370681116,
+      "delta_RMSE_M16_minus_PySR": 0.020856127675487432,
+      "relative_RMSE_change_M16_over_PySR": 0.1915635593080145
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-2.125196",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.8267763842986566,
+        146.39422060583126
+      ],
+      "original_PySR": {
+        "R2": 0.8800188896035831,
+        "RMSE": 0.11342427412858232,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.8317822468420641,
+        "RMSE": 0.13430292896084411,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.048236642761518955,
+      "delta_RMSE_M16_minus_PySR": 0.020878654832261798,
+      "relative_RMSE_change_M16_over_PySR": 0.1840757191762401
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-2.000699",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.8335456520922255,
+        146.7447901408734
+      ],
+      "original_PySR": {
+        "R2": 0.872735348099258,
+        "RMSE": 0.11748528236223393,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.8228983350381589,
+        "RMSE": 0.13859287056746758,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.04983701306109911,
+      "delta_RMSE_M16_minus_PySR": 0.021107588205233646,
+      "relative_RMSE_change_M16_over_PySR": 0.17966155233090508
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-1.879378",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.840298788961753,
+        147.09452428120025
+      ],
+      "original_PySR": {
+        "R2": 0.8654301381646016,
+        "RMSE": 0.12074083221510791,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.8138095391281228,
+        "RMSE": 0.1420230958116183,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.051620599036478754,
+      "delta_RMSE_M16_minus_PySR": 0.02128226359651038,
+      "relative_RMSE_change_M16_over_PySR": 0.17626401281212467
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-1.761151",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.84825908217447,
+        147.50677511474424
+      ],
+      "original_PySR": {
+        "R2": 0.8544424012006624,
+        "RMSE": 0.12616881571998204,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.8008320489621032,
+        "RMSE": 0.14758571140434573,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.053610352238559145,
+      "delta_RMSE_M16_minus_PySR": 0.021416895684363696,
+      "relative_RMSE_change_M16_over_PySR": 0.16974793305420377
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-1.645941",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.8568069807258807,
+        147.9494570874685
+      ],
+      "original_PySR": {
+        "R2": 0.8448902389798771,
+        "RMSE": 0.13127197488420417,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.790020043979025,
+        "RMSE": 0.1527359866635219,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.05487019500085211,
+      "delta_RMSE_M16_minus_PySR": 0.021464011779317727,
+      "relative_RMSE_change_M16_over_PySR": 0.1635079520838416
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-1.533669",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.8659371019841235,
+        148.4222914414914
+      ],
+      "original_PySR": {
+        "R2": 0.8336993809808205,
+        "RMSE": 0.13613135225413825,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.7762894589865523,
+        "RMSE": 0.15788993637637988,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.0574099219942682,
+      "delta_RMSE_M16_minus_PySR": 0.02175858412224163,
+      "relative_RMSE_change_M16_over_PySR": 0.15983521622279473
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-1.424261",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.8756439473209676,
+        148.92499341166553
+      ],
+      "original_PySR": {
+        "R2": 0.8229924591565032,
+        "RMSE": 0.14074658597305498,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.7631980218276786,
+        "RMSE": 0.1627925956847416,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.05979443732882461,
+      "delta_RMSE_M16_minus_PySR": 0.02204600971168663,
+      "relative_RMSE_change_M16_over_PySR": 0.1566361951820785
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-1.317643",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.8859216225453634,
+        149.45725774727856
+      ],
+      "original_PySR": {
+        "R2": 0.8102439772969934,
+        "RMSE": 0.1464433384694959,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": 0.7484913163834623,
+        "RMSE": 0.16859641224464808,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.06175266091353104,
+      "delta_RMSE_M16_minus_PySR": 0.022153073775152188,
+      "relative_RMSE_change_M16_over_PySR": 0.15127402862211214
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-1.213746",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.8973654008989342,
+        143.66982394032775
+      ],
+      "original_PySR": {
+        "R2": 0.7992618543786045,
+        "RMSE": 0.15376586626059355,
+        "n": 39
+      },
+      "printed_M16": {
+        "R2": 0.7359694403432151,
+        "RMSE": 0.1763486272824463,
+        "n": 39
+      },
+      "delta_R2_M16_minus_PySR": -0.06329241403538943,
+      "delta_RMSE_M16_minus_PySR": 0.02258276102185275,
+      "relative_RMSE_change_M16_over_PySR": 0.14686459076412173
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-1.112499",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.9099614343898836,
+        144.29441547905105
+      ],
+      "original_PySR": {
+        "R2": 0.7860450279873741,
+        "RMSE": 0.15989526746446905,
+        "n": 39
+      },
+      "printed_M16": {
+        "R2": 0.7212070757818705,
+        "RMSE": 0.18252203058414052,
+        "n": 39
+      },
+      "delta_R2_M16_minus_PySR": -0.06483795220550359,
+      "delta_RMSE_M16_minus_PySR": 0.02262676311967146,
+      "relative_RMSE_change_M16_over_PySR": 0.14150989881360587
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-1.013834",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.9236947038968686,
+        144.97539842016766
+      ],
+      "original_PySR": {
+        "R2": 0.7694877081584288,
+        "RMSE": 0.1671403694976622,
+        "n": 39
+      },
+      "printed_M16": {
+        "R2": 0.7027132547473702,
+        "RMSE": 0.1898113101008428,
+        "n": 39
+      },
+      "delta_R2_M16_minus_PySR": -0.06677445341105859,
+      "delta_RMSE_M16_minus_PySR": 0.02267094060318059,
+      "relative_RMSE_change_M16_over_PySR": 0.13564012495196542
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-0.917687",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.9391421973693665,
+        139.46538975430659
+      ],
+      "original_PySR": {
+        "R2": 0.763085836901668,
+        "RMSE": 0.17176641303037085,
+        "n": 38
+      },
+      "printed_M16": {
+        "R2": 0.6953373232975593,
+        "RMSE": 0.1947835877855702,
+        "n": 38
+      },
+      "delta_R2_M16_minus_PySR": -0.06774851360410872,
+      "delta_RMSE_M16_minus_PySR": 0.02301717475519935,
+      "relative_RMSE_change_M16_over_PySR": 0.13400276776536968
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-0.823992",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.9556875999724737,
+        140.2504865164672
+      ],
+      "original_PySR": {
+        "R2": 0.740650372146323,
+        "RMSE": 0.18063007795087113,
+        "n": 38
+      },
+      "printed_M16": {
+        "R2": 0.6699930738332454,
+        "RMSE": 0.203755238061536,
+        "n": 38
+      },
+      "delta_R2_M16_minus_PySR": -0.07065729831307765,
+      "delta_RMSE_M16_minus_PySR": 0.023125160110664872,
+      "relative_RMSE_change_M16_over_PySR": 0.12802496889224946
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-0.732687",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.974483912268287,
+        141.1423913118954
+      ],
+      "original_PySR": {
+        "R2": 0.7205415124964831,
+        "RMSE": 0.18846804575668877,
+        "n": 38
+      },
+      "printed_M16": {
+        "R2": 0.6475773047704292,
+        "RMSE": 0.21164646023624759,
+        "n": 38
+      },
+      "delta_R2_M16_minus_PySR": -0.07296420772605394,
+      "delta_RMSE_M16_minus_PySR": 0.023178414479558818,
+      "relative_RMSE_change_M16_over_PySR": 0.12298325897368323
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-0.643710",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.9954885365663775,
+        142.1390828353603
+      ],
+      "original_PySR": {
+        "R2": 0.6951730591986732,
+        "RMSE": 0.19781781928298875,
+        "n": 38
+      },
+      "printed_M16": {
+        "R2": 0.6189988810599827,
+        "RMSE": 0.22115759663253295,
+        "n": 38
+      },
+      "delta_R2_M16_minus_PySR": -0.07617417813869054,
+      "delta_RMSE_M16_minus_PySR": 0.023339777349544205,
+      "relative_RMSE_change_M16_over_PySR": 0.11798622305180428
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-0.557004",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        3.0192328068172656,
+        137.0140110431045
+      ],
+      "original_PySR": {
+        "R2": 0.6720348991073337,
+        "RMSE": 0.20878382516129879,
+        "n": 37
+      },
+      "printed_M16": {
+        "R2": 0.5939857260147037,
+        "RMSE": 0.23230239370528458,
+        "n": 37
+      },
+      "delta_R2_M16_minus_PySR": -0.07804917309263004,
+      "delta_RMSE_M16_minus_PySR": 0.02351856854398579,
+      "relative_RMSE_change_M16_over_PySR": 0.11264554869524113
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-0.472510",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        3.0467959910681826,
+        138.26483953927448
+      ],
+      "original_PySR": {
+        "R2": 0.6352848289744895,
+        "RMSE": 0.2211881237964239,
+        "n": 37
+      },
+      "printed_M16": {
+        "R2": 0.5532155406627008,
+        "RMSE": 0.24481268637989798,
+        "n": 37
+      },
+      "delta_R2_M16_minus_PySR": -0.08206928831178861,
+      "delta_RMSE_M16_minus_PySR": 0.023624562583474062,
+      "relative_RMSE_change_M16_over_PySR": 0.10680755448342927
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-0.390170",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        3.0786406220904747,
+        139.70996182885085
+      ],
+      "original_PySR": {
+        "R2": 0.5860861146905281,
+        "RMSE": 0.23569089938018192,
+        "n": 37
+      },
+      "printed_M16": {
+        "R2": 0.4982272172131751,
+        "RMSE": 0.25950239243584405,
+        "n": 37
+      },
+      "delta_R2_M16_minus_PySR": -0.08785889747735298,
+      "delta_RMSE_M16_minus_PySR": 0.02381149305566213,
+      "relative_RMSE_change_M16_over_PySR": 0.10102847890300981
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-0.309932",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        3.116313679359664,
+        135.16228944130188
+      ],
+      "original_PySR": {
+        "R2": 0.5394489282954538,
+        "RMSE": 0.2510999541596768,
+        "n": 36
+      },
+      "printed_M16": {
+        "R2": 0.4462486304796539,
+        "RMSE": 0.27533735840489265,
+        "n": 36
+      },
+      "delta_R2_M16_minus_PySR": -0.09320029781579986,
+      "delta_RMSE_M16_minus_PySR": 0.024237404245215866,
+      "relative_RMSE_change_M16_over_PySR": 0.09652492500975551
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-0.231740",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        3.162360613906513,
+        137.15945973142001
+      ],
+      "original_PySR": {
+        "R2": 0.44541055698025345,
+        "RMSE": 0.27592120492674294,
+        "n": 36
+      },
+      "printed_M16": {
+        "R2": 0.3430664202123007,
+        "RMSE": 0.30030323433993017,
+        "n": 36
+      },
+      "delta_R2_M16_minus_PySR": -0.10234413676795273,
+      "delta_RMSE_M16_minus_PySR": 0.024382029413187234,
+      "relative_RMSE_change_M16_over_PySR": 0.08836591381101222
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-0.155542",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        3.2207505738015336,
+        139.6919777869896
+      ],
+      "original_PySR": {
+        "R2": 0.3069001273055024,
+        "RMSE": 0.30731658357549146,
+        "n": 36
+      },
+      "printed_M16": {
+        "R2": 0.19154289883042608,
+        "RMSE": 0.33190712619262747,
+        "n": 36
+      },
+      "delta_R2_M16_minus_PySR": -0.11535722847507635,
+      "delta_RMSE_M16_minus_PySR": 0.024590542617136002,
+      "relative_RMSE_change_M16_over_PySR": 0.08001697250124296
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-0.081288",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        3.2987562328946836,
+        136.65238771070005
+      ],
+      "original_PySR": {
+        "R2": 0.09845319472162939,
+        "RMSE": 0.34817267597987145,
+        "n": 35
+      },
+      "printed_M16": {
+        "R2": -0.03535776602788254,
+        "RMSE": 0.3731176287678154,
+        "n": 35
+      },
+      "delta_R2_M16_minus_PySR": -0.13381096074951193,
+      "delta_RMSE_M16_minus_PySR": 0.024944952787943953,
+      "relative_RMSE_change_M16_over_PySR": 0.07164534872744022
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_-0.008929",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        3.4205808816373704,
+        141.69902588502103
+      ],
+      "original_PySR": {
+        "R2": -0.2744818599891745,
+        "RMSE": 0.38983250622500765,
+        "n": 35
+      },
+      "printed_M16": {
+        "R2": -0.4406950552433808,
+        "RMSE": 0.41447396293500494,
+        "n": 35
+      },
+      "delta_R2_M16_minus_PySR": -0.1662131952542063,
+      "delta_RMSE_M16_minus_PySR": 0.02464145670999729,
+      "relative_RMSE_change_M16_over_PySR": 0.06321036936764446
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+0.062500",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        3.4518519110866337,
+        142.99174616231318
+      ],
+      "original_PySR": {
+        "R2": -0.41587754497608165,
+        "RMSE": 0.42531986416029416,
+        "n": 35
+      },
+      "printed_M16": {
+        "R2": -0.5895054452593373,
+        "RMSE": 0.450644245221004,
+        "n": 35
+      },
+      "delta_R2_M16_minus_PySR": -0.1736279002832557,
+      "delta_RMSE_M16_minus_PySR": 0.025324381060709833,
+      "relative_RMSE_change_M16_over_PySR": 0.05954196639911835
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+0.133929",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        3.3517977457708805,
+        138.84654999193208
+      ],
+      "original_PySR": {
+        "R2": -0.2255896727085116,
+        "RMSE": 0.4303406301705362,
+        "n": 35
+      },
+      "printed_M16": {
+        "R2": -0.3777558826449312,
+        "RMSE": 0.4562742313124008,
+        "n": 35
+      },
+      "delta_R2_M16_minus_PySR": -0.1521662099364196,
+      "delta_RMSE_M16_minus_PySR": 0.025933601141864604,
+      "relative_RMSE_change_M16_over_PySR": 0.06026296222968197
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+0.205357",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        3.207203763081263,
+        132.85872514491984
+      ],
+      "original_PySR": {
+        "R2": -0.01949952618398587,
+        "RMSE": 0.41437755715808416,
+        "n": 35
+      },
+      "printed_M16": {
+        "R2": -0.15353617247915952,
+        "RMSE": 0.4407763867905936,
+        "n": 35
+      },
+      "delta_R2_M16_minus_PySR": -0.13403664629517364,
+      "delta_RMSE_M16_minus_PySR": 0.026398829632509446,
+      "relative_RMSE_change_M16_over_PySR": 0.06370718967880373
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+0.276786",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        3.0304711305437504,
+        125.54544491616275
+      ],
+      "original_PySR": {
+        "R2": 0.1858743238685634,
+        "RMSE": 0.3854426603848875,
+        "n": 35
+      },
+      "printed_M16": {
+        "R2": 0.06833240627664594,
+        "RMSE": 0.4123296345646805,
+        "n": 35
+      },
+      "delta_R2_M16_minus_PySR": -0.11754191759191746,
+      "delta_RMSE_M16_minus_PySR": 0.02688697417979302,
+      "relative_RMSE_change_M16_over_PySR": 0.06975609330047883
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+0.348214",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.8236586064940425,
+        116.98870658242149
+      ],
+      "original_PySR": {
+        "R2": 0.38632730455374054,
+        "RMSE": 0.3478091509394836,
+        "n": 35
+      },
+      "printed_M16": {
+        "R2": 0.2855139562423554,
+        "RMSE": 0.3752921488633803,
+        "n": 35
+      },
+      "delta_R2_M16_minus_PySR": -0.10081334831138511,
+      "delta_RMSE_M16_minus_PySR": 0.02748299792389669,
+      "relative_RMSE_change_M16_over_PySR": 0.07901746647453378
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+0.419643",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.5833688995960022,
+        107.04159772385988
+      ],
+      "original_PySR": {
+        "R2": 0.5655071858376117,
+        "RMSE": 0.30723768847964417,
+        "n": 35
+      },
+      "printed_M16": {
+        "R2": 0.48251274309348424,
+        "RMSE": 0.33529958797813525,
+        "n": 35
+      },
+      "delta_R2_M16_minus_PySR": -0.08299444274412748,
+      "delta_RMSE_M16_minus_PySR": 0.028061899498491083,
+      "relative_RMSE_change_M16_over_PySR": 0.09133612362908505
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+0.491071",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.304736681483246,
+        95.50261221027
+      ],
+      "original_PySR": {
+        "R2": 0.6989366049427522,
+        "RMSE": 0.27275066876518905,
+        "n": 35
+      },
+      "printed_M16": {
+        "R2": 0.6341194938154665,
+        "RMSE": 0.3006813436741252,
+        "n": 35
+      },
+      "delta_R2_M16_minus_PySR": -0.06481711112728572,
+      "delta_RMSE_M16_minus_PySR": 0.027930674908936137,
+      "relative_RMSE_change_M16_over_PySR": 0.10240368991718829
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+0.562500",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.9832221586769607,
+        86.05247018174059
+      ],
+      "original_PySR": {
+        "R2": 0.7425590218538765,
+        "RMSE": 0.2730715518205103,
+        "n": 36
+      },
+      "printed_M16": {
+        "R2": 0.6934578417695592,
+        "RMSE": 0.2979769875782715,
+        "n": 36
+      },
+      "delta_R2_M16_minus_PySR": -0.0491011800843173,
+      "delta_RMSE_M16_minus_PySR": 0.02490543575776122,
+      "relative_RMSE_change_M16_over_PySR": 0.09120479812606597
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+0.633929",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.6141571796967773,
+        70.04539991432803
+      ],
+      "original_PySR": {
+        "R2": 0.6638392710817478,
+        "RMSE": 0.3496075108158323,
+        "n": 36
+      },
+      "printed_M16": {
+        "R2": 0.6298099600610054,
+        "RMSE": 0.3668762774180054,
+        "n": 36
+      },
+      "delta_R2_M16_minus_PySR": -0.03402931102074236,
+      "delta_RMSE_M16_minus_PySR": 0.01726876660217308,
+      "relative_RMSE_change_M16_over_PySR": 0.04939472427773439
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+0.705357",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.1952908678294605,
+        54.28110284935328
+      ],
+      "original_PySR": {
+        "R2": 0.35099013168689674,
+        "RMSE": 0.5514124628525463,
+        "n": 37
+      },
+      "printed_M16": {
+        "R2": 0.3249106060771211,
+        "RMSE": 0.5623822047130813,
+        "n": 37
+      },
+      "delta_R2_M16_minus_PySR": -0.026079525609775667,
+      "delta_RMSE_M16_minus_PySR": 0.01096974186053501,
+      "relative_RMSE_change_M16_over_PySR": 0.019893895404152984
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+4.419642",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        6.82975266565646,
+        98.25465289716682
+      ],
+      "original_PySR": {
+        "R2": -0.8740199669084798,
+        "RMSE": 1.0630159598429112,
+        "n": 61
+      },
+      "printed_M16": {
+        "R2": -0.8196941659655257,
+        "RMSE": 1.0474948089289084,
+        "n": 61
+      },
+      "delta_R2_M16_minus_PySR": 0.05432580094295414,
+      "delta_RMSE_M16_minus_PySR": -0.015521150914002746,
+      "relative_RMSE_change_M16_over_PySR": -0.014601051630773632
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+4.491072",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        9.198910975778587,
+        143.22889048696143
+      ],
+      "original_PySR": {
+        "R2": -0.7333499100690415,
+        "RMSE": 1.0243917367717756,
+        "n": 62
+      },
+      "printed_M16": {
+        "R2": -0.6884368441821518,
+        "RMSE": 1.0110330572040125,
+        "n": 62
+      },
+      "delta_R2_M16_minus_PySR": 0.0449130658868897,
+      "delta_RMSE_M16_minus_PySR": -0.013358679567763154,
+      "relative_RMSE_change_M16_over_PySR": -0.013040596764145262
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+4.562500",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        12.176416787963708,
+        147.57687607336206
+      ],
+      "original_PySR": {
+        "R2": -0.5737540787882072,
+        "RMSE": 0.937531670466288,
+        "n": 56
+      },
+      "printed_M16": {
+        "R2": -0.5395145850238405,
+        "RMSE": 0.9272768486997913,
+        "n": 56
+      },
+      "delta_R2_M16_minus_PySR": 0.034239493764366635,
+      "delta_RMSE_M16_minus_PySR": -0.010254821766496724,
+      "relative_RMSE_change_M16_over_PySR": -0.010938107041649547
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+4.633928",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.695200585383953,
+        146.8590339323387
+      ],
+      "original_PySR": {
+        "R2": -0.42878091371419913,
+        "RMSE": 0.8318870797426117,
+        "n": 54
+      },
+      "printed_M16": {
+        "R2": -0.4147276229629704,
+        "RMSE": 0.8277858070093358,
+        "n": 54
+      },
+      "delta_R2_M16_minus_PySR": 0.014053290751228742,
+      "delta_RMSE_M16_minus_PySR": -0.004101272733275874,
+      "relative_RMSE_change_M16_over_PySR": -0.004930083461020751
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+4.705358",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.8846854347557718,
+        146.8183334781515
+      ],
+      "original_PySR": {
+        "R2": -0.48525044730167544,
+        "RMSE": 0.782034937730642,
+        "n": 53
+      },
+      "printed_M16": {
+        "R2": -0.48423809579896004,
+        "RMSE": 0.781768373530254,
+        "n": 53
+      },
+      "delta_R2_M16_minus_PySR": 0.0010123515027153918,
+      "delta_RMSE_M16_minus_PySR": -0.00026656420038806417,
+      "relative_RMSE_change_M16_over_PySR": -0.0003408597078304876
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+4.776786",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.0296263175062315,
+        147.17159489729522
+      ],
+      "original_PySR": {
+        "R2": -0.5434368670059957,
+        "RMSE": 0.7445706513467275,
+        "n": 54
+      },
+      "printed_M16": {
+        "R2": -0.5593117723765575,
+        "RMSE": 0.7483899687372847,
+        "n": 54
+      },
+      "delta_R2_M16_minus_PySR": -0.015874905370561798,
+      "delta_RMSE_M16_minus_PySR": 0.0038193173905571864,
+      "relative_RMSE_change_M16_over_PySR": 0.005129556723259432
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+4.848214",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.290552743044534,
+        146.58414125823063
+      ],
+      "original_PySR": {
+        "R2": -0.8904659952506939,
+        "RMSE": 0.7578757331552699,
+        "n": 55
+      },
+      "printed_M16": {
+        "R2": -0.9335852943576672,
+        "RMSE": 0.7664701281495601,
+        "n": 55
+      },
+      "delta_R2_M16_minus_PySR": -0.04311929910697332,
+      "delta_RMSE_M16_minus_PySR": 0.008594394994290155,
+      "relative_RMSE_change_M16_over_PySR": 0.01134011107402677
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+4.919642",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.3753748406166373,
+        145.18130091868878
+      ],
+      "original_PySR": {
+        "R2": -1.9581919704511956,
+        "RMSE": 0.8510679402342888,
+        "n": 57
+      },
+      "printed_M16": {
+        "R2": -2.0189132791621467,
+        "RMSE": 0.8597582914906514,
+        "n": 57
+      },
+      "delta_R2_M16_minus_PySR": -0.06072130871095105,
+      "delta_RMSE_M16_minus_PySR": 0.008690351256362638,
+      "relative_RMSE_change_M16_over_PySR": 0.010211113408842953
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+4.991072",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.4417506859873852,
+        146.6644097232286
+      ],
+      "original_PySR": {
+        "R2": -2.358812696771492,
+        "RMSE": 0.8636587174137316,
+        "n": 57
+      },
+      "printed_M16": {
+        "R2": -2.421931197057085,
+        "RMSE": 0.8717358455870553,
+        "n": 57
+      },
+      "delta_R2_M16_minus_PySR": -0.06311850028559318,
+      "delta_RMSE_M16_minus_PySR": 0.008077128173323733,
+      "relative_RMSE_change_M16_over_PySR": 0.009352222134121568
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+5.063145",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.505203056812002,
+        147.52745188202786
+      ],
+      "original_PySR": {
+        "R2": -2.953483868768801,
+        "RMSE": 0.8571364574455091,
+        "n": 56
+      },
+      "printed_M16": {
+        "R2": -3.043117101607681,
+        "RMSE": 0.866798482364646,
+        "n": 56
+      },
+      "delta_R2_M16_minus_PySR": -0.0896332328388798,
+      "delta_RMSE_M16_minus_PySR": 0.009662024919136813,
+      "relative_RMSE_change_M16_over_PySR": 0.011272446569280392
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+5.136523",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.5646981130283508,
+        147.72199218595907
+      ],
+      "original_PySR": {
+        "R2": -3.552544133205113,
+        "RMSE": 0.8538570470458964,
+        "n": 55
+      },
+      "printed_M16": {
+        "R2": -3.667919418355088,
+        "RMSE": 0.864609015884611,
+        "n": 55
+      },
+      "delta_R2_M16_minus_PySR": -0.11537528514997497,
+      "delta_RMSE_M16_minus_PySR": 0.010751968838714654,
+      "relative_RMSE_change_M16_over_PySR": 0.012592235287995024
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+5.211230",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.6193287615732712,
+        147.22287993711706
+      ],
+      "original_PySR": {
+        "R2": -4.261537348776622,
+        "RMSE": 0.8520437029549306,
+        "n": 54
+      },
+      "printed_M16": {
+        "R2": -4.408868709258114,
+        "RMSE": 0.8638906274553144,
+        "n": 54
+      },
+      "delta_R2_M16_minus_PySR": -0.1473313604814912,
+      "delta_RMSE_M16_minus_PySR": 0.011846924500383826,
+      "relative_RMSE_change_M16_over_PySR": 0.013904127756942719
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+5.287290",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.6773680900136072,
+        146.81761214855914
+      ],
+      "original_PySR": {
+        "R2": -5.033914806575899,
+        "RMSE": 0.8487289502886696,
+        "n": 53
+      },
+      "printed_M16": {
+        "R2": -5.21651066140545,
+        "RMSE": 0.8614751823538013,
+        "n": 53
+      },
+      "delta_R2_M16_minus_PySR": -0.1825958548295512,
+      "delta_RMSE_M16_minus_PySR": 0.012746232065131702,
+      "relative_RMSE_change_M16_over_PySR": 0.015018024377271955
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+5.364727",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.7296987141401883,
+        145.71629689047617
+      ],
+      "original_PySR": {
+        "R2": -6.080166920586215,
+        "RMSE": 0.8393306176328126,
+        "n": 52
+      },
+      "printed_M16": {
+        "R2": -6.3146626043110405,
+        "RMSE": 0.8531167459872729,
+        "n": 52
+      },
+      "delta_R2_M16_minus_PySR": -0.2344956837248251,
+      "delta_RMSE_M16_minus_PySR": 0.013786128354460359,
+      "relative_RMSE_change_M16_over_PySR": 0.01642514649750515
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+5.443565",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.7756009504057295,
+        149.5832731638159
+      ],
+      "original_PySR": {
+        "R2": -6.289993575969307,
+        "RMSE": 0.8289074456082125,
+        "n": 52
+      },
+      "printed_M16": {
+        "R2": -6.545212419305195,
+        "RMSE": 0.8432924329569726,
+        "n": 52
+      },
+      "delta_R2_M16_minus_PySR": -0.2552188433358884,
+      "delta_RMSE_M16_minus_PySR": 0.014384987348760148,
+      "relative_RMSE_change_M16_over_PySR": 0.01735415386238337
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+5.523831",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.8215396560675432,
+        147.65119601228997
+      ],
+      "original_PySR": {
+        "R2": -7.613507699294415,
+        "RMSE": 0.8210289092073964,
+        "n": 51
+      },
+      "printed_M16": {
+        "R2": -7.938582019482716,
+        "RMSE": 0.836378270182185,
+        "n": 51
+      },
+      "delta_R2_M16_minus_PySR": -0.3250743201883015,
+      "delta_RMSE_M16_minus_PySR": 0.015349360974788673,
+      "relative_RMSE_change_M16_over_PySR": 0.018695274676267637
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+5.605552",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.865182235287573,
+        145.4276238826575
+      ],
+      "original_PySR": {
+        "R2": -9.36502220770628,
+        "RMSE": 0.8156249100851739,
+        "n": 50
+      },
+      "printed_M16": {
+        "R2": -9.78170682370771,
+        "RMSE": 0.8318578548911094,
+        "n": 50
+      },
+      "delta_R2_M16_minus_PySR": -0.4166846160014295,
+      "delta_RMSE_M16_minus_PySR": 0.016232944805935512,
+      "relative_RMSE_change_M16_over_PySR": 0.01990246325880407
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+5.688751",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.905546606036519,
+        148.57482012787204
+      ],
+      "original_PySR": {
+        "R2": -9.488966303744602,
+        "RMSE": 0.8021526458791693,
+        "n": 50
+      },
+      "printed_M16": {
+        "R2": -9.932785381126552,
+        "RMSE": 0.8189475473056016,
+        "n": 50
+      },
+      "delta_R2_M16_minus_PySR": -0.44381907738194926,
+      "delta_RMSE_M16_minus_PySR": 0.01679490142643225,
+      "relative_RMSE_change_M16_over_PySR": 0.020937288573080526
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+5.773457",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.947307370877195,
+        145.9982895823759
+      ],
+      "original_PySR": {
+        "R2": -11.57438544598153,
+        "RMSE": 0.7962115472224522,
+        "n": 49
+      },
+      "printed_M16": {
+        "R2": -12.137895885135679,
+        "RMSE": 0.8138567977558017,
+        "n": 49
+      },
+      "delta_R2_M16_minus_PySR": -0.5635104391541486,
+      "delta_RMSE_M16_minus_PySR": 0.01764525053334942,
+      "relative_RMSE_change_M16_over_PySR": 0.022161510461514933
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+5.859696",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.9816192825320036,
+        148.57080611922188
+      ],
+      "original_PySR": {
+        "R2": -12.000445375683098,
+        "RMSE": 0.7849424298111709,
+        "n": 49
+      },
+      "printed_M16": {
+        "R2": -12.60326861584706,
+        "RMSE": 0.8029348847104203,
+        "n": 49
+      },
+      "delta_R2_M16_minus_PySR": -0.6028232401639624,
+      "delta_RMSE_M16_minus_PySR": 0.017992454899249388,
+      "relative_RMSE_change_M16_over_PySR": 0.022922005762356035
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+5.947496",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.013187852120052,
+        145.09038202676854
+      ],
+      "original_PySR": {
+        "R2": -13.953749672087504,
+        "RMSE": 0.7794772188263682,
+        "n": 48
+      },
+      "printed_M16": {
+        "R2": -14.674476446296627,
+        "RMSE": 0.7980404330266228,
+        "n": 48
+      },
+      "delta_R2_M16_minus_PySR": -0.7207267742091226,
+      "delta_RMSE_M16_minus_PySR": 0.01856321420025453,
+      "relative_RMSE_change_M16_over_PySR": 0.02381495411527812
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+6.036888",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.0432048077259393,
+        147.25370302612407
+      ],
+      "original_PySR": {
+        "R2": -13.978663408109078,
+        "RMSE": 0.7666150707019884,
+        "n": 48
+      },
+      "printed_M16": {
+        "R2": -14.730532665355893,
+        "RMSE": 0.7856200095749414,
+        "n": 48
+      },
+      "delta_R2_M16_minus_PySR": -0.7518692572468151,
+      "delta_RMSE_M16_minus_PySR": 0.01900493887295296,
+      "relative_RMSE_change_M16_over_PySR": 0.02479071909654751
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+6.127897",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.0748843414055886,
+        149.53684597235727
+      ],
+      "original_PySR": {
+        "R2": -13.385120530573898,
+        "RMSE": 0.7515369801256742,
+        "n": 48
+      },
+      "printed_M16": {
+        "R2": -14.1412515089808,
+        "RMSE": 0.7710357046057068,
+        "n": 48
+      },
+      "delta_R2_M16_minus_PySR": -0.756130978406901,
+      "delta_RMSE_M16_minus_PySR": 0.019498724480032648,
+      "relative_RMSE_change_M16_over_PySR": 0.02594512977494734
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+6.220553",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.10505490396424,
+        145.78239462474986
+      ],
+      "original_PySR": {
+        "R2": -14.875089996715174,
+        "RMSE": 0.7449197746237692,
+        "n": 47
+      },
+      "printed_M16": {
+        "R2": -15.740377409496585,
+        "RMSE": 0.7649517237892866,
+        "n": 47
+      },
+      "delta_R2_M16_minus_PySR": -0.8652874127814112,
+      "delta_RMSE_M16_minus_PySR": 0.020031949165517315,
+      "relative_RMSE_change_M16_over_PySR": 0.026891418174037174
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+6.314888",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.134798807786691,
+        147.8422637125154
+      ],
+      "original_PySR": {
+        "R2": -13.85623616031306,
+        "RMSE": 0.7317405924415581,
+        "n": 47
+      },
+      "printed_M16": {
+        "R2": -14.69148047850533,
+        "RMSE": 0.7520292121658385,
+        "n": 47
+      },
+      "delta_R2_M16_minus_PySR": -0.8352443181922702,
+      "delta_RMSE_M16_minus_PySR": 0.02028861972428042,
+      "relative_RMSE_change_M16_over_PySR": 0.027726519389315918
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+6.410931",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.1631290238358507,
+        149.80422999097456
+      ],
+      "original_PySR": {
+        "R2": -13.41763129689274,
+        "RMSE": 0.7206828565858966,
+        "n": 47
+      },
+      "printed_M16": {
+        "R2": -14.255686728855357,
+        "RMSE": 0.7413326276236482,
+        "n": 47
+      },
+      "delta_R2_M16_minus_PySR": -0.8380554319626174,
+      "delta_RMSE_M16_minus_PySR": 0.020649771037751563,
+      "relative_RMSE_change_M16_over_PySR": 0.02865306264613543
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+6.508713",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.1861257874639586,
+        145.4261900660036
+      ],
+      "original_PySR": {
+        "R2": -13.361301119154628,
+        "RMSE": 0.715407303442231,
+        "n": 46
+      },
+      "printed_M16": {
+        "R2": -14.219805559803154,
+        "RMSE": 0.7364801184033924,
+        "n": 46
+      },
+      "delta_R2_M16_minus_PySR": -0.8585044406485256,
+      "delta_RMSE_M16_minus_PySR": 0.021072814961161423,
+      "relative_RMSE_change_M16_over_PySR": 0.029455688891863563
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+6.608265",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.2088831167716068,
+        146.9400607299273
+      ],
+      "original_PySR": {
+        "R2": -12.466919637885612,
+        "RMSE": 0.7025143699821995,
+        "n": 46
+      },
+      "printed_M16": {
+        "R2": -13.298560542774172,
+        "RMSE": 0.7238810992616107,
+        "n": 46
+      },
+      "delta_R2_M16_minus_PySR": -0.8316409048885607,
+      "delta_RMSE_M16_minus_PySR": 0.02136672927941119,
+      "relative_RMSE_change_M16_over_PySR": 0.030414650848996194
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+6.709620",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.2304336301445375,
+        148.37365118101812
+      ],
+      "original_PySR": {
+        "R2": -11.632838627693442,
+        "RMSE": 0.6942412409508442,
+        "n": 46
+      },
+      "printed_M16": {
+        "R2": -12.431668983454893,
+        "RMSE": 0.7158547730083257,
+        "n": 46
+      },
+      "delta_R2_M16_minus_PySR": -0.7988303557614511,
+      "delta_RMSE_M16_minus_PySR": 0.02161353205748151,
+      "relative_RMSE_change_M16_over_PySR": 0.031132595966035126
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+6.812809",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.250812262767032,
+        149.7292853892775
+      ],
+      "original_PySR": {
+        "R2": -10.31523148438518,
+        "RMSE": 0.6806318585299536,
+        "n": 46
+      },
+      "printed_M16": {
+        "R2": -11.055121300914932,
+        "RMSE": 0.7025323773169014,
+        "n": 46
+      },
+      "delta_R2_M16_minus_PySR": -0.739889816529752,
+      "delta_RMSE_M16_minus_PySR": 0.021900518786947876,
+      "relative_RMSE_change_M16_over_PySR": 0.032176746522340594
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+6.917867",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.2690923233758373,
+        144.93582849736558
+      ],
+      "original_PySR": {
+        "R2": -9.349566591333526,
+        "RMSE": 0.6723904520746411,
+        "n": 45
+      },
+      "printed_M16": {
+        "R2": -10.049004421304131,
+        "RMSE": 0.6947395610310532,
+        "n": 45
+      },
+      "delta_R2_M16_minus_PySR": -0.6994378299706057,
+      "delta_RMSE_M16_minus_PySR": 0.022349108956412067,
+      "relative_RMSE_change_M16_over_PySR": 0.033238290174190555
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+7.024828",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.2862753959661677,
+        146.03337875407118
+      ],
+      "original_PySR": {
+        "R2": -8.121994028959758,
+        "RMSE": 0.6614477830912723,
+        "n": 45
+      },
+      "printed_M16": {
+        "R2": -8.757492049807633,
+        "RMSE": 0.6841002930254987,
+        "n": 45
+      },
+      "delta_R2_M16_minus_PySR": -0.6354980208478747,
+      "delta_RMSE_M16_minus_PySR": 0.022652509934226406,
+      "relative_RMSE_change_M16_over_PySR": 0.0342468604677455
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+7.133724",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.303330355114829,
+        147.12274590265966
+      ],
+      "original_PySR": {
+        "R2": -7.685234393263384,
+        "RMSE": 0.6541782251250253,
+        "n": 45
+      },
+      "printed_M16": {
+        "R2": -8.30003489112575,
+        "RMSE": 0.6769359852545155,
+        "n": 45
+      },
+      "delta_R2_M16_minus_PySR": -0.6148004978623653,
+      "delta_RMSE_M16_minus_PySR": 0.022757760129490157,
+      "relative_RMSE_change_M16_over_PySR": 0.03478831800789561
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+7.244593",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.3193225451249964,
+        148.14422981705698
+      ],
+      "original_PySR": {
+        "R2": -6.8335994737421,
+        "RMSE": 0.6417994180671804,
+        "n": 45
+      },
+      "printed_M16": {
+        "R2": -7.404925500594684,
+        "RMSE": 0.6647916743205567,
+        "n": 45
+      },
+      "delta_R2_M16_minus_PySR": -0.5713260268525842,
+      "delta_RMSE_M16_minus_PySR": 0.02299225625337631,
+      "relative_RMSE_change_M16_over_PySR": 0.035824676068761496
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+7.357469",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.3342740807606845,
+        149.09924305399855
+      ],
+      "original_PySR": {
+        "R2": -5.842415122932634,
+        "RMSE": 0.6290209652042412,
+        "n": 45
+      },
+      "printed_M16": {
+        "R2": -6.358528788319707,
+        "RMSE": 0.6523128110072515,
+        "n": 45
+      },
+      "delta_R2_M16_minus_PySR": -0.5161136653870733,
+      "delta_RMSE_M16_minus_PySR": 0.023291845803010247,
+      "relative_RMSE_change_M16_over_PySR": 0.037028727326198885
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+7.472389",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.3491304006901172,
+        144.01518012953505
+      ],
+      "original_PySR": {
+        "R2": -5.367319005144264,
+        "RMSE": 0.6221986794670046,
+        "n": 44
+      },
+      "printed_M16": {
+        "R2": -5.857274590284186,
+        "RMSE": 0.6456937028447854,
+        "n": 44
+      },
+      "delta_R2_M16_minus_PySR": -0.48995558513992243,
+      "delta_RMSE_M16_minus_PySR": 0.023495023377780866,
+      "relative_RMSE_change_M16_over_PySR": 0.03776128775764587
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+7.589390",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.3620529768556664,
+        144.807408238146
+      ],
+      "original_PySR": {
+        "R2": -4.8138778109472,
+        "RMSE": 0.614389529791056,
+        "n": 44
+      },
+      "printed_M16": {
+        "R2": -5.270500303188414,
+        "RMSE": 0.6380606361817294,
+        "n": 44
+      },
+      "delta_R2_M16_minus_PySR": -0.4566224922412143,
+      "delta_RMSE_M16_minus_PySR": 0.02367110639067338,
+      "relative_RMSE_change_M16_over_PySR": 0.038527847957831485
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+7.708508",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.3739896392623248,
+        145.53919417311806
+      ],
+      "original_PySR": {
+        "R2": -4.367113330711948,
+        "RMSE": 0.6013220030278033,
+        "n": 44
+      },
+      "printed_M16": {
+        "R2": -4.7999919662906905,
+        "RMSE": 0.6251013092671728,
+        "n": 44
+      },
+      "delta_R2_M16_minus_PySR": -0.4328786355787422,
+      "delta_RMSE_M16_minus_PySR": 0.023779306239369524,
+      "relative_RMSE_change_M16_over_PySR": 0.039545045948152335
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+7.829784",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.385866503526362,
+        146.267314138641
+      ],
+      "original_PySR": {
+        "R2": -3.828214488115888,
+        "RMSE": 0.5899483601931828,
+        "n": 44
+      },
+      "printed_M16": {
+        "R2": -4.228366928906419,
+        "RMSE": 0.613908646715489,
+        "n": 44
+      },
+      "delta_R2_M16_minus_PySR": -0.4001524407905306,
+      "delta_RMSE_M16_minus_PySR": 0.023960286522306196,
+      "relative_RMSE_change_M16_over_PySR": 0.04061420988518427
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+7.953256",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.3967774697183377,
+        146.93621900703957
+      ],
+      "original_PySR": {
+        "R2": -3.4834748296222795,
+        "RMSE": 0.579716696346127,
+        "n": 44
+      },
+      "printed_M16": {
+        "R2": -3.8639327247019875,
+        "RMSE": 0.6038126680453878,
+        "n": 44
+      },
+      "delta_R2_M16_minus_PySR": -0.38045789507970795,
+      "delta_RMSE_M16_minus_PySR": 0.02409597169926081,
+      "relative_RMSE_change_M16_over_PySR": 0.0415650814460482
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+8.078963",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.4085420301890212,
+        147.65745410528382
+      ],
+      "original_PySR": {
+        "R2": -3.042530290161734,
+        "RMSE": 0.5681968011258796,
+        "n": 44
+      },
+      "printed_M16": {
+        "R2": -3.395105735803842,
+        "RMSE": 0.5924569614138258,
+        "n": 44
+      },
+      "delta_R2_M16_minus_PySR": -0.35257544564210797,
+      "delta_RMSE_M16_minus_PySR": 0.024260160287946197,
+      "relative_RMSE_change_M16_over_PySR": 0.042696756194112284
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+8.206946",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.4184519210775517,
+        148.2649873103185
+      ],
+      "original_PySR": {
+        "R2": -2.821380515352383,
+        "RMSE": 0.5584871445043021,
+        "n": 44
+      },
+      "printed_M16": {
+        "R2": -3.160550462406679,
+        "RMSE": 0.5827448381077239,
+        "n": 44
+      },
+      "delta_R2_M16_minus_PySR": -0.33916994705429593,
+      "delta_RMSE_M16_minus_PySR": 0.02425769360342178,
+      "relative_RMSE_change_M16_over_PySR": 0.04343464991473045
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+8.337248",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.4274257600415083,
+        148.81513515841925
+      ],
+      "original_PySR": {
+        "R2": -2.5648806732140987,
+        "RMSE": 0.5498012517693253,
+        "n": 44
+      },
+      "printed_M16": {
+        "R2": -2.8869102280783743,
+        "RMSE": 0.5740972688045516,
+        "n": 44
+      },
+      "delta_R2_M16_minus_PySR": -0.32202955486427554,
+      "delta_RMSE_M16_minus_PySR": 0.024296017035226325,
+      "relative_RMSE_change_M16_over_PySR": 0.04419054514161047
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+8.469908",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.436366574112551,
+        149.36325839098546
+      ],
+      "original_PySR": {
+        "R2": -2.251820087099992,
+        "RMSE": 0.5405411220777924,
+        "n": 44
+      },
+      "printed_M16": {
+        "R2": -2.55257940175501,
+        "RMSE": 0.5649856024249573,
+        "n": 44
+      },
+      "delta_R2_M16_minus_PySR": -0.3007593146550178,
+      "delta_RMSE_M16_minus_PySR": 0.024444480347164954,
+      "relative_RMSE_change_M16_over_PySR": 0.04522223999018338
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+8.604969",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.4452747288530134,
+        149.90937941908703
+      ],
+      "original_PySR": {
+        "R2": -2.0960581803539697,
+        "RMSE": 0.5330564647561823,
+        "n": 44
+      },
+      "printed_M16": {
+        "R2": -2.3867199662761442,
+        "RMSE": 0.5575172408080213,
+        "n": 44
+      },
+      "delta_R2_M16_minus_PySR": -0.2906617859221745,
+      "delta_RMSE_M16_minus_PySR": 0.02446077605183905,
+      "relative_RMSE_change_M16_over_PySR": 0.04588777675368272
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+8.742476",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.4532643670625873,
+        144.28966052691396
+      ],
+      "original_PySR": {
+        "R2": -1.8856967270454614,
+        "RMSE": 0.5267667151739593,
+        "n": 43
+      },
+      "printed_M16": {
+        "R2": -2.161159679279335,
+        "RMSE": 0.5513358067789689,
+        "n": 43
+      },
+      "delta_R2_M16_minus_PySR": -0.2754629522338736,
+      "delta_RMSE_M16_minus_PySR": 0.02456909160500953,
+      "relative_RMSE_change_M16_over_PySR": 0.04664131369214508
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+8.882473",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.461228120187855,
+        144.75805164300914
+      ],
+      "original_PySR": {
+        "R2": -1.654613577284859,
+        "RMSE": 0.5139689761887755,
+        "n": 43
+      },
+      "printed_M16": {
+        "R2": -1.9146560556033272,
+        "RMSE": 0.5385548063800377,
+        "n": 43
+      },
+      "delta_R2_M16_minus_PySR": -0.2600424783184683,
+      "delta_RMSE_M16_minus_PySR": 0.02458583019126226,
+      "relative_RMSE_change_M16_over_PySR": 0.04783524167854081
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+9.025005",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.4691661726977654,
+        145.22493116780788
+      ],
+      "original_PySR": {
+        "R2": -1.460418589613822,
+        "RMSE": 0.5030329844992676,
+        "n": 43
+      },
+      "printed_M16": {
+        "R2": -1.70589304675152,
+        "RMSE": 0.5275301387628046,
+        "n": 43
+      },
+      "delta_R2_M16_minus_PySR": -0.2454744571376981,
+      "delta_RMSE_M16_minus_PySR": 0.024497154263537047,
+      "relative_RMSE_change_M16_over_PySR": 0.04869890249428099
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+9.170118",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.4753226227442524,
+        145.5870250779404
+      ],
+      "original_PySR": {
+        "R2": -1.292680771037312,
+        "RMSE": 0.4930983692196547,
+        "n": 43
+      },
+      "printed_M16": {
+        "R2": -1.5257005309748344,
+        "RMSE": 0.5175504609755042,
+        "n": 43
+      },
+      "delta_R2_M16_minus_PySR": -0.23301975993752233,
+      "delta_RMSE_M16_minus_PySR": 0.024452091755849448,
+      "relative_RMSE_change_M16_over_PySR": 0.049588668878677744
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+9.317858",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.4832155752140532,
+        146.0512520270263
+      ],
+      "original_PySR": {
+        "R2": -1.1640804786163566,
+        "RMSE": 0.481802319225665,
+        "n": 43
+      },
+      "printed_M16": {
+        "R2": -1.3893105277196245,
+        "RMSE": 0.5062540153357489,
+        "n": 43
+      },
+      "delta_R2_M16_minus_PySR": -0.22523004910326794,
+      "delta_RMSE_M16_minus_PySR": 0.024451696110083854,
+      "relative_RMSE_change_M16_over_PySR": 0.05075047407281419
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+9.468273",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.4893372837041774,
+        146.41130259953854
+      ],
+      "original_PySR": {
+        "R2": -1.0831700830597404,
+        "RMSE": 0.4756839170484151,
+        "n": 43
+      },
+      "printed_M16": {
+        "R2": -1.302348967741934,
+        "RMSE": 0.5000825245752417,
+        "n": 43
+      },
+      "delta_R2_M16_minus_PySR": -0.2191788846821936,
+      "delta_RMSE_M16_minus_PySR": 0.0243986075268266,
+      "relative_RMSE_change_M16_over_PySR": 0.05129163852799201
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+9.621411",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.4954439622939724,
+        146.77046918284626
+      ],
+      "original_PySR": {
+        "R2": -0.9732983221047009,
+        "RMSE": 0.4691825224840939,
+        "n": 43
+      },
+      "printed_M16": {
+        "R2": -1.1841576129440874,
+        "RMSE": 0.49361396716672695,
+        "n": 43
+      },
+      "delta_R2_M16_minus_PySR": -0.21085929083938648,
+      "delta_RMSE_M16_minus_PySR": 0.02443144468263303,
+      "relative_RMSE_change_M16_over_PySR": 0.052072367387600904
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+9.777323",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.501535701603409,
+        147.12875710679697
+      ],
+      "original_PySR": {
+        "R2": -0.7900472317005178,
+        "RMSE": 0.45331005632324645,
+        "n": 43
+      },
+      "printed_M16": {
+        "R2": -0.9876983842121649,
+        "RMSE": 0.4776814217951073,
+        "n": 43
+      },
+      "delta_R2_M16_minus_PySR": -0.1976511525116471,
+      "delta_RMSE_M16_minus_PySR": 0.024371365471860862,
+      "relative_RMSE_change_M16_over_PySR": 0.05376312555149254
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+9.936056",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.507612683153642,
+        147.48617704762518
+      ],
+      "original_PySR": {
+        "R2": -0.7371593709300781,
+        "RMSE": 0.4462234512064492,
+        "n": 43
+      },
+      "printed_M16": {
+        "R2": -0.9313804493361417,
+        "RMSE": 0.47050741764217513,
+        "n": 43
+      },
+      "delta_R2_M16_minus_PySR": -0.19422107840606362,
+      "delta_RMSE_M16_minus_PySR": 0.024283966435725945,
+      "relative_RMSE_change_M16_over_PySR": 0.05442108963585324
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+10.097665",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.5136749476801,
+        147.84273140120035
+      ],
+      "original_PySR": {
+        "R2": -0.6711428129400716,
+        "RMSE": 0.4385468486219014,
+        "n": 43
+      },
+      "printed_M16": {
+        "R2": -0.8604133625878871,
+        "RMSE": 0.46271538192576905,
+        "n": 43
+      },
+      "delta_R2_M16_minus_PySR": -0.18927054964781553,
+      "delta_RMSE_M16_minus_PySR": 0.024168533303867645,
+      "relative_RMSE_change_M16_over_PySR": 0.05511049362186804
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+10.262199",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.5205854192076775,
+        148.249173366519
+      ],
+      "original_PySR": {
+        "R2": -0.5605913626976453,
+        "RMSE": 0.42914471552568867,
+        "n": 43
+      },
+      "printed_M16": {
+        "R2": -0.7424158178410376,
+        "RMSE": 0.45345591575231803,
+        "n": 43
+      },
+      "delta_R2_M16_minus_PySR": -0.1818244551433923,
+      "delta_RMSE_M16_minus_PySR": 0.02431120022662936,
+      "relative_RMSE_change_M16_over_PySR": 0.05665035440748456
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+10.429712",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.5257558539337293,
+        148.55327441710887
+      ],
+      "original_PySR": {
+        "R2": -0.4735192845910312,
+        "RMSE": 0.419614458195816,
+        "n": 43
+      },
+      "printed_M16": {
+        "R2": -0.6477114732124822,
+        "RMSE": 0.4437241995650181,
+        "n": 43
+      },
+      "delta_R2_M16_minus_PySR": -0.17419218862145103,
+      "delta_RMSE_M16_minus_PySR": 0.024109741369202076,
+      "relative_RMSE_change_M16_over_PySR": 0.05745688905207147
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+10.600259",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.530915715312449,
+        148.85675359232425
+      ],
+      "original_PySR": {
+        "R2": -0.44923922898693447,
+        "RMSE": 0.41915689181193727,
+        "n": 43
+      },
+      "printed_M16": {
+        "R2": -0.6204273638354738,
+        "RMSE": 0.4432220466338099,
+        "n": 43
+      },
+      "delta_R2_M16_minus_PySR": -0.17118813484853934,
+      "delta_RMSE_M16_minus_PySR": 0.024065154821872603,
+      "relative_RMSE_change_M16_over_PySR": 0.05741323903286766
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+10.773893",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.5360651052623613,
+        149.1596168865412
+      ],
+      "original_PySR": {
+        "R2": -0.35188311233063185,
+        "RMSE": 0.40083359836454907,
+        "n": 43
+      },
+      "printed_M16": {
+        "R2": -0.5182649507430181,
+        "RMSE": 0.4247841751697859,
+        "n": 43
+      },
+      "delta_R2_M16_minus_PySR": -0.1663818384123863,
+      "delta_RMSE_M16_minus_PySR": 0.023950576805236823,
+      "relative_RMSE_change_M16_over_PySR": 0.05975191925766232
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+10.950672",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.540348274473309,
+        149.4115330842916
+      ],
+      "original_PySR": {
+        "R2": -0.2676536338197293,
+        "RMSE": 0.39444813386235933,
+        "n": 43
+      },
+      "printed_M16": {
+        "R2": -0.4254927550683407,
+        "RMSE": 0.41828482600702516,
+        "n": 43
+      },
+      "delta_R2_M16_minus_PySR": -0.15783912124861144,
+      "delta_RMSE_M16_minus_PySR": 0.023836692144665828,
+      "relative_RMSE_change_M16_over_PySR": 0.06043048527384731
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+11.130651",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.5446242263044305,
+        149.6630247891504
+      ],
+      "original_PySR": {
+        "R2": -0.2023812985717004,
+        "RMSE": 0.3868325363980387,
+        "n": 43
+      },
+      "printed_M16": {
+        "R2": -0.35461038042545256,
+        "RMSE": 0.41059068144818145,
+        "n": 43
+      },
+      "delta_R2_M16_minus_PySR": -0.15222908185375217,
+      "delta_RMSE_M16_minus_PySR": 0.02375814505014273,
+      "relative_RMSE_change_M16_over_PySR": 0.06141713225925849
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+11.313889",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.548039839898326,
+        149.86391537908074
+      ],
+      "original_PySR": {
+        "R2": -0.15419602059565185,
+        "RMSE": 0.3789180543763149,
+        "n": 43
+      },
+      "printed_M16": {
+        "R2": -0.3020718854721258,
+        "RMSE": 0.402460250513347,
+        "n": 43
+      },
+      "delta_R2_M16_minus_PySR": -0.14787586487647397,
+      "delta_RMSE_M16_minus_PySR": 0.023542196137032123,
+      "relative_RMSE_change_M16_over_PySR": 0.06213004596938965
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+11.500443",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.5514508802931286,
+        143.90296038928258
+      ],
+      "original_PySR": {
+        "R2": -0.07884038749250122,
+        "RMSE": 0.3650440558057555,
+        "n": 42
+      },
+      "printed_M16": {
+        "R2": -0.2221337995955468,
+        "RMSE": 0.3885313440284238,
+        "n": 42
+      },
+      "delta_R2_M16_minus_PySR": -0.14329341210304558,
+      "delta_RMSE_M16_minus_PySR": 0.023487288222668323,
+      "relative_RMSE_change_M16_over_PySR": 0.06434096884778806
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+11.690377",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.5557082641941102,
+        144.1430787280666
+      ],
+      "original_PySR": {
+        "R2": 0.007420715622953322,
+        "RMSE": 0.3610812450663054,
+        "n": 42
+      },
+      "printed_M16": {
+        "R2": -0.12670524705584985,
+        "RMSE": 0.3847046947102908,
+        "n": 42
+      },
+      "delta_R2_M16_minus_PySR": -0.13412596267880317,
+      "delta_RMSE_M16_minus_PySR": 0.023623449643985384,
+      "relative_RMSE_change_M16_over_PySR": 0.06542419460098903
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+11.883749",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.5608077830253384,
+        144.43069385013013
+      ],
+      "original_PySR": {
+        "R2": 0.032515801890210416,
+        "RMSE": 0.34959731284118467,
+        "n": 42
+      },
+      "printed_M16": {
+        "R2": -0.10128084984541741,
+        "RMSE": 0.37298828308374316,
+        "n": 42
+      },
+      "delta_R2_M16_minus_PySR": -0.13379665173562783,
+      "delta_RMSE_M16_minus_PySR": 0.023390970242558484,
+      "relative_RMSE_change_M16_over_PySR": 0.06690832390117518
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+12.080623",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.5658971649826148,
+        144.71773724801037
+      ],
+      "original_PySR": {
+        "R2": 0.054573232554102846,
+        "RMSE": 0.3462064751125021,
+        "n": 42
+      },
+      "printed_M16": {
+        "R2": -0.07710860662016761,
+        "RMSE": 0.36953109356773456,
+        "n": 42
+      },
+      "delta_R2_M16_minus_PySR": -0.13168183917427045,
+      "delta_RMSE_M16_minus_PySR": 0.023324618455232482,
+      "relative_RMSE_change_M16_over_PySR": 0.06737198790881371
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+12.281061",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.57013063435245,
+        144.95650679663936
+      ],
+      "original_PySR": {
+        "R2": 0.12175411662137126,
+        "RMSE": 0.3385562622452169,
+        "n": 42
+      },
+      "printed_M16": {
+        "R2": -0.0023896836333441307,
+        "RMSE": 0.36169381645493637,
+        "n": 42
+      },
+      "delta_R2_M16_minus_PySR": -0.12414380025471539,
+      "delta_RMSE_M16_minus_PySR": 0.02313755420971947,
+      "relative_RMSE_change_M16_over_PySR": 0.06834182908411512
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+12.485128",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.5743571380441685,
+        145.19488347793558
+      ],
+      "original_PySR": {
+        "R2": 0.14444697814036744,
+        "RMSE": 0.3313918825691892,
+        "n": 42
+      },
+      "printed_M16": {
+        "R2": 0.021060956555395083,
+        "RMSE": 0.35448366433809714,
+        "n": 42
+      },
+      "delta_R2_M16_minus_PySR": -0.12338602158497236,
+      "delta_RMSE_M16_minus_PySR": 0.023091781768907915,
+      "relative_RMSE_change_M16_over_PySR": 0.06968119312363275
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+12.692890",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.5794197843146685,
+        145.48041897123304
+      ],
+      "original_PySR": {
+        "R2": 0.1860332929338525,
+        "RMSE": 0.3222744241577901,
+        "n": 42
+      },
+      "printed_M16": {
+        "R2": 0.06491528303030003,
+        "RMSE": 0.34542041347296637,
+        "n": 42
+      },
+      "delta_R2_M16_minus_PySR": -0.12111800990355248,
+      "delta_RMSE_M16_minus_PySR": 0.023145989315176252,
+      "relative_RMSE_change_M16_over_PySR": 0.07182074524115412
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+12.904414",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.5853136843077054,
+        145.81283754287287
+      ],
+      "original_PySR": {
+        "R2": 0.23049826964470677,
+        "RMSE": 0.3157847604165015,
+        "n": 42
+      },
+      "printed_M16": {
+        "R2": 0.1138727991857369,
+        "RMSE": 0.3388709974678323,
+        "n": 42
+      },
+      "delta_R2_M16_minus_PySR": -0.11662547045896987,
+      "delta_RMSE_M16_minus_PySR": 0.023086237051330782,
+      "relative_RMSE_change_M16_over_PySR": 0.073107508484201
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+13.119768",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.590354923580175,
+        146.09716567199436
+      ],
+      "original_PySR": {
+        "R2": 0.2635690268126405,
+        "RMSE": 0.30940815187238446,
+        "n": 42
+      },
+      "printed_M16": {
+        "R2": 0.15014216894671328,
+        "RMSE": 0.33238305027525317,
+        "n": 42
+      },
+      "delta_R2_M16_minus_PySR": -0.11342685786592721,
+      "delta_RMSE_M16_minus_PySR": 0.022974898402868704,
+      "relative_RMSE_change_M16_over_PySR": 0.07425434095332006
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+13.339022",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.5962239846983817,
+        146.42818332008585
+      ],
+      "original_PySR": {
+        "R2": 0.25200777262042984,
+        "RMSE": 0.3146761582359028,
+        "n": 42
+      },
+      "printed_M16": {
+        "R2": 0.1385844519457975,
+        "RMSE": 0.33769268254618,
+        "n": 42
+      },
+      "delta_R2_M16_minus_PySR": -0.11342332067463234,
+      "delta_RMSE_M16_minus_PySR": 0.02301652431027723,
+      "relative_RMSE_change_M16_over_PySR": 0.07314352774391786
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+13.562243",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.6012441042054735,
+        146.71132028508026
+      ],
+      "original_PySR": {
+        "R2": 0.2774217250889016,
+        "RMSE": 0.3114562426541577,
+        "n": 42
+      },
+      "printed_M16": {
+        "R2": 0.1673608363032123,
+        "RMSE": 0.33433589608848713,
+        "n": 42
+      },
+      "delta_R2_M16_minus_PySR": -0.11006088878568931,
+      "delta_RMSE_M16_minus_PySR": 0.022879653434329406,
+      "relative_RMSE_change_M16_over_PySR": 0.0734602499514998
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+13.789509",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.607922514984311,
+        147.08798561271536
+      ],
+      "original_PySR": {
+        "R2": 0.29328460365735176,
+        "RMSE": 0.3077197995834266,
+        "n": 42
+      },
+      "printed_M16": {
+        "R2": 0.184656137851951,
+        "RMSE": 0.3305244320088351,
+        "n": 42
+      },
+      "delta_R2_M16_minus_PySR": -0.10862846580540075,
+      "delta_RMSE_M16_minus_PySR": 0.022804632425408478,
+      "relative_RMSE_change_M16_over_PySR": 0.07410843389434185
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+14.020888",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.614583900640978,
+        147.46369071591488
+      ],
+      "original_PySR": {
+        "R2": 0.31337970869954535,
+        "RMSE": 0.29807440410991604,
+        "n": 42
+      },
+      "printed_M16": {
+        "R2": 0.20481593956211064,
+        "RMSE": 0.3207747687355808,
+        "n": 42
+      },
+      "delta_R2_M16_minus_PySR": -0.1085637691374347,
+      "delta_RMSE_M16_minus_PySR": 0.02270036462566477,
+      "relative_RMSE_change_M16_over_PySR": 0.07615670554957799
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+14.256457",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.6203987089833256,
+        147.7916484834044
+      ],
+      "original_PySR": {
+        "R2": 0.3423464619583466,
+        "RMSE": 0.2952045066314208,
+        "n": 42
+      },
+      "printed_M16": {
+        "R2": 0.23802138302534992,
+        "RMSE": 0.3177574889264709,
+        "n": 42
+      },
+      "delta_R2_M16_minus_PySR": -0.1043250789329967,
+      "delta_RMSE_M16_minus_PySR": 0.022552982295050095,
+      "relative_RMSE_change_M16_over_PySR": 0.0763978251971904
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+14.496292",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.6262006381743794,
+        148.11887986105324
+      ],
+      "original_PySR": {
+        "R2": 0.4041072468468271,
+        "RMSE": 0.2863383482944415,
+        "n": 42
+      },
+      "printed_M16": {
+        "R2": 0.3072160661480172,
+        "RMSE": 0.30874104322842205,
+        "n": 42
+      },
+      "delta_R2_M16_minus_PySR": -0.09689118069880986,
+      "delta_RMSE_M16_minus_PySR": 0.02240269493398056,
+      "relative_RMSE_change_M16_over_PySR": 0.07823854215623216
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+14.740467",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.6344669477816534,
+        148.58510338633013
+      ],
+      "original_PySR": {
+        "R2": 0.38545632198728774,
+        "RMSE": 0.2863596888327714,
+        "n": 42
+      },
+      "printed_M16": {
+        "R2": 0.2854322948342697,
+        "RMSE": 0.3087857118075907,
+        "n": 42
+      },
+      "delta_R2_M16_minus_PySR": -0.10002402715301806,
+      "delta_RMSE_M16_minus_PySR": 0.02242602297481927,
+      "relative_RMSE_change_M16_over_PySR": 0.07831417566568044
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+14.989065",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.6451745412579526,
+        149.18901640373747
+      ],
+      "original_PySR": {
+        "R2": 0.4539600766741799,
+        "RMSE": 0.2715926846678891,
+        "n": 42
+      },
+      "printed_M16": {
+        "R2": 0.36133055232281364,
+        "RMSE": 0.29372704768880514,
+        "n": 42
+      },
+      "delta_R2_M16_minus_PySR": -0.09262952435136629,
+      "delta_RMSE_M16_minus_PySR": 0.022134363020916037,
+      "relative_RMSE_change_M16_over_PySR": 0.08149837705674035
+    },
+    {
+      "dataset_id": "Lardeau_APG_xH_+15.242165",
+      "source_family": "Lardeau_recovering_APG",
+      "flow_family": "recovering_APG_TBL",
+      "role": "recovering_apg_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.66564510897979,
+        144.10126547810486
+      ],
+      "original_PySR": {
+        "R2": 0.7618543870643648,
+        "RMSE": 0.15143411494934247,
+        "n": 41
+      },
+      "printed_M16": {
+        "R2": 0.8060180023227669,
+        "RMSE": 0.13667313133388345,
+        "n": 41
+      },
+      "delta_R2_M16_minus_PySR": 0.04416361525840207,
+      "delta_RMSE_M16_minus_PySR": -0.014760983615459022,
+      "relative_RMSE_change_M16_over_PySR": -0.09747462532070028
+    },
+    {
+      "dataset_id": "PeriodicHill_xH_0.00000",
+      "source_family": "TMBWG_periodic_hill",
+      "flow_family": "separated_periodic_hill",
+      "role": "separated_flow_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.1451539119005012,
+        146.7530570723714
+      ],
+      "original_PySR": {
+        "R2": -0.8013548509312098,
+        "RMSE": 1.5459616519201265,
+        "n": 45
+      },
+      "printed_M16": {
+        "R2": -0.9111093631285718,
+        "RMSE": 1.5923621659164597,
+        "n": 45
+      },
+      "delta_R2_M16_minus_PySR": -0.10975451219736199,
+      "delta_RMSE_M16_minus_PySR": 0.04640051399633327,
+      "relative_RMSE_change_M16_over_PySR": 0.03001401356799671
+    },
+    {
+      "dataset_id": "PeriodicHill_xH_1.00125",
+      "source_family": "TMBWG_periodic_hill",
+      "flow_family": "separated_periodic_hill",
+      "role": "separated_flow_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.3236617342518033,
+        145.60239267037318
+      ],
+      "original_PySR": {
+        "R2": -0.7303495183932527,
+        "RMSE": 0.6797860472816896,
+        "n": 68
+      },
+      "printed_M16": {
+        "R2": -0.7526331760673877,
+        "RMSE": 0.6841492297170538,
+        "n": 68
+      },
+      "delta_R2_M16_minus_PySR": -0.022283657674134982,
+      "delta_RMSE_M16_minus_PySR": 0.004363182435364266,
+      "relative_RMSE_change_M16_over_PySR": 0.006418464240052657
+    },
+    {
+      "dataset_id": "PeriodicHill_xH_2.00250",
+      "source_family": "TMBWG_periodic_hill",
+      "flow_family": "separated_periodic_hill",
+      "role": "separated_flow_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        1.4476249051541015,
+        148.9781413298178
+      ],
+      "original_PySR": {
+        "R2": -21.527029627026675,
+        "RMSE": 0.7804792851805232,
+        "n": 57
+      },
+      "printed_M16": {
+        "R2": -22.51502037777405,
+        "RMSE": 0.79741076713996,
+        "n": 57
+      },
+      "delta_R2_M16_minus_PySR": -0.9879907507473753,
+      "delta_RMSE_M16_minus_PySR": 0.016931481959436723,
+      "relative_RMSE_change_M16_over_PySR": 0.02169369806595256
+    },
+    {
+      "dataset_id": "PeriodicHill_xH_4.00500",
+      "source_family": "TMBWG_periodic_hill",
+      "flow_family": "separated_periodic_hill",
+      "role": "separated_flow_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        32.140485856277785,
+        146.00251548635458
+      ],
+      "original_PySR": {
+        "R2": -3.4903491666549096,
+        "RMSE": 0.5728486000689044,
+        "n": 40
+      },
+      "printed_M16": {
+        "R2": -4.050289845733643,
+        "RMSE": 0.6075163235454674,
+        "n": 40
+      },
+      "delta_R2_M16_minus_PySR": -0.5599406790787338,
+      "delta_RMSE_M16_minus_PySR": 0.034667723476562995,
+      "relative_RMSE_change_M16_over_PySR": 0.06051812550889202
+    },
+    {
+      "dataset_id": "PeriodicHill_xH_4.99500",
+      "source_family": "TMBWG_periodic_hill",
+      "flow_family": "separated_periodic_hill",
+      "role": "separated_flow_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        16.492358576032245,
+        147.4452251887512
+      ],
+      "original_PySR": {
+        "R2": -0.6818233713565707,
+        "RMSE": 0.6875225611932999,
+        "n": 65
+      },
+      "printed_M16": {
+        "R2": -0.709970326821475,
+        "RMSE": 0.6932518697846103,
+        "n": 65
+      },
+      "delta_R2_M16_minus_PySR": -0.02814695546490431,
+      "delta_RMSE_M16_minus_PySR": 0.005729308591310378,
+      "relative_RMSE_change_M16_over_PySR": 0.008333266302368747
+    },
+    {
+      "dataset_id": "PeriodicHill_xH_7.99875",
+      "source_family": "TMBWG_periodic_hill",
+      "flow_family": "separated_periodic_hill",
+      "role": "separated_flow_stress_test",
+      "historical_exposure": "used_in_original_model_selection",
+      "actual_y_plus_range": [
+        2.4803105194693353,
+        146.14370227806714
+      ],
+      "original_PySR": {
+        "R2": 0.15539678057453288,
+        "RMSE": 0.5319576738026557,
+        "n": 33
+      },
+      "printed_M16": {
+        "R2": 0.16384284551681094,
+        "RMSE": 0.5292911921412817,
+        "n": 33
+      },
+      "delta_R2_M16_minus_PySR": 0.008446064942278064,
+      "delta_RMSE_M16_minus_PySR": -0.002666481661373954,
+      "relative_RMSE_change_M16_over_PySR": -0.005012582377678321
+    }
+  ]
+}
