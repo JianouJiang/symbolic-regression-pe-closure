@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software or these records, please cite the article below."
+title: "Code and data records: Combining symbolic regression and turbulence physics to develop a compact inner-layer production-dissipation closure"
+authors:
+  - family-names: Jiang
+    given-names: Jianou
+    orcid: "https://orcid.org/0009-0004-6581-0319"
+    affiliation: "Department of Engineering Science, University of Oxford"
+  - family-names: Rosic
+    given-names: Budimir
+    affiliation: "Department of Engineering Science, University of Oxford"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Combining symbolic regression and turbulence physics to develop a compact inner-layer production-dissipation closure"
+  authors:
+    - family-names: Jiang
+      given-names: Jianou
+      orcid: "https://orcid.org/0009-0004-6581-0319"
+    - family-names: Rosic
+      given-names: Budimir
+  journal: "Physics of Fluids"
+  volume: 38
+  issue: 9
+  start: 095140
+  year: 2026
+  month: 9
+  doi: 10.1063/5.0347368
+  publisher:
+    name: "AIP Publishing"

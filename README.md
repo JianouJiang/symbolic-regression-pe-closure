@@ -1,10 +1,10 @@
-# Combining Symbolic Regression and Turbulence Physics to Develop a Compact Inner-Layer Production–Dissipation Closure
+# Combining symbolic regression and turbulence physics to develop a compact inner-layer production–dissipation closure
 
 Code and data records for the article of the above title by **Jianou Jiang** and
-**Budimir Rosic** (Department of Engineering Science, University of Oxford), accepted for
-publication in *Physics of Fluids* (AIP Publishing) and selected by the Editors as a
-**Featured Article**. Citation details (volume, pages, DOI) will be added here on
-publication; the manuscript reference number is `POF26-AR-08545`.
+**Budimir Rosic** (Department of Engineering Science, University of Oxford), published in
+*Physics of Fluids* (AIP Publishing) and selected by the Editors as a **Featured Article**.
+
+> *Physics of Fluids* **38**, 095140 (2026) · [doi:10.1063/5.0347368](https://doi.org/10.1063/5.0347368) · published online 9 September 2026
 
 ![Turbulent channel flow and the inner-layer energy budget](figures/fig_3d_channel.png)
 
@@ -96,11 +96,24 @@ regenerates the clean-room audit. Regenerated files can be compared against
 
 ## Citation
 
-Until the DOI is assigned, please cite:
+> J. Jiang and B. Rosic, "Combining symbolic regression and turbulence physics to develop
+> a compact inner-layer production–dissipation closure," *Physics of Fluids* **38**,
+> 095140 (2026). https://doi.org/10.1063/5.0347368
 
-> J. Jiang and B. Rosic, "Combining Symbolic Regression and Turbulence Physics to
-> Develop a Compact Inner-Layer Production–Dissipation Closure," *Physics of Fluids*
-> (accepted, in production), POF26-AR-08545.
+```bibtex
+@article{Jiang2026PoF,
+  author  = {Jiang, Jianou and Rosic, Budimir},
+  title   = {Combining symbolic regression and turbulence physics to develop a compact
+             inner-layer production--dissipation closure},
+  journal = {Physics of Fluids},
+  volume  = {38},
+  number  = {9},
+  pages   = {095140},
+  year    = {2026},
+  doi     = {10.1063/5.0347368},
+  note    = {Featured Article}
+}
+```
 
 ## Licence
 
