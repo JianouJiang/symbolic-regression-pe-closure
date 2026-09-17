@@ -4,7 +4,7 @@ Implements the two printed formulas of
 
     Jiang & Rosic, "Combining Symbolic Regression and Turbulence Physics to
     Develop a Compact Inner-Layer Production--Dissipation Closure",
-    Physics of Fluids (accepted).
+    Physics of Fluids 38, 095140 (2026), doi:10.1063/5.0347368.
 
 F(y+) approximates the turbulent-kinetic-energy production-to-dissipation
 ratio P/eps as a function of the inner-scaled wall distance y+ on the domain

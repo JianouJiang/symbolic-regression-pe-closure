@@ -6,6 +6,29 @@ Code and data records for the article of the above title by **Jianou Jiang** and
 
 > *Physics of Fluids* **38**, 095140 (2026) · [doi:10.1063/5.0347368](https://doi.org/10.1063/5.0347368) · published online 9 September 2026
 
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JianouJiang/symbolic-regression-pe-closure/blob/v1.0.0/examples/five_minute_tutorial.ipynb)
+[![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22806787.svg)](https://doi.org/10.5281/zenodo.22806787)
+
+## Try it in five minutes
+
+Open the [executed tutorial notebook](examples/five_minute_tutorial.ipynb),
+or use **Open in Colab** above and choose **Runtime → Run all**. The tutorial
+compares the recommended closure, M16, and the equilibrium assumption with
+one small Lee–Moser DNS profile. It downloads and verifies the original data
+automatically; no model training or CFD simulation is needed.
+
+From a local clone:
+
+```bash
+python3 -m pip install -r requirements.txt
+python3 examples/quickstart.py
+```
+
+This reproduces the paper's nominal-550 channel dissipation diagnostic on
+49 points. It is a training-family illustration using DNS production.
+See the [tutorial guide](examples/README.md) for provenance, interpretation,
+offline use, and output files.
+
 ![Turbulent channel flow and the inner-layer energy budget](figures/fig_3d_channel.png)
 
 *Figure 1 of the article: the near-wall turbulence problem addressed by the closure.*
@@ -35,10 +58,13 @@ inner-layer curve across channel, pipe and boundary-layer flows.*
 Ready-to-use implementation:
 
 ```python
+import numpy as np
 from closure.pe_closure import f_pysr, f_m16, valid_domain
 
-F = f_pysr(yplus)                 # recommended closure
+re_tau = 550
+yplus = np.array([0.0, 5.0, 12.0, 30.0, 100.0, 200.0])
 mask = valid_domain(yplus, re_tau)
+F = f_pysr(yplus[mask])           # evaluate positive, in-domain coordinates
 ```
 
 `python3 closure/pe_closure.py` prints a small reference table.
@@ -46,6 +72,7 @@ mask = valid_domain(yplus, re_tau)
 ## Repository layout
 
 - `closure/` — stand-alone NumPy implementation of the two printed formulas.
+- `examples/` — executable five-minute tutorial and small DNS demonstration.
 - `FORMULA_DECISION.md` — the formula-selection rule, its result, and the numerical
   basis (the exact paired comparison on the frozen manifest).
 - `records/manifest/` — the frozen 179-row per-profile manifest with evaluation masks,

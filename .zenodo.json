@@ -1,0 +1,43 @@
+{
+  "title": "Code and tutorial: Combining symbolic regression and turbulence physics to develop a compact inner-layer production–dissipation closure",
+  "upload_type": "software",
+  "description": "<p>Version 1.0.0 of the code and reproducibility records accompanying J. Jiang and B. Rosic, <em>Combining symbolic regression and turbulence physics to develop a compact inner-layer production–dissipation closure</em>, Physics of Fluids 38, 095140 (2026), doi:10.1063/5.0347368.</p><p>This release contains NumPy implementations of the recommended PySR expression and the M16 asymptotic benchmark, the original numerical audits and replay records, and a five-minute executable notebook and command-line demonstration.</p><p>The tutorial downloads a small Lee–Moser channel DNS table from its original provider, verifies the source checksum, and compares the fixed formulas with the equilibrium production–dissipation assumption. It reproduces the corresponding published DNS-based dissipation diagnostic. This training-family illustration is not a new independent validation or a coupled RANS test.</p><p>The raw third-party DNS/LES datasets are not included and are not relicensed under the code licence. The tutorial identifies the original data source and citation; the full replay requires the reader to obtain the datasets recorded in the source manifest.</p><p>Please cite the journal article when using the closure and this software record when referring to the archived implementation.</p>",
+  "creators": [
+    {
+      "name": "Jiang, Jianou",
+      "affiliation": "Department of Engineering Science, University of Oxford",
+      "orcid": "0009-0004-6581-0319"
+    },
+    {
+      "name": "Rosic, Budimir",
+      "affiliation": "Department of Engineering Science, University of Oxford"
+    }
+  ],
+  "version": "1.0.0",
+  "publication_date": "2026-09-17",
+  "access_right": "open",
+  "license": "mit",
+  "keywords": [
+    "symbolic regression",
+    "turbulence modelling",
+    "wall-bounded turbulence",
+    "production-dissipation closure",
+    "computational fluid dynamics",
+    "reproducibility",
+    "scientific machine learning"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.1063/5.0347368",
+      "scheme": "doi",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://github.com/JianouJiang/symbolic-regression-pe-closure/tree/v1.0.0",
+      "scheme": "url",
+      "relation": "isIdenticalTo",
+      "resource_type": "software"
+    }
+  ]
+}

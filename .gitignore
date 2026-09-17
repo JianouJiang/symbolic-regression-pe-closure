@@ -9,3 +9,8 @@ codes/results/
 codes/data_processing/
 related_papers/
 records/manifest/source_cache/
+
+# Downloaded tutorial data and locally regenerated outputs:
+examples/.cache/
+examples/output/
+.ipynb_checkpoints/

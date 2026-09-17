@@ -1,4 +1,8 @@
 cff-version: 1.2.0
+version: 1.0.0
+date-released: '2026-09-17'
+doi: 10.5281/zenodo.22806787
+repository-code: https://github.com/JianouJiang/symbolic-regression-pe-closure
 message: "If you use this software or these records, please cite the article below."
 title: "Code and data records: Combining symbolic regression and turbulence physics to develop a compact inner-layer production-dissipation closure"
 authors:
@@ -22,7 +26,7 @@ preferred-citation:
   journal: "Physics of Fluids"
   volume: 38
   issue: 9
-  start: 095140
+  start: '095140'
   year: 2026
   month: 9
   doi: 10.1063/5.0347368
