@@ -6,6 +6,8 @@ Code and data records for the article of the above title by **Jianou Jiang** and
 
 > *Physics of Fluids* **38**, 095140 (2026) · [doi:10.1063/5.0347368](https://doi.org/10.1063/5.0347368) · published online 9 September 2026
 
+News coverage: [University of Oxford, Department of Engineering Science](https://eng.ox.ac.uk/news/oxford-researchers-use-machine-learning-to-simplify-a-longstanding-turbulence-problem) (22 September 2026).
+
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JianouJiang/symbolic-regression-pe-closure/blob/v1.0.0/examples/five_minute_tutorial.ipynb)
 [![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22806787.svg)](https://doi.org/10.5281/zenodo.22806787)
 
