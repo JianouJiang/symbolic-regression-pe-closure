@@ -35,9 +35,9 @@ points, reproducing the corresponding entry in the paper's
 This Lee–Moser profile belongs to the **training dataset family**. It is an
 illustration of how to use the fixed formulas, not additional independent
 validation. Production is taken from DNS; this example does not demonstrate
-performance in a coupled RANS simulation. Strong adverse pressure gradients,
-outer-wake prediction, and plane Couette flow are outside the demonstrated
-scope. The PySR expression is not the exact cubic wall-limit expression;
+performance in a coupled RANS simulation. Strong adverse pressure gradients
+and outer-wake prediction are outside the demonstrated scope; plane Couette
+flow is covered (see the corrections in the main README). The PySR expression is not the exact cubic wall-limit expression;
 M16 is retained for that asymptotic comparison.
 
 ## Data provenance and offline use

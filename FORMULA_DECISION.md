@@ -11,7 +11,7 @@ F_{\mathrm{PySR}}(y^+)=
 \]
 
 Its stated domain remains
-\(1<y^+\leq\min(150,0.3Re_\tau)\) for incompressible, smooth-wall, pressure-driven flows, with the adverse-pressure-gradient and Couette limitations stated explicitly.
+\(1<y^+\leq\min(150,0.3Re_\tau)\) for incompressible, smooth-wall, pressure-driven flows, with the adverse-pressure-gradient limitation stated explicitly. (The article's Couette limitation is withdrawn; see the corrections in the README.)
 
 The printed M16 expression is retained only as a **physics-constrained asymptotic benchmark**. It enforces the exact cubic wall exponent, whereas the recommended PySR expression has a quadratic leading wall order. M16 is not presented as the recommended predictive closure because its finite-domain comparison is unfavourable.
 

@@ -14,3 +14,6 @@ records/manifest/source_cache/
 examples/.cache/
 examples/output/
 .ipynb_checkpoints/
+
+# Provider files downloaded by corrections/couette_check.py (not redistributed):
+corrections/data/

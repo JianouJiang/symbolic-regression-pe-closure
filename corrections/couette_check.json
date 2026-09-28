@@ -1,0 +1,60 @@
+{
+  "data": "Lee & Moser (2018), plane Couette flow, https://turbulence.oden.utexas.edu/couette2018/data/",
+  "mask": "1 < y+ <= min(150, 0.3 Re_tau), eps > 1e-6, P/eps > 0.01; nominal Re_tau",
+  "cases": {
+    "93": {
+      "file": "LM_Couette_R0093_020PI_RSTE_k_prof.dat",
+      "sha256": "afb990b13f29294d08d21af87f2d91abe29ca93710d79e21cd407b55af4b07e4",
+      "published (column 3, turbulent transport)": {
+        "points": 25,
+        "max_P_over_eps": 37.29542746133008,
+        "y_plus_at_max": 8.018313601780362,
+        "R2_recommended": -0.33119536963111473,
+        "R2_M16": -0.3273030188679482
+      },
+      "corrected (column 7, dissipation)": {
+        "points": 25,
+        "max_P_over_eps": 1.755907956559987,
+        "y_plus_at_max": 11.19002143263839,
+        "R2_recommended": 0.9921257223031926,
+        "R2_M16": 0.9968162367548249
+      }
+    },
+    "220": {
+      "file": "LM_Couette_R0220_020PI_RSTE_k_prof.dat",
+      "sha256": "d0653dd1557283cc207a9fb66667a4a145285dea8160a1b89a5a9fac8c0ad36c",
+      "published (column 3, turbulent transport)": {
+        "points": 41,
+        "max_P_over_eps": 18789.75350779412,
+        "y_plus_at_max": 8.161453472398696,
+        "R2_recommended": -0.026662859723330046,
+        "R2_M16": -0.026657065082160036
+      },
+      "corrected (column 7, dissipation)": {
+        "points": 41,
+        "max_P_over_eps": 1.7562330640880037,
+        "y_plus_at_max": 11.42849431292265,
+        "R2_recommended": 0.9925139906993683,
+        "R2_M16": 0.9933513950164921
+      }
+    },
+    "500": {
+      "file": "LM_Couette_R0500_020PI_RSTE_k_prof.dat",
+      "sha256": "6a5db733e3a56111b6fb4780fd75aabba5f46bac8dcf5771eccd56bd54405ba6",
+      "published (column 3, turbulent transport)": {
+        "points": 58,
+        "max_P_over_eps": 461.71315897425774,
+        "y_plus_at_max": 108.3765388029297,
+        "R2_recommended": -0.24192709597445705,
+        "R2_M16": -0.24153642174798495
+      },
+      "corrected (column 7, dissipation)": {
+        "points": 57,
+        "max_P_over_eps": 1.7237398596598426,
+        "y_plus_at_max": 11.67378344467107,
+        "R2_recommended": 0.9724487094547429,
+        "R2_M16": 0.9808011038297559
+      }
+    }
+  }
+}

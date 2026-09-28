@@ -1,0 +1,237 @@
+{
+  "diagnostic": "RMSE reduction (%) of eps = P/F(y+) against eps = P, DNS production and dissipation",
+  "profiles": {
+    "channel 180": {
+      "published window 5 < y+ < 80": {
+        "points": 45,
+        "recommended": 91.87961949814782,
+        "M16": 91.16837906625855
+      },
+      "whole domain 1 < y+ <= min(150, 0.3 Re_tau)": {
+        "points": 41,
+        "recommended": 53.68086828868128,
+        "M16": 93.96391056786364
+      },
+      "viscous sublayer 1 < y+ <= 5": {
+        "points": 7,
+        "recommended": 39.883443257749306,
+        "M16": 95.81015275683156
+      },
+      "domain above y+ = 5": {
+        "points": 34,
+        "recommended": 92.34395087107976,
+        "M16": 92.04620119265013
+      }
+    },
+    "channel 550": {
+      "published window 5 < y+ < 80": {
+        "points": 49,
+        "recommended": 94.60875002198324,
+        "M16": 94.1086057305152
+      },
+      "whole domain 1 < y+ <= min(150, 0.3 Re_tau)": {
+        "points": 84,
+        "recommended": 53.64112641751239,
+        "M16": 93.85582119174278
+      },
+      "viscous sublayer 1 < y+ <= 5": {
+        "points": 9,
+        "recommended": 42.8203295322002,
+        "M16": 93.81326307784404
+      },
+      "domain above y+ = 5": {
+        "points": 75,
+        "recommended": 94.55721539227162,
+        "M16": 93.9371499626456
+      }
+    },
+    "channel 1000": {
+      "published window 5 < y+ < 80": {
+        "points": 49,
+        "recommended": 94.41389555549571,
+        "M16": 94.67980599561042
+      },
+      "whole domain 1 < y+ <= min(150, 0.3 Re_tau)": {
+        "points": 82,
+        "recommended": 52.59537425462344,
+        "M16": 95.28132704920687
+      },
+      "viscous sublayer 1 < y+ <= 5": {
+        "points": 8,
+        "recommended": 42.23924452861745,
+        "M16": 95.6939321301202
+      },
+      "domain above y+ = 5": {
+        "points": 74,
+        "recommended": 94.3772704082873,
+        "M16": 94.5373126605222
+      }
+    },
+    "channel 2000": {
+      "published window 5 < y+ < 80": {
+        "points": 51,
+        "recommended": 94.63662872259478,
+        "M16": 94.36576679658282
+      },
+      "whole domain 1 < y+ <= min(150, 0.3 Re_tau)": {
+        "points": 86,
+        "recommended": 53.16128408073427,
+        "M16": 96.3116491406258
+      },
+      "viscous sublayer 1 < y+ <= 5": {
+        "points": 9,
+        "recommended": 43.65371061636716,
+        "M16": 97.8178448207332
+      },
+      "domain above y+ = 5": {
+        "points": 77,
+        "recommended": 94.58711324661778,
+        "M16": 94.24559100867091
+      }
+    },
+    "channel 5200": {
+      "published window 5 < y+ < 80": {
+        "points": 59,
+        "recommended": 92.37791624214941,
+        "M16": 92.46412187929474
+      },
+      "whole domain 1 < y+ <= min(150, 0.3 Re_tau)": {
+        "points": 97,
+        "recommended": 55.986012485925365,
+        "M16": 95.05646786503796
+      },
+      "viscous sublayer 1 < y+ <= 5": {
+        "points": 6,
+        "recommended": 44.14797299834342,
+        "M16": 98.19005754537993
+      },
+      "domain above y+ = 5": {
+        "points": 91,
+        "recommended": 92.32718104121238,
+        "M16": 92.38011839735435
+      }
+    },
+    "pipe 180": {
+      "published window 5 < y+ < 80": {
+        "points": 116,
+        "recommended": 88.00648725176366,
+        "M16": 85.8370903328537
+      },
+      "whole domain 1 < y+ <= min(150, 0.3 Re_tau)": {
+        "points": 120,
+        "recommended": 56.961451218002026,
+        "M16": 86.66268514182097
+      },
+      "viscous sublayer 1 < y+ <= 5": {
+        "points": 23,
+        "recommended": 41.00303266092612,
+        "M16": 86.37961272014145
+      },
+      "domain above y+ = 5": {
+        "points": 97,
+        "recommended": 88.93386155354044,
+        "M16": 86.97014324001161
+      }
+    },
+    "pipe 360": {
+      "published window 5 < y+ < 80": {
+        "points": 169,
+        "recommended": 94.25600013007653,
+        "M16": 92.26627365936886
+      },
+      "whole domain 1 < y+ <= min(150, 0.3 Re_tau)": {
+        "points": 214,
+        "recommended": 62.491691600856704,
+        "M16": 93.88529571407793
+      },
+      "viscous sublayer 1 < y+ <= 5": {
+        "points": 22,
+        "recommended": 45.96531884059365,
+        "M16": 96.86787871155909
+      },
+      "domain above y+ = 5": {
+        "points": 192,
+        "recommended": 94.14770770762443,
+        "M16": 92.09985408723153
+      }
+    },
+    "pipe 550": {
+      "published window 5 < y+ < 80": {
+        "points": 247,
+        "recommended": 94.71824296074463,
+        "M16": 93.1913415087838
+      },
+      "whole domain 1 < y+ <= min(150, 0.3 Re_tau)": {
+        "points": 353,
+        "recommended": 63.93817884656957,
+        "M16": 93.83230557532578
+      },
+      "viscous sublayer 1 < y+ <= 5": {
+        "points": 24,
+        "recommended": 46.81281707197537,
+        "M16": 95.02001327682056
+      },
+      "domain above y+ = 5": {
+        "points": 329,
+        "recommended": 94.62665025641505,
+        "M16": 92.99602040653767
+      }
+    },
+    "pipe 1000": {
+      "published window 5 < y+ < 80": {
+        "points": 336,
+        "recommended": 94.49826302669189,
+        "M16": 92.99031644175136
+      },
+      "whole domain 1 < y+ <= min(150, 0.3 Re_tau)": {
+        "points": 504,
+        "recommended": 63.66526584333283,
+        "M16": 93.78883897766848
+      },
+      "viscous sublayer 1 < y+ <= 5": {
+        "points": 24,
+        "recommended": 46.592050391994476,
+        "M16": 95.33668601219016
+      },
+      "domain above y+ = 5": {
+        "points": 480,
+        "recommended": 94.39412205385545,
+        "M16": 92.73800572035884
+      }
+    }
+  },
+  "ranges": {
+    "published window 5 < y+ < 80, recommended": [
+      88.00648725176366,
+      94.71824296074463
+    ],
+    "published window 5 < y+ < 80, M16": [
+      85.8370903328537,
+      94.67980599561042
+    ],
+    "whole domain 1 < y+ <= min(150, 0.3 Re_tau), recommended": [
+      52.59537425462344,
+      63.93817884656957
+    ],
+    "whole domain 1 < y+ <= min(150, 0.3 Re_tau), M16": [
+      86.66268514182097,
+      96.3116491406258
+    ],
+    "viscous sublayer 1 < y+ <= 5, recommended": [
+      39.883443257749306,
+      46.81281707197537
+    ],
+    "viscous sublayer 1 < y+ <= 5, M16": [
+      86.37961272014145,
+      98.19005754537993
+    ],
+    "domain above y+ = 5, recommended": [
+      88.93386155354044,
+      94.62665025641505
+    ],
+    "domain above y+ = 5, M16": [
+      86.97014324001161,
+      94.5373126605222
+    ]
+  }
+}
