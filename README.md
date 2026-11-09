@@ -8,8 +8,16 @@ Code and data records for the article of the above title by **Jianou Jiang** and
 
 News coverage: [University of Oxford, Department of Engineering Science](https://eng.ox.ac.uk/news/oxford-researchers-use-machine-learning-to-simplify-a-longstanding-turbulence-problem) (22 September 2026).
 
+Video seminar: a three-part talk on this work is on the
+[Jianou Jiang YouTube channel](https://www.youtube.com/@JianouJiang).
+
+1. [Wall functions and the energy budget](https://www.youtube.com/watch?v=GXuL9M32clk)
+2. [Symbolic regression and wall limits](https://www.youtube.com/watch?v=8g_xrzyBUBo)
+3. [Validation and dissipation](https://www.youtube.com/watch?v=8Pkb02wS7oY)
+
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JianouJiang/symbolic-regression-pe-closure/blob/v1.0.0/examples/five_minute_tutorial.ipynb)
 [![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22806787.svg)](https://doi.org/10.5281/zenodo.22806787)
+[![Video seminar on YouTube](https://img.shields.io/badge/YouTube-video%20seminar-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/@JianouJiang)
 
 ## Try it in five minutes
 
